@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Unity3d-hw8-背包系统 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Unity3d实战之背包系统选题要求参考unity官网的背包系统例子，实现一个简单的背包系统 实现效果 静态图 动态图  知识准备 摄像机渲染 Clearing Flags： Skybox：天空盒(默认项)。在屏幕空白处显示当前摄像机的天空盒，如果没有指定天空盒，则会显示默认背景色。 Solid Color：空白处将显示默认此处设置的背景色。 Depth only：仅深度，该模式用于对象不被裁剪。">
+<meta name="keywords" content="Unity3d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity3d-hw8-背包系统">
+<meta property="og:url" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Unity3d实战之背包系统选题要求参考unity官网的背包系统例子，实现一个简单的背包系统 实现效果 静态图 动态图  知识准备 摄像机渲染 Clearing Flags： Skybox：天空盒(默认项)。在屏幕空白处显示当前摄像机的天空盒，如果没有指定天空盒，则会显示默认背景色。 Solid Color：空白处将显示默认此处设置的背景色。 Depth only：仅深度，该模式用于对象不被裁剪。">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/scene.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/GIF.gif">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/step1.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/step1_2.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/step1_3.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/step2.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/step2_2.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/step3_1.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/step3_2.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/weapon1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/weapon2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/weapon3.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/weapon1.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/weapon2.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/weapon3.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/GIF.gif">
+<meta property="og:updated_time" content="2018-06-05T16:11:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unity3d-hw8-背包系统">
+<meta name="twitter:description" content="Unity3d实战之背包系统选题要求参考unity官网的背包系统例子，实现一个简单的背包系统 实现效果 静态图 动态图  知识准备 摄像机渲染 Clearing Flags： Skybox：天空盒(默认项)。在屏幕空白处显示当前摄像机的天空盒，如果没有指定天空盒，则会显示默认背景色。 Solid Color：空白处将显示默认此处设置的背景色。 Depth only：仅深度，该模式用于对象不被裁剪。">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/Unity3d-hw8-背包系统/scene.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Unity3d-hw8-背包系统" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/06/Unity3d-hw8-背包系统/" class="article-date">
+  <time datetime="2018-06-05T16:03:50.000Z" itemprop="datePublished">2018-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Unity3d-hw8-背包系统
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Unity3d实战之背包系统"><a href="#Unity3d实战之背包系统" class="headerlink" title="Unity3d实战之背包系统"></a>Unity3d实战之背包系统</h1><h2 id="选题要求"><a href="#选题要求" class="headerlink" title="选题要求"></a>选题要求</h2><p>参考unity官网的背包系统例子，实现一个简单的背包系统</p>
+<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><ul>
+<li>静态图<br><img src="Unity3d-hw8-背包系统/scene.png" alt=""></li>
+<li>动态图<br><img src="Unity3d-hw8-背包系统/GIF.gif" alt=""></li>
+</ul>
+<h2 id="知识准备"><a href="#知识准备" class="headerlink" title="知识准备"></a>知识准备</h2><ul>
+<li>摄像机渲染<ul>
+<li>Clearing Flags：<ul>
+<li>Skybox：天空盒(默认项)。在屏幕空白处显示当前摄像机的天空盒，如果没有指定天空盒，则会显示默认背景色。</li>
+<li>Solid Color：空白处将显示默认此处设置的背景色。</li>
+<li>Depth only：仅深度，该模式用于对象不被裁剪。</li>
+<li>Don’t Clear：不清除，该模式不清楚任何颜色和或深度缓存，但这样做每帧渲染的结果都会叠加在下一帧之上。</li>
+</ul>
+</li>
+<li>Culling Mask： 摄像机渲染的层</li>
+<li>Layers： 摄像机所在的层</li>
+<li>Depth： 指定多个摄像机的渲染顺序</li>
+<li>Rendering Path：渲染路径，设定摄像机的渲染方法</li>
+<li>Projection：投影方式，分为透视和正交</li>
+<li>Clipping Planes：剪裁平面，摄像机的渲染范围。Near为最近的点，Far为最远的点</li>
+</ul>
+</li>
+<li>粒子系统<br>  粒子系统有许多大模块，比如最常用的有初始化模块、发射模块、粒子群形状模块，颜色随存活时间、速度变化的模块等。方便起见这里再把上次的粒子系统贴一遍。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">持续时间（Duration）</td>
+<td style="text-align:center">粒子系统发射粒子的持续时间</td>
+</tr>
+<tr>
+<td style="text-align:center">循环（Looping）</td>
+<td style="text-align:center">粒子系统是否循环</td>
+</tr>
+<tr>
+<td style="text-align:center">预热（Prewarm）</td>
+<td style="text-align:center">当looping开启时，才能启动预热（Prewarm），游戏开始时粒子已经发射了一个周期</td>
+</tr>
+<tr>
+<td style="text-align:center">初始延迟（Start Delay）</td>
+<td style="text-align:center">粒子系统发射粒子之前的延迟。注意在prewarm（预热）启用下不能使用此项</td>
+</tr>
+<tr>
+<td style="text-align:center">初始生命（Start Lifetime）</td>
+<td style="text-align:center">以秒为单位，粒子存活数量</td>
+</tr>
+<tr>
+<td style="text-align:center">初始速度（Start Speed）</td>
+<td style="text-align:center">粒子发射时的速度</td>
+</tr>
+<tr>
+<td style="text-align:center">初始大小（Start Size）</td>
+<td style="text-align:center">粒子发射时的大小</td>
+</tr>
+<tr>
+<td style="text-align:center">初始旋转（Start Rotation）</td>
+<td style="text-align:center">粒子发射时的旋转值</td>
+</tr>
+<tr>
+<td style="text-align:center">初始颜色（Start Color）</td>
+<td style="text-align:center">粒子发射时的颜色</td>
+</tr>
+<tr>
+<td style="text-align:center">重力修改器（Gravity Modifier）</td>
+<td style="text-align:center">粒子在发射时受到的重力影响</td>
+</tr>
+<tr>
+<td style="text-align:center">继承速度（Inherit Velocity）</td>
+<td style="text-align:center">控制粒子速率的因素将继承自粒子系统的移动（对于移动中的粒子系统）</td>
+</tr>
+<tr>
+<td style="text-align:center">模拟空间（Simulation Space）</td>
+<td style="text-align:center">粒子系统在自身坐标系还是世界坐标系</td>
+</tr>
+<tr>
+<td style="text-align:center">唤醒时播放（Play On Awake）</td>
+<td style="text-align:center">如果启用粒子系统当在创建时，自动开始播放</td>
+</tr>
+<tr>
+<td style="text-align:center">最大粒子数（Max Particles）</td>
+<td style="text-align:center">粒子发射的最大数量</td>
+</tr>
+</tbody>
+</table>
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ul>
+<li>第一步，搭建UI界面。新建一个画布（Canvas），再创建一个Panel容器，里面包含UI界面的所有UI控件，比如背包区的九个格子和装备区的三个格子，每个格子都是一个Button控件，背包区和装备区的这些按钮的父级分别是Bag和Equip两个空对象，主要是为了添加GridLayout控件来控制子对象的布局，以及相应的控制脚本。基本的控件创建好之后，将画布设置成UI层，接着再创建一个保存鼠标图片的Image控件，这是为了暂存移动的图片达到交换目的，最后创建一个专门渲染UI层的摄像机，将其Culling Mask设置成UI层。这样UI层的搭建基本完成，剩下的就是对控件位置、大小等的参数调整，以及更改控件的图片。这里要注意的一点是，<strong>添加图片时必须先把原来的图片转成Sprite类型才可以被Image组件识别</strong>。<br>搭建完成后的文件结构<br><img src="Unity3d-hw8-背包系统/step1.png" alt=""><br>UI Camera设置<br><img src="Unity3d-hw8-背包系统/step1_2.png" alt=""><br>GridLayout组件的设置<br><img src="Unity3d-hw8-背包系统/step1_3.png" alt=""></li>
+<li>第二步，搭建背景界面。这个比布置UI界面容易多了。为了让背景有点简单的动态特效，这里用到了一点粒子系统。首先新建一个空对象scene，然后右键scene-&gt;Effects-&gt;Particle System，便可把例子系统添加为其子对象。接着再新建一个空对象，用来显示背景图片，修改其Sprite Renderer的Sprite为要添加的背景图片即可。最后把主摄像机放到这个空对象下面，其渲染的层是默认层，无需修改。要注意的是必须确保UI层的渲染要介于背景层渲染和英雄层渲染之间，用摄像机的深度Depth控制。<br>搭建完成后的文件结构<br><img src="Unity3d-hw8-背包系统/step2.png" alt=""><br>主摄像机设置<br><img src="Unity3d-hw8-背包系统/step2_2.png" alt=""></li>
+<li>第三步，搭建英雄层。这层就是用来渲染英雄的，为了和UI层区分开来以便拓展更多的功能。新建一个摄像机，负责渲染英雄层，将英雄作为该摄像机的子对象，并将英雄的所在层设置成英雄层（自定义的一个层）。<br>搭建完成后的总的文件结构<br><img src="Unity3d-hw8-背包系统/step3_1.png" alt=""><br>英雄摄像机的设置<br><img src="Unity3d-hw8-背包系统/step3_2.png" alt=""></li>
+<li><p>第四步，实现画布随鼠标旋转。这里用的是老师上课提供的一个源码，我外加做了一些修改，原本是整个画布的旋转，但是感觉看起来怪怪的，我将其改成以中轴线为界，两边（背包区和装备区）分别旋转，鼠标在背包区的时候装备区不动，鼠标在装备区的时候背包区不动。因此便有了两份类似的代码，分别挂载在背包区的父级元素Bag上和装备区的父级元素Equip上。<br>以控制背包区随鼠标旋转的代码为例</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">BagTilt</span> : <span class="title">MonoBehaviour</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Vector2 range = <span class="keyword">new</span> Vector2(<span class="number">50</span>f, <span class="number">30</span>f);</span><br><span class="line"></span><br><span class="line">    Transform mTrans;</span><br><span class="line">    Quaternion mStart;</span><br><span class="line">    Vector2 mRot = Vector2.zero;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        mTrans = transform;</span><br><span class="line">        mStart = mTrans.localRotation;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Update is called once per frame</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Vector3 pos = Input.mousePosition;</span><br><span class="line">        <span class="comment">//Debug.Log(pos);        </span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">float</span> halfWidth = Screen.width * <span class="number">0.5</span>f;</span><br><span class="line">        <span class="keyword">float</span> halfHeight = Screen.height * <span class="number">0.5</span>f;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (pos.x - halfWidth &lt; <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">float</span> x = Mathf.Clamp((pos.x - halfWidth) / halfWidth, <span class="number">-1</span>f, <span class="number">1</span>f);</span><br><span class="line">        <span class="keyword">float</span> y = Mathf.Clamp((pos.y - halfHeight) / halfHeight, <span class="number">-1</span>f, <span class="number">1</span>f);</span><br><span class="line">        mRot = Vector2.Lerp(mRot, <span class="keyword">new</span> Vector2(x, y), Time.deltaTime * <span class="number">5</span>f);</span><br><span class="line"></span><br><span class="line">        mTrans.localRotation = mStart * Quaternion.Euler(-mRot.y * range.y, -mRot.x * range.x, <span class="number">0</span>f);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第五步，实现游戏的管理者。挂载到任何一个对象上都行，因为其执行与所挂在的对象无关，是对整个游戏场景的控制。这里我是挂载到Canvas上。游戏的管理者主要负责跟踪装备区的装备情况、装备类型的判断以及鼠标对象的单例化。这里为了方便添加脚本，在构造函数中采用循环为每个Button添加对应的脚本。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Manager</span> : <span class="title">MonoBehaviour</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> MouseImage mouse;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> IsWeapon1 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> IsWeapon2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> IsWeapon3 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        mouse = (MouseImage)FindObjectOfType(<span class="keyword">typeof</span>(MouseImage));</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">9</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            GameObject.Find(<span class="string">"Grid"</span> + i).AddComponent&lt;Bag&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">3</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            GameObject.Find(<span class="string">"Weapon"</span> + i).AddComponent&lt;Equip&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Update is called once per frame</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> MouseImage <span class="title">getMouse</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mouse;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMouse</span>(<span class="params">MouseImage m</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (mouse == <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            mouse = m;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getWeapon1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> IsWeapon1;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getWeapon2</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> IsWeapon2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getWeapon3</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> IsWeapon3;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setWeapon1</span>(<span class="params"><span class="keyword">int</span> w1</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        IsWeapon1 = w1;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setWeapon2</span>(<span class="params"><span class="keyword">int</span> w2</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        IsWeapon2 = w2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setWeapon3</span>(<span class="params"><span class="keyword">int</span> w3</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        IsWeapon3 = w3;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第六步，实现对鼠标对象的维护。新建一个C#脚本MouseImage，挂载在MouseImage这个Image对象上。目的也就是，使得点击装备区或是背包区的时候，如果点击的格子里面有装备，则和鼠标上的图片发生交换，以达到将装备取出的效果，而且实现点击图片，图片跟随鼠标移动的效果。这个脚本主要负责装备类型的检测、鼠标图片的设置和图片跟随鼠标移动。Update部分鼠标坐标减去的值是为了不让鼠标上的图片阻挡了对按钮的点击。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MouseImage</span> : <span class="title">MonoBehaviour</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Manager GM;</span><br><span class="line">    <span class="keyword">private</span> Image mouseImage;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mouseType = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> z;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Sprite none;</span><br><span class="line">    <span class="keyword">public</span> Sprite weapon1;</span><br><span class="line">    <span class="keyword">public</span> Sprite weapon2;</span><br><span class="line">    <span class="keyword">public</span> Sprite weapon3;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        GM = (Manager)FindObjectOfType(<span class="keyword">typeof</span>(Manager));</span><br><span class="line">        GM.setMouse(<span class="keyword">this</span>);</span><br><span class="line">        mouseImage = GetComponent&lt;Image&gt;();        </span><br><span class="line">        z = <span class="number">-400</span>;</span><br><span class="line"></span><br><span class="line">        weapon1 = GameObject.Find(<span class="string">"Grid1"</span>).GetComponent&lt;Image&gt;().sprite;</span><br><span class="line">        weapon2 = GameObject.Find(<span class="string">"Grid2"</span>).GetComponent&lt;Image&gt;().sprite;</span><br><span class="line">        weapon3 = GameObject.Find(<span class="string">"Grid3"</span>).GetComponent&lt;Image&gt;().sprite;</span><br><span class="line">        none = GameObject.Find(<span class="string">"MouseImage"</span>).GetComponent&lt;Image&gt;().sprite;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getMouseType</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mouseType;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMouseType</span>(<span class="params"><span class="keyword">int</span> m</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        mouseType = m;</span><br><span class="line">        <span class="keyword">switch</span> (m)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">                mouseImage.sprite = none;</span><br><span class="line">                z = <span class="number">-400</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                mouseImage.sprite = weapon1;</span><br><span class="line">                z = <span class="number">100</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                mouseImage.sprite = weapon2;</span><br><span class="line">                z = <span class="number">100</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                mouseImage.sprite = weapon3;</span><br><span class="line">                z = <span class="number">100</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                mouseImage.sprite = none;</span><br><span class="line">                z = <span class="number">-400</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Update is called once per frame</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        transform.position = <span class="keyword">new</span> Vector3(Input.mousePosition.x - <span class="number">26</span>, Input.mousePosition.y - <span class="number">26</span>, z);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第七步，实现背包区的交换逻辑。这里主要是要赋予背包区按钮对点击事件的响应能力。比如做一些基本的判断：不管鼠标图片是否为空，如果点中有装备的格子，那么将发生交换，交换的时候要记录装备类型，其他情况一律不交换。为了避免重复添加的繁琐，我是直接在代码里面绑定点击事件，这样也便于修改。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Bag</span> : <span class="title">MonoBehaviour</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Manager GM;</span><br><span class="line">    <span class="keyword">private</span> Image gridImage;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mouseType = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Sprite none;</span><br><span class="line">    <span class="keyword">public</span> Sprite weapon1;</span><br><span class="line">    <span class="keyword">public</span> Sprite weapon2;</span><br><span class="line">    <span class="keyword">public</span> Sprite weapon3;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        GM = (Manager)FindObjectOfType(<span class="keyword">typeof</span>(Manager));</span><br><span class="line">        gridImage = GetComponent&lt;Image&gt;();</span><br><span class="line">        weapon1 = GameObject.Find(<span class="string">"Grid1"</span>).GetComponent&lt;Image&gt;().sprite;</span><br><span class="line">        weapon2 = GameObject.Find(<span class="string">"Grid2"</span>).GetComponent&lt;Image&gt;().sprite;</span><br><span class="line">        weapon3 = GameObject.Find(<span class="string">"Grid3"</span>).GetComponent&lt;Image&gt;().sprite;</span><br><span class="line">        none = GameObject.Find(<span class="string">"Grid4"</span>).GetComponent&lt;Image&gt;().sprite;</span><br><span class="line">        Debug.Log(gridImage.sprite == weapon1);</span><br><span class="line">        Debug.Log(weapon1);</span><br><span class="line">        Debug.Log(weapon2);</span><br><span class="line">        Debug.Log(weapon3);</span><br><span class="line">        <span class="keyword">this</span>.GetComponent&lt;Button&gt;().onClick.AddListener(OnBagButton);</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// Update is called once per frame</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Update</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">OnBagButton</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//Debug.Log("grid click");</span></span><br><span class="line">        mouseType = GM.getMouse().getMouseType();</span><br><span class="line">        <span class="keyword">if</span> (gridImage.sprite == none &amp;&amp; mouseType != <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">switch</span> (mouseType)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                    gridImage.sprite = weapon1;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                    gridImage.sprite = weapon2;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                    gridImage.sprite = weapon3;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    gridImage.sprite = none;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            GM.getMouse().setMouseType(<span class="number">0</span>);          </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//Debug.Log(gridImage.sprite);</span></span><br><span class="line">            <span class="comment">//Debug.Log(mouseType);</span></span><br><span class="line">            <span class="keyword">if</span> (gridImage.sprite == none)</span><br><span class="line">            &#123;</span><br><span class="line">                GM.getMouse().setMouseType(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (gridImage.sprite == weapon1)</span><br><span class="line">            &#123;</span><br><span class="line">                GM.getMouse().setMouseType(<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (gridImage.sprite == weapon2)</span><br><span class="line">            &#123;</span><br><span class="line">                GM.getMouse().setMouseType(<span class="number">2</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (gridImage.sprite == weapon3)</span><br><span class="line">            &#123;</span><br><span class="line">                GM.getMouse().setMouseType(<span class="number">3</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">switch</span> (mouseType)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">0</span>:                    </span><br><span class="line">                    gridImage.sprite = none;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                    gridImage.sprite = weapon1;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                    gridImage.sprite = weapon2;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                    gridImage.sprite = weapon3;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    gridImage.sprite = none;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;                 </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第八步，实现装备区的交换逻辑。这里同样是要赋予装备区按钮对点击事件的响应能力。比如稍有不同的简单判断：类似在背包区交换的原理和基础上，外加检测交换的装备类型是否符合该格子所应装备的类型，如果符合才允许交换。同样的，也是在代码里面绑定点击事件。这里我为了弥补添加装备时没有动画的遗憾，规定每次添加动作时英雄都播放一次攻击动画，播放完成后回到Idle状态。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Equip</span> : <span class="title">MonoBehaviour</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Manager GM;</span><br><span class="line">    <span class="keyword">private</span> Image weaponImage;</span><br><span class="line">    <span class="keyword">private</span> GameObject hero;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> mouseType;</span><br><span class="line">    <span class="keyword">public</span> Sprite weapon1;</span><br><span class="line">    <span class="keyword">public</span> Sprite weapon2;</span><br><span class="line">    <span class="keyword">public</span> Sprite weapon3;</span><br><span class="line">    <span class="keyword">public</span> Sprite none;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        GM = (Manager)FindObjectOfType(<span class="keyword">typeof</span>(Manager));</span><br><span class="line">        weaponImage = GetComponent&lt;Image&gt;();</span><br><span class="line">        hero = GameObject.Find(<span class="string">"Hero"</span>);</span><br><span class="line">        weapon1 = GameObject.Find(<span class="string">"Grid1"</span>).GetComponent&lt;Image&gt;().sprite;</span><br><span class="line">        weapon2 = GameObject.Find(<span class="string">"Grid2"</span>).GetComponent&lt;Image&gt;().sprite;</span><br><span class="line">        weapon3 = GameObject.Find(<span class="string">"Grid3"</span>).GetComponent&lt;Image&gt;().sprite;</span><br><span class="line">        none = GameObject.Find(<span class="string">"Grid4"</span>).GetComponent&lt;Image&gt;().sprite;</span><br><span class="line">        Debug.Log(weapon1);</span><br><span class="line">        Debug.Log(weapon2);</span><br><span class="line">        Debug.Log(weapon3);</span><br><span class="line">        Debug.Log(none);</span><br><span class="line">        <span class="keyword">this</span>.GetComponent&lt;Button&gt;().onClick.AddListener(OnEquipButton);</span><br><span class="line">        mouseType = <span class="keyword">this</span>.name[<span class="keyword">this</span>.name.Length - <span class="number">1</span>] - <span class="string">'0'</span>;</span><br><span class="line">        Debug.Log(mouseType);</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// Update is called once per frame</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Update</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (hero.GetComponent&lt;Animation&gt;().IsPlaying(<span class="string">"Attack"</span>) == <span class="literal">false</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            hero.GetComponent&lt;Animation&gt;().Play(<span class="string">"idle"</span>, PlayMode.StopAll);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (mouseType == <span class="number">1</span> &amp;&amp; GM.getWeapon1() == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            GM.setWeapon1(<span class="number">0</span>);</span><br><span class="line">            weaponImage.sprite = weapon1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (mouseType == <span class="number">2</span> &amp;&amp; GM.getWeapon2() == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            GM.setWeapon2(<span class="number">0</span>);</span><br><span class="line">            weaponImage.sprite = weapon2;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (mouseType == <span class="number">3</span> &amp;&amp; GM.getWeapon3() == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            GM.setWeapon3(<span class="number">0</span>);</span><br><span class="line">            weaponImage.sprite = weapon3;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">OnEquipButton</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//Debug.Log("equiping");</span></span><br><span class="line">        <span class="keyword">int</span> _mouseType = GM.getMouse().getMouseType();</span><br><span class="line">        Debug.Log(_mouseType);</span><br><span class="line">        <span class="keyword">if</span> (weaponImage.sprite != <span class="literal">null</span> &amp;&amp; _mouseType == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            weaponImage.sprite = none;</span><br><span class="line">            GM.getMouse().setMouseType(mouseType);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (weaponImage.sprite == none &amp;&amp; _mouseType == mouseType)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">switch</span> (_mouseType)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">                    weaponImage.sprite = none;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                    GM.setWeapon1(<span class="number">1</span>);</span><br><span class="line">                    weaponImage.sprite = weapon1;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                    GM.setWeapon2(<span class="number">1</span>);</span><br><span class="line">                    weaponImage.sprite = weapon2;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                    GM.setWeapon3(<span class="number">1</span>);</span><br><span class="line">                    weaponImage.sprite = weapon3;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    weaponImage.sprite = none;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            GM.getMouse().setMouseType(<span class="number">0</span>);</span><br><span class="line">            Animation animation = hero.GetComponent&lt;Animation&gt;();</span><br><span class="line">            animation.Play(<span class="string">"Attack"</span>, PlayMode.StopAll);</span><br><span class="line">            animation.wrapMode = WrapMode.Once;</span><br><span class="line">        &#125;        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第九步，图片加工。在网上进行了一番搜索和筛选之后，选到比较符合心意的图，但是都是白底不透明的，放在界面上感觉很生硬。为了更加逼真地模仿，我用了ps对筛选好的图片进行了简单的抠图处理，使得每个装备除装备实体以外的部分都是透明的，同样美观起见，将没有装备时的鼠标图片也设置成一张全透明的图片。<br>效果对比（深色背景下才看得出差别）：  </p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">武器</th>
+<th style="text-align:center">袖箭</th>
+<th style="text-align:center">匕首</th>
+<th style="text-align:center">斧子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">处理前</td>
+<td style="text-align:center"><img src="Unity3d-hw8-背包系统/weapon1.jpg" alt=""></td>
+<td style="text-align:center"><img src="Unity3d-hw8-背包系统/weapon2.jpg" alt=""></td>
+<td style="text-align:center"><img src="Unity3d-hw8-背包系统/weapon3.jpg" alt=""></td>
+</tr>
+<tr>
+<td style="text-align:center">处理后</td>
+<td style="text-align:center"><img src="Unity3d-hw8-背包系统/weapon1.png" alt=""></td>
+<td style="text-align:center"><img src="Unity3d-hw8-背包系统/weapon2.png" alt=""></td>
+<td style="text-align:center"><img src="Unity3d-hw8-背包系统/weapon3.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>最后一步。核对所有代码挂载情况、文件结构以及摄像机的渲染情况，耐心慢慢调参。调好合适的位置后变可以正常的运行了。到此便和一开始展示的效果完全一致了。<br><img src="Unity3d-hw8-背包系统/GIF.gif" alt=""></li>
+</ul>
+<hr>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>以上为个人理解，可能有误，仅供参考。</li>
+<li>如感兴趣，可访问笔者Gayhub地址—<a href="https://github.com/gitgiter/unity3d-learning/tree/master/homework8" target="_blank" rel="noopener">传送门</a></li>
+<li>视频演示地址—<a href="https://www.bilibili.com/video/av24424927/" target="_blank" rel="noopener">传送门</a></li>
+<li>csdn博客地址—<a href="https://blog.csdn.net/Wonderful_sky/article/details/80589009" target="_blank" rel="noopener">传送门</a></li>
+</ul>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/" data-id="cjmddk5h2000ei0q2oyzm54rb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/06/19/Unity3d-hw9-AR小游戏/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Unity3d-hw9-AR小游戏
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/05/28/Unity3d-hw7-粒子系统/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Unity3d-hw7-粒子系统</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity3d/">Unity3d</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中级实训/">中级实训</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Unity3d/" style="font-size: 20px;">Unity3d</a> <a href="/tags/中级实训/" style="font-size: 10px;">中级实训</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/09/22/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/24/Unity3d-hw10-联机冰球对战/">Unity-hw10-联机冰球对战</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/19/Unity3d-hw9-AR小游戏/">Unity3d-hw9-AR小游戏</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/06/Unity3d-hw8-背包系统/">Unity3d-hw8-背包系统</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/28/Unity3d-hw7-粒子系统/">Unity3d-hw7-粒子系统</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

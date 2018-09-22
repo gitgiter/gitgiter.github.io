@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Unity3d-hw2-太阳系-魔鬼与牧师v1 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="简答题 游戏对象运动的本质是什么？ 请用三种方法以上方法，实现物体的抛物线运动。（如，修改Transform属性，使用向量Vector3的方法…） 写一个程序，实现一个完整的太阳系， 其他星球围绕太阳的转速必须不一样，且不在一个法平面上。    个人理解 游戏对象运动的本质是游戏对象的位置的改变。 12345678910111213public class Uniform : MonoBehavi">
+<meta name="keywords" content="Unity3d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity3d-hw2-太阳系-魔鬼与牧师v1">
+<meta property="og:url" content="http://yoursite.com/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="简答题 游戏对象运动的本质是什么？ 请用三种方法以上方法，实现物体的抛物线运动。（如，修改Transform属性，使用向量Vector3的方法…） 写一个程序，实现一个完整的太阳系， 其他星球围绕太阳的转速必须不一样，且不在一个法平面上。    个人理解 游戏对象运动的本质是游戏对象的位置的改变。 12345678910111213public class Uniform : MonoBehavi">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/Unity3d-hw2-太阳系-魔鬼与牧师v1/Solar1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/Unity3d-hw2-太阳系-魔鬼与牧师v1/Solar2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/Unity3d-hw2-太阳系-魔鬼与牧师v1/Solar3.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/Unity3d-hw2-太阳系-魔鬼与牧师v1/PriestAndDevil1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/Unity3d-hw2-太阳系-魔鬼与牧师v1/PriestAndDevil2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/Unity3d-hw2-太阳系-魔鬼与牧师v1/PriestAndDevil3.jpg">
+<meta property="og:updated_time" content="2018-04-10T15:55:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unity3d-hw2-太阳系-魔鬼与牧师v1">
+<meta name="twitter:description" content="简答题 游戏对象运动的本质是什么？ 请用三种方法以上方法，实现物体的抛物线运动。（如，修改Transform属性，使用向量Vector3的方法…） 写一个程序，实现一个完整的太阳系， 其他星球围绕太阳的转速必须不一样，且不在一个法平面上。    个人理解 游戏对象运动的本质是游戏对象的位置的改变。 12345678910111213public class Uniform : MonoBehavi">
+<meta name="twitter:image" content="http://yoursite.com/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/Unity3d-hw2-太阳系-魔鬼与牧师v1/Solar1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Unity3d-hw2-太阳系-魔鬼与牧师v1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/" class="article-date">
+  <time datetime="2018-04-03T12:46:50.000Z" itemprop="datePublished">2018-04-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Unity3d-hw2-太阳系-魔鬼与牧师v1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h1><ol>
+<li>游戏对象运动的本质是什么？</li>
+<li>请用三种方法以上方法，实现物体的抛物线运动。（如，修改Transform属性，使用向量Vector3的方法…）</li>
+<li>写一个程序，实现一个完整的太阳系， 其他星球围绕太阳的转速必须不一样，且不在一个法平面上。  </li>
+</ol>
+<h1 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h1><ol>
+<li><p>游戏对象运动的本质是游戏对象的位置的改变。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Uniform</span> : <span class="title">MonoBehaviour</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> GameObject MyCube;</span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        MyCube = GameObject.Find(<span class="string">"Cube"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Update is called once per frame</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span> (<span class="params"></span>) </span>&#123;      </span><br><span class="line">        MyCube.transform.position += (<span class="keyword">float</span>)<span class="number">0.1</span> * Vector3.left;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>抛物线运动的三种实现</p>
+<ul>
+<li>修改Transform<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Parabola1</span> : <span class="title">MonoBehaviour</span> &#123;	</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> GameObject MySphere;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> vx;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> vz;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> a;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> t;</span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        MySphere = GameObject.Find(<span class="string">"Sphere"</span>);</span><br><span class="line">        vx = (<span class="keyword">float</span>)<span class="number">0.5</span>;</span><br><span class="line">        vz = <span class="number">0</span>;</span><br><span class="line">        a = (<span class="keyword">float</span>)<span class="number">0.1</span>;</span><br><span class="line">        t = Time.deltaTime;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Update is called once per frame</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">float</span> x = MySphere.transform.position.x;</span><br><span class="line">        <span class="keyword">float</span> y = MySphere.transform.position.y;</span><br><span class="line">        <span class="keyword">float</span> z = MySphere.transform.position.z;</span><br><span class="line">        MySphere.transform.position = <span class="keyword">new</span> Vector3(x + vx, y, z + vz);</span><br><span class="line">        vz += a * t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">```  </span><br><span class="line">- 使用Vector3  </span><br><span class="line">``` csharp</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Parabola2</span> : <span class="title">MonoBehaviour</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> GameObject MyCapsule;</span><br><span class="line">    <span class="keyword">private</span> Vector3 vx;</span><br><span class="line">    <span class="keyword">private</span> Vector3 vz;</span><br><span class="line">    <span class="keyword">private</span> Vector3 a;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> t;</span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        MyCapsule = GameObject.Find(<span class="string">"Capsule"</span>);</span><br><span class="line">        vx = (<span class="keyword">float</span>)<span class="number">0.5</span> * Vector3.right;</span><br><span class="line">        vz = Vector3.zero;</span><br><span class="line">        a = (<span class="keyword">float</span>)<span class="number">0.1</span> * Vector3.forward;</span><br><span class="line">        t = Time.deltaTime;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Update is called once per frame</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        MyCapsule.transform.position += vx;</span><br><span class="line">        MyCapsule.transform.position += vz;</span><br><span class="line">        vz += a * t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">```  </span><br><span class="line">- 使用Rigidbody  </span><br><span class="line">``` csharp</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Parabola3</span> : <span class="title">MonoBehaviour</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Rigidbody rigid;</span><br><span class="line">    <span class="keyword">private</span> Vector3 v0;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        rigid = <span class="keyword">this</span>.GetComponent&lt;Rigidbody&gt;();</span><br><span class="line">        v0 = <span class="keyword">new</span> Vector3(<span class="number">3</span>, <span class="number">10</span>, <span class="number">0</span>);</span><br><span class="line">        rigid.velocity = v0;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Update is called once per frame</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>具体实现见Solar.cs文件，以下部分是效果图和部分核心代码  </p>
+<ul>
+<li>材质<br>从网上下载各个行星对应的材质</li>
+<li><p>自转(以地球自转为例)</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Earth.Rotate(Vector3.up * <span class="number">30</span> * Time.deltaTime);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>公转(以地球公转为例)</p>
+<pre><code class="csharp">Earth.RotateAround(Sun.position, axis3, <span class="number">10</span> * Time.deltaTime);
+</code></pre>
+<p>月球绕地球转只需将绕点设成地球的position即可，有个地方要注意的是必须把月球放在地球的子对象中，否则会失去随地球绕太阳公转这一属性，显得有滞后性</p>
+</li>
+<li>轨迹<br>添加一个Trail Render的组件记录行星移动轨迹</li>
+<li>轨道不同面<br>调整各个行星的公转轴使其不朝着一个方向即可</li>
+<li>自发光<ul>
+<li>将太阳的材质设置成可发光类型</li>
+<li>在太阳的中心防止一个点光源</li>
+<li>修改背景以显示阴影效果</li>
+</ul>
+</li>
+<li>效果图<br><img src="Unity3d-hw2-太阳系-魔鬼与牧师v1/Solar1.jpg" alt="solar1"><br><img src="Unity3d-hw2-太阳系-魔鬼与牧师v1/Solar2.jpg" alt="solar2"></li>
+<li>对象结构<br><img src="Unity3d-hw2-太阳系-魔鬼与牧师v1/Solar3.jpg" alt="solar3"></li>
+</ul>
+</li>
+</ol>
+<h1 id="编程题"><a href="#编程题" class="headerlink" title="编程题"></a>编程题</h1><ul>
+<li>动作表 </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">动作</th>
+<th style="text-align:center">条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">上船</td>
+<td style="text-align:center">船靠所在岸且船没坐满</td>
+</tr>
+<tr>
+<td style="text-align:center">上岸</td>
+<td style="text-align:center">船靠岸</td>
+</tr>
+<tr>
+<td style="text-align:center">开船</td>
+<td style="text-align:center">船靠岸且船上有牧师或魔鬼</td>
+</tr>
+<tr>
+<td style="text-align:center">失败</td>
+<td style="text-align:center">船靠岸且一侧魔鬼多于牧师</td>
+</tr>
+<tr>
+<td style="text-align:center">获胜</td>
+<td style="text-align:center">牧师魔鬼全部在对岸</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>核心要求<ul>
+<li>MVC架构</li>
+<li>对象均由代码创建</li>
+<li>不使用Find等耦合语句</li>
+</ul>
+</li>
+<li>亮点<ul>
+<li>抛物线上下船</li>
+<li>UI</li>
+<li>计时</li>
+<li>计步</li>
+</ul>
+</li>
+<li>效果图<ul>
+<li>游戏界面<br><img src="Unity3d-hw2-太阳系-魔鬼与牧师v1/PriestAndDevil1.jpg" alt="PriestAndDevil1"></li>
+<li>胜利界面<br><img src="Unity3d-hw2-太阳系-魔鬼与牧师v1/PriestAndDevil2.jpg" alt="PriestAndDevil2"></li>
+<li>失败界面<br><img src="Unity3d-hw2-太阳系-魔鬼与牧师v1/PriestAndDevil3.jpg" alt="PriestAndDevil3"></li>
+</ul>
+</li>
+<li>本项目Github地址——<a href="https://github.com/gitgiter/unity3d-learning/tree/master/homework2" target="_blank" rel="noopener">传送门</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/" data-id="cjmddk5gr0003i0q2mt1oejnm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Unity3d_hw3_魔鬼与牧师v2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/04/03/Unity3d-hw1-概念/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Unity3d_hw1_概念</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity3d/">Unity3d</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中级实训/">中级实训</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Unity3d/" style="font-size: 20px;">Unity3d</a> <a href="/tags/中级实训/" style="font-size: 10px;">中级实训</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/09/22/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/24/Unity3d-hw10-联机冰球对战/">Unity-hw10-联机冰球对战</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/19/Unity3d-hw9-AR小游戏/">Unity3d-hw9-AR小游戏</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/06/Unity3d-hw8-背包系统/">Unity3d-hw8-背包系统</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/28/Unity3d-hw7-粒子系统/">Unity3d-hw7-粒子系统</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

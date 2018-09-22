@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Unity-hw10-联机冰球对战 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Unity3d之联机冰球对战 1. 游戏简介一个简单的联机冰球对战小游戏，双方可在自己的视角分别控制  2. 效果 静态图    动态图    3. 预备知识——Unity网络编程相关组件3.1 浅谈个人对多人游戏与网络的一些看法 网络游戏可以说是目前最吸引各路游戏开发者的一大热点，尤其是多人游戏。因此，大多数游戏引擎及基本的开发语言都配有基本的成套的网络编程相关的功能或接口，如果一门开发语言或是">
+<meta name="keywords" content="Unity3d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity-hw10-联机冰球对战">
+<meta property="og:url" content="http://yoursite.com/2018/06/24/Unity3d-hw10-联机冰球对战/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Unity3d之联机冰球对战 1. 游戏简介一个简单的联机冰球对战小游戏，双方可在自己的视角分别控制  2. 效果 静态图    动态图    3. 预备知识——Unity网络编程相关组件3.1 浅谈个人对多人游戏与网络的一些看法 网络游戏可以说是目前最吸引各路游戏开发者的一大热点，尤其是多人游戏。因此，大多数游戏引擎及基本的开发语言都配有基本的成套的网络编程相关的功能或接口，如果一门开发语言或是">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/06/24/Unity3d-hw10-联机冰球对战/Unity3d-hw10-联机冰球对战/scene.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/24/Unity3d-hw10-联机冰球对战/Unity3d-hw10-联机冰球对战/GIF.gif">
+<meta property="og:image" content="http://yoursite.com/2018/06/24/Unity3d-hw10-联机冰球对战/Unity3d-hw10-联机冰球对战/relation.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/24/Unity3d-hw10-联机冰球对战/Unity3d-hw10-联机冰球对战/spawn.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/24/Unity3d-hw10-联机冰球对战/Unity3d-hw10-联机冰球对战/desk_structure.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/24/Unity3d-hw10-联机冰球对战/Unity3d-hw10-联机冰球对战/desk.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/24/Unity3d-hw10-联机冰球对战/Unity3d-hw10-联机冰球对战/scene.png">
+<meta property="og:updated_time" content="2018-06-23T16:56:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unity-hw10-联机冰球对战">
+<meta name="twitter:description" content="Unity3d之联机冰球对战 1. 游戏简介一个简单的联机冰球对战小游戏，双方可在自己的视角分别控制  2. 效果 静态图    动态图    3. 预备知识——Unity网络编程相关组件3.1 浅谈个人对多人游戏与网络的一些看法 网络游戏可以说是目前最吸引各路游戏开发者的一大热点，尤其是多人游戏。因此，大多数游戏引擎及基本的开发语言都配有基本的成套的网络编程相关的功能或接口，如果一门开发语言或是">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/24/Unity3d-hw10-联机冰球对战/Unity3d-hw10-联机冰球对战/scene.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Unity3d-hw10-联机冰球对战" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/24/Unity3d-hw10-联机冰球对战/" class="article-date">
+  <time datetime="2018-06-23T16:34:31.000Z" itemprop="datePublished">2018-06-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Unity-hw10-联机冰球对战
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Unity3d之联机冰球对战"><a href="#Unity3d之联机冰球对战" class="headerlink" title="Unity3d之联机冰球对战"></a>Unity3d之联机冰球对战</h1><hr>
+<h2 id="1-游戏简介"><a href="#1-游戏简介" class="headerlink" title="1. 游戏简介"></a>1. 游戏简介</h2><p>一个简单的联机冰球对战小游戏，双方可在自己的视角分别控制</p>
+<hr>
+<h2 id="2-效果"><a href="#2-效果" class="headerlink" title="2. 效果"></a>2. 效果</h2><ul>
+<li>静态图</li>
+</ul>
+<p><img src="Unity3d-hw10-联机冰球对战/scene.png" alt=""></p>
+<ul>
+<li>动态图</li>
+</ul>
+<p><img src="Unity3d-hw10-联机冰球对战/GIF.gif" alt=""></p>
+<hr>
+<h2 id="3-预备知识——Unity网络编程相关组件"><a href="#3-预备知识——Unity网络编程相关组件" class="headerlink" title="3. 预备知识——Unity网络编程相关组件"></a>3. 预备知识——Unity网络编程相关组件</h2><h3 id="3-1-浅谈个人对多人游戏与网络的一些看法"><a href="#3-1-浅谈个人对多人游戏与网络的一些看法" class="headerlink" title="3.1 浅谈个人对多人游戏与网络的一些看法"></a>3.1 浅谈个人对多人游戏与网络的一些看法</h3><ul>
+<li>网络游戏可以说是目前最吸引各路游戏开发者的一大热点，尤其是多人游戏。因此，大多数游戏引擎及基本的开发语言都配有基本的成套的网络编程相关的功能或接口，如果一门开发语言或是游戏引擎不支持网络编程，那这个语言或是这类IDE肯定是走不远的。网络编程的运用在unity现在的游戏里面是必须的。完整的游戏都需要提供网络功能。</li>
+<li>多人游戏与网络，相比单机的游戏，实现起来要复杂许多，但是可以实现更加丰富的功能。原理其实是很简单的，其实就是一个游戏的多个实例运行在不同的机器上，这些机器既可以是通过局域网互相连通，也可以是通过更广的网络连向世界各地。因此，要管理好这么多的实例，毫无疑问网络编程比较棘手的一个地方就是多个游戏实例之间的同步和通信，而一个实例里面就可能有成千上百的游戏对象，多人游戏更是可能涉及到上前上百万的游戏实例，这正是多人游戏与网络要解决的问题。</li>
+<li>unity里面比较常用的是unet，更底层、高端的还有像planton、socket之类，相较而言，unet就显得更加轻便和容易使用，是一个轻量级的好工具，也由于unet的轻便特性，更加适合开发局域网内的联机游戏，虽然在做高级开发时可能会遇到一些瓶颈（Unity自带的Networkview对于广域网就很难适应，这里就要转向socket一类更加底层的实现），但作为初学者学习网络编程是再好不过的选择了。</li>
+</ul>
+<h3 id="3-2-一些重要概念（引自-这里-）"><a href="#3-2-一些重要概念（引自-这里-）" class="headerlink" title="3.2 一些重要概念（引自 这里 ）"></a>3.2 一些重要概念（引自 <a href="https://pmlpml.github.io/unity3d-learning/13-Multiplayer-and-Networking" target="_blank" rel="noopener">这里</a> ）</h3><ul>
+<li>主机与服务器<ul>
+<li>HOST：主机，运行服务器程序的机器</li>
+<li>Server：服务器，游戏程序实例。它连接所有客户端，并管理所有客户端共享的游戏对象及部分需要同步的状态（属性）</li>
+<li>Client：客户端，游戏程序实例。玩家游戏主机运行的程序</li>
+<li>重要的关系图<br><img src="Unity3d-hw10-联机冰球对战/relation.png" alt=""></li>
+</ul>
+</li>
+<li>游戏对象<ul>
+<li><strong>网络游戏对象（Networked GameObjects）</strong> ：在服务器上注册，由孵化（也叫派生）系统（Spawning System）管理的对象，它必须包含 NetworkIdentity 组件，并用 NetworkBehaviour 脚本编程。</li>
+<li><strong>玩家游戏对象（player GameObjects）</strong> ：是特殊的网络游戏对象，指一个 client 加入网络游戏，服务器创建并孵化到客户端，由玩家控制的游戏对象。客户端代码可以控制它们的状态，并自动有服务器同步到其他玩家的客户端。例如：联网赛车游戏，每个玩家都有属于自己的赛车。</li>
+<li>关系图<br><img src="Unity3d-hw10-联机冰球对战/spawn.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-unet基本组件"><a href="#3-3-unet基本组件" class="headerlink" title="3.3 unet基本组件"></a>3.3 unet基本组件</h3><ul>
+<li><p>NetworkManager（核心）。作为多玩家游戏的核心控制组件。通常挂载在一个空的物体，或者一个方便的管理物体上。</p>
+<ul>
+<li>Spawn Info属性集（重要）。最常用的一个组件属性，同时又由以下属性构成：<ul>
+<li>PlayerPrefab。客户端加入时自动生成的预制对象，可以预先定义好。</li>
+<li>AutoCreatePlayer。勾选表示自动生成上面定义好的PlayerPrefab。</li>
+<li>PlayerSpawnMethod。指定具体的生成方法：<ul>
+<li>Random。随机生成。</li>
+<li>RoundRobin。轮询生成，适合用与对战游戏，在本次项目就采用这种生成方式，可以在指定的地点轮流生成（这里就要用到后面的NetworkStartPosition组件）</li>
+</ul>
+</li>
+<li>RegisteredSpawnablePrefabs。注册接下来需要派生的预制对象，比如一些枪战游戏，子弹就需要在各个客户端同步，需要派生到各个客户端。在本次项目中则是冰球，也需要由服务器派生到客户端。这是一个预制对象的数组，数组中的游戏对象可以在网络中同步生成。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>NetworkManagerHUD。一个基础的网络连接UI面板，适合用于简单的应用界面或者最初的开发调试界面（一般后期会被替换成更美观的UI）。所起的作用主要提供现成接口帮助实现前期的开发任务。</p>
+</li>
+<li><p>NetworkIdentity。将一个预制对象标识为网络中的对象及扮演的角色。</p>
+<ul>
+<li>ServerOnly。勾选表示该对象只在服务器端生成和存在。</li>
+<li>LocalPlayerAuthority。勾选表示该对象可以在各个客户端中生成和存在，并由拥有它的客户端控制的，在对应客户端具有特定的权限，可以通过isLocalPlayer来识别。</li>
+</ul>
+</li>
+<li><p>NetworkTransform。用于同步挂载了该组件的派生对象。</p>
+<ul>
+<li>NetworkSendRate（seconds）。同步的频率。0代表在生成是同步一次</li>
+<li>TransformSyncMode。指定要被同步的组件。一般默认第二个，具有刚体数属性的预制会自动默认为后两个（根据刚体组件是2d还是3d决定）<ul>
+<li>SyncNone。不同步其他组件</li>
+<li>SyncTransform。同步Transform组件。</li>
+<li>SyncRigidbody2D。同步Rigidbody2D组件。</li>
+<li>SyncRigidbody3D。同步Rigidbody3D组件。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>NetworkStartPosition（很有用，也是很必要的一个组件）。指定预制对象的初始位置（可以不同）。因为实际情况往往就很需要多个客户端的玩家对象初始在不同位置，如本项目的两个玩家必须在两对面，不用这个组件就很麻烦，会导致玩家对象都生成在同一个位置。</p>
+</li>
+<li><p>基本标识</p>
+<ul>
+<li>游戏对象判断<ul>
+<li>IsClient。如果是正在运行的客户端对象，且是从服务器派生的，则为true。</li>
+<li>IsLocalPlayer。如果是当前客户端的本地游戏对象（本地玩家——自己），则为true。</li>
+<li>IsServer。如果这个对象是激活状态，且在一个被激活的服务器上，则为true。</li>
+</ul>
+</li>
+<li>函数、变量判断<ul>
+<li>[Command]。用来标识只能在服务端被调用的方法，这些方法名都必须以Cmd开头，且不能是静态方法，否则会导致编译错误。常用于比如联网发射子弹，状态同步只能通过服务器来同步，再派生到各个客户端，因此发射子弹需要由客户端调用服务端上的发射方法，即被[Command]标记的方法。如果该方法用[Command]标记而是任由客户端自己调用的话，在各个客户端之间子弹就是各飞各的，一个客户端射出的子弹不会被另外一个客户端感知。</li>
+<li>[ClientRpc]。用来表示只能在客户端被调用的方法，服务器调用该方法时，也会在客户端调用。被标识的方法必须以Rpc开头。</li>
+<li>[SyncVar]。用来标识需要同步的变量，可以将被标识的变量同步到所有的客户端和服务器端。作用也是非常大，再拿对战游戏来说，需要同步各个客户端之间的具有不同值的血条，这时就必须将这些记录血量的变量标识为同步变量，否则各个客户端上的变量都是互不相关。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>华丽的分割线——说了那么多，终于可以开始讲实现步骤了，多图预警。步骤有些繁琐（如仿作切勿遗漏），毕竟想实现这个游戏也是我一时脑洞兴起。</p>
+<hr>
+<h2 id="4-实现步骤"><a href="#4-实现步骤" class="headerlink" title="4. 实现步骤"></a>4. 实现步骤</h2><h3 id="4-1-网络管理对象设置"><a href="#4-1-网络管理对象设置" class="headerlink" title="4.1 网络管理对象设置"></a>4.1 网络管理对象设置</h3><p>经过以下几步，应该就有了一个空的游戏管理对象，包含了基本的网络控制器和用户控制界面。这些组件的所以属性都还是默认设置。</p>
+<ul>
+<li>创建一个空对象。</li>
+<li>为其添加一个NetworkManager组件。</li>
+<li>为其添加一个NetworkManagerHUD组件。</li>
+</ul>
+<h3 id="4-2-设置玩家对象预制"><a href="#4-2-设置玩家对象预制" class="headerlink" title="4.2 设置玩家对象预制"></a>4.2 设置玩家对象预制</h3><p>经过以下几步，应该就有了一个具有基本需要的网络玩家对象预制，其他代码脚本之后再添加。</p>
+<ul>
+<li>创建一个圆柱体。</li>
+<li>创建一个球体，作为圆柱体的子对象。</li>
+<li>适当调整两者参数，使得两者组合看起来像一个冰球对战的手柄（就是手抓的那个，具体名字不知道叫什么）</li>
+<li>添加NetworkIdentity组件。由前面的预备知识可知，我们需要在客户端和服务端中对玩家对象进行区分。</li>
+<li>添加NetwTransform组件。因为玩家对象的移动需要在多个客户端之间同步。</li>
+<li>添加Rigidbody刚体组件。点开Constraints属性集，对玩家预制进行一些约束。我们的玩家对象是需要紧贴在游戏台（桌面）上移动的，因此我们冻结其与等下要制作的游戏台（桌面）所在平面垂直的轴，我的桌面是平放的，因此我冻结了它的y轴，也就是防止它在碰撞过程中飞起来。同样，还要防止它在碰撞中产生旋转（假设我们的握力无穷大，现实中我们玩这个也是不会让手柄转起来的），所以干脆把旋转的三个轴都冻结了。综上，冻结了位置的y轴，旋转的所有轴。</li>
+<li>拖入project面板做成预制。</li>
+</ul>
+<h3 id="4-3-玩家预制的移动"><a href="#4-3-玩家预制的移动" class="headerlink" title="4.3 玩家预制的移动"></a>4.3 玩家预制的移动</h3><p>添加一个PlayerMove脚本，这里我直接把完整代码贴出来了，注释写得比较详细，结合前面的预备知识看。这个脚本我实现的功能主要是：</p>
+<ul>
+<li>对玩家对象移动的控制。这里我实现了键盘移动和鼠标拖拽的功能，大量的代码其实用来判断边界条件了，主要是为了防止玩家对象移出界。注意这里不再是使用MonoBehaviour，而是NetworkBehaviour，需要引入UnityEngine.Networking;命名空间。</li>
+<li>识别本地玩家对象。我们需要对玩家对象进行区分，这里通过前面提到的IsLocalPlayer来区分本地玩家对象和非本地玩家对象——自己和对手，<strong>不区分的话会导致两个玩家对象同时被操控</strong>。我用了红色来标记本地玩家对象，方便辨认。</li>
+<li>冰球的创建（这个在后面会详细说，这里简要提一下）。OnStartLocalPlayer是一个在本地玩家对象创建的时候会被调用的方法，在这个方法里面我生成了唯一（看起来是一个，但是服务器在不同客户端各派生了一个）的冰球，防止重复创建。</li>
+<li><strong>摄像机角度的问题</strong>。只要是对战游戏，就会涉及到用户角度的问题，如何让两个玩家看起来都是自己控制的对象靠近自己这边。这个问题困扰了我很久，由于摄像机不是玩家对象，没法像初始化玩家对象位置时用NetworkTransform来指定不同的初始位置。<strong>最后，我想到了用两个摄像机，分别预先留在场景中，预先调好针对两个玩家的角度，然后在本地玩家创建时，将对方的摄像机灭活，这样就保证了每个玩家端都只有一个摄像机，且都是自己的角度。</strong></li>
+<li><strong>由摄像机角度问题带来的移动问题</strong>。因为调整针对不同玩家的摄像机的时候，有个摄像机是翻转过来的，因此对于这个摄像机所活跃在的客户端，对玩家的运动需要反过来控制，也即是对x和z取个反。<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> UnityEngine.Networking;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">PlayerMove</span> : <span class="title">NetworkBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> GameObject ballPrefab;</span><br><span class="line">    <span class="keyword">private</span> Vector3 screenPoint;</span><br><span class="line">    <span class="keyword">private</span> Vector3 offset;</span><br><span class="line">    <span class="keyword">private</span> Vector3 scanPos;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        scanPos = transform.position;</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// Update is called once per frame</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Update</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!isLocalPlayer)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> x = Input.GetAxis(<span class="string">"Horizontal"</span>) * <span class="number">0.1</span>f;</span><br><span class="line">        <span class="keyword">var</span> z = Input.GetAxis(<span class="string">"Vertical"</span>) * <span class="number">0.1</span>f;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//判断是哪边的玩家</span></span><br><span class="line">        <span class="keyword">if</span> (transform.position.z &lt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//向前不能越过中线，向后不能超出边界</span></span><br><span class="line">            <span class="keyword">if</span> (transform.position.z + z &lt; <span class="number">0</span> &amp;&amp; transform.position.z + z &gt; <span class="number">-6</span>)</span><br><span class="line">            &#123;                </span><br><span class="line">                transform.Translate(<span class="number">0</span>, <span class="number">0</span>, z);</span><br><span class="line">            &#125;      </span><br><span class="line">            <span class="comment">//向左向右都不能超出边界</span></span><br><span class="line">            <span class="keyword">if</span> (transform.position.x + x &lt; <span class="number">3.5</span> &amp;&amp; transform.position.x + x &gt; <span class="number">-3.5</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                transform.Translate(x, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//向前不能越过中线，向后不能超出边界</span></span><br><span class="line">            <span class="keyword">if</span> (transform.position.z - z &gt; <span class="number">0</span> &amp;&amp; transform.position.z - z &lt; <span class="number">6</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                transform.Translate(<span class="number">0</span>, <span class="number">0</span>, -z);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//向左向右都不能超出边界</span></span><br><span class="line">            <span class="keyword">if</span> (transform.position.x - x &lt; <span class="number">3.5</span> &amp;&amp; transform.position.x - x &gt; <span class="number">-3.5</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                transform.Translate(-x, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">OnMouseDown</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        screenPoint = Camera.main.WorldToScreenPoint(scanPos);</span><br><span class="line">        offset = scanPos - Camera.main.ScreenToWorldPoint(<span class="keyword">new</span> Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">OnMouseDrag</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!isLocalPlayer)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        </span><br><span class="line">        Vector3 curScreenPoint = <span class="keyword">new</span> Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);</span><br><span class="line">        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> temp = transform.position;</span><br><span class="line">        <span class="comment">//判断是哪边的玩家</span></span><br><span class="line">        <span class="keyword">if</span> (transform.position.z &lt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//向前不能越过中线，向后不能超出边界</span></span><br><span class="line">            <span class="keyword">if</span> (curPosition.z &lt; <span class="number">-0.5</span> &amp;&amp; curPosition.z &gt; <span class="number">-6</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                temp.z = curPosition.z;</span><br><span class="line">                transform.position = temp;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//向左向右都不能超出边界</span></span><br><span class="line">            <span class="keyword">if</span> (curPosition.x &lt; <span class="number">3.5</span> &amp;&amp; curPosition.x &gt; <span class="number">-3.5</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                temp.x = curPosition.x;</span><br><span class="line">                transform.position = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//向前不能越过中线，向后不能超出边界</span></span><br><span class="line">            <span class="keyword">if</span> (curPosition.z &gt; <span class="number">0.5</span> &amp;&amp; curPosition.z &lt; <span class="number">6</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                temp.z = -curPosition.z;</span><br><span class="line">                transform.position = temp;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//向左向右都不能超出边界</span></span><br><span class="line">            <span class="keyword">if</span> (curPosition.x &lt; <span class="number">3.5</span> &amp;&amp; curPosition.x &gt; <span class="number">-3.5</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                temp.x = -curPosition.x;</span><br><span class="line">                transform.position = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        Debug.Log(<span class="string">"curPosition"</span> + curPosition);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnStartLocalPlayer</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//创建冰球，且唯一</span></span><br><span class="line">        <span class="keyword">if</span> (GameObject.Find(<span class="string">"Ball(Clone)"</span>) == <span class="literal">null</span>)</span><br><span class="line">            CmdStart();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//取消对方的摄像机</span></span><br><span class="line">        <span class="keyword">if</span> (transform.position.z &lt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            GameObject.Find(<span class="string">"Camera"</span>).SetActive(<span class="literal">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//设置己方颜色</span></span><br><span class="line">        MeshRenderer[] temp = GetComponentsInChildren&lt;MeshRenderer&gt;();</span><br><span class="line">        <span class="keyword">foreach</span> (MeshRenderer m <span class="keyword">in</span> temp)</span><br><span class="line">        &#123;</span><br><span class="line">            m.material.color = Color.red;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    </span><br><span class="line"></span><br><span class="line">    [<span class="meta">Command</span>]</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">CmdStart</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// This [Command] code is run on the server!</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// create the bullet object locally</span></span><br><span class="line">        <span class="keyword">var</span> ball = (GameObject)Instantiate(</span><br><span class="line">             ballPrefab,</span><br><span class="line">             <span class="keyword">new</span> Vector3(<span class="number">0</span>, <span class="number">0.002</span>f, <span class="number">0</span>),</span><br><span class="line">             Quaternion.identity);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// spawn the bullet on the clients</span></span><br><span class="line">        NetworkServer.Spawn(ball);        </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="4-4-注册联网玩家对象"><a href="#4-4-注册联网玩家对象" class="headerlink" title="4.4 注册联网玩家对象"></a>4.4 注册联网玩家对象</h3><p>到上一步为止，玩家对象应该算是大功告成了。这里就要将玩家对象注册到网络管理器中（也就是第一步做的那个空对象）。</p>
+<ul>
+<li>找到最开始创建的那个空对象，并展开NetworkManager组件。</li>
+<li>找到Spawn Info属性集（默认被折叠），总之——展开。</li>
+<li>找到 “Player Prefab” 插槽，拖入我们前面做好的玩家对象预制。</li>
+<li>保存当前场景为scene（待会Build的时候需要添加现有场景）。</li>
+</ul>
+<h3 id="4-5-玩家对象初始化不同位置"><a href="#4-5-玩家对象初始化不同位置" class="headerlink" title="4.5 玩家对象初始化不同位置"></a>4.5 玩家对象初始化不同位置</h3><p>在前面的基础上，如果只用代码无论如何调节都会导致两个玩家对象初始化在同一个位置。玩家应该在不同的地点。NetworkStartPosition 组件可用于执行此操作。</p>
+<ul>
+<li>创建一个新的空对象 Pos1</li>
+<li>添加 NetworkStartPosition 组件</li>
+<li>将Pos1对象设置成其中一个玩家要被初始化的位置</li>
+<li>创建第二个空对象 Pos2</li>
+<li>添加 NetworkStartPosition 组件</li>
+<li>将Pos1对象设置成另一个玩家要被初始化的位置</li>
+<li>找到 NetworkManager 并选择它。</li>
+<li>打开 “Spawn Info” 折页</li>
+<li>将 Player Spawn Method 更改为 Round Robin。前面有提到这是轮询生成玩家对象。</li>
+</ul>
+<h3 id="4-6-冰球对象预制"><a href="#4-6-冰球对象预制" class="headerlink" title="4.6 冰球对象预制"></a>4.6 冰球对象预制</h3><p>冰球其实就是一个普通的圆柱体，但是要加一些关键的组件和脚本，见步骤。</p>
+<ul>
+<li>创建一个圆柱体，调参成所要的样子，比玩家对象直径略小即可。</li>
+<li>添加NetworkIdentity组件。由前面的预备知识可知，我们需要在客户端和服务端中对玩家对象进行区分。</li>
+<li>添加NetwTransform组件。因为玩家对象的移动需要在多个客户端之间同步。</li>
+<li>添加Rigidbody刚体组件。点开Constraints属性集，对玩家预制进行一些约束。我们的玩家对象是需要紧贴在游戏台（桌面）上移动的，因此我们冻结其与等下要制作的游戏台（桌面）所在平面垂直的轴，我的桌面是平放的，因此我冻结了它的y轴，也就是防止它在碰撞过程中飞起来。同样，还要防止它在碰撞中产生旋转（假设我们的握力无穷大，现实中我们玩这个也是不会让手柄转起来的），所以干脆把旋转的三个轴都冻结了。综上，冻结了位置的y轴，旋转的所有轴。</li>
+<li>拖入project面板做成预制。</li>
+<li>在PlayerMove脚本组件上，找到 ballPrefab 插槽</li>
+<li>将冰球预制件拖入 ballPrefab 插槽</li>
+</ul>
+<h3 id="4-7-冰球移动及碰撞脚本"><a href="#4-7-冰球移动及碰撞脚本" class="headerlink" title="4.7 冰球移动及碰撞脚本"></a>4.7 冰球移动及碰撞脚本</h3><p>这部分实现冰球的主要代码。主要包括基本的移动边界判断，以及碰撞的检测和响应。代码注释挺详细，就不多做解释了。<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Ball</span> : <span class="title">MonoBehaviour</span> &#123;</span><br><span class="line">	</span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Start</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// Update is called once per frame</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Update</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> speed = GetComponent&lt;Rigidbody&gt;().velocity;</span><br><span class="line">        <span class="comment">//Debug.Log("speed: " + speed);        </span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//如果没有碰到上下边界，操作待扩展</span></span><br><span class="line">        <span class="keyword">if</span> (transform.position.z &gt; <span class="number">-6</span> &amp;&amp; transform.position.z &lt; <span class="number">6</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//transform.Translate(new Vector3(0, 0, speed.z));            </span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//碰到上下边界</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//碰到门，更改比分，重置球位置</span></span><br><span class="line">            <span class="keyword">if</span> (transform.position.x &gt; <span class="number">-1.5</span> &amp;&amp; transform.position.x &lt; <span class="number">1.5</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">var</span> score = GetComponent&lt;Score&gt;();</span><br><span class="line">                Debug.Log(score);</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span> (transform.position.z &gt; <span class="number">0</span>)</span><br><span class="line">                    score.HostWin();</span><br><span class="line">                <span class="keyword">else</span> score.ClientWin();</span><br><span class="line"></span><br><span class="line">                transform.position = Vector3.zero;</span><br><span class="line">                GetComponent&lt;Rigidbody&gt;().velocity = Vector3.zero;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//z轴速度反向</span></span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                speed.z = -speed.z;</span><br><span class="line">                GetComponent&lt;Rigidbody&gt;().velocity = speed;</span><br><span class="line">                Debug.Log(<span class="string">"up down bound speed: "</span> + speed);</span><br><span class="line">            &#125;            </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//如果没有碰到左右边界，操作待扩展</span></span><br><span class="line">        <span class="keyword">if</span> (transform.position.x &gt; <span class="number">-3.5</span> &amp;&amp; transform.position.x &lt; <span class="number">3.5</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//transform.Translate(new Vector3(speed.x, 0, 0));</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//碰到左右边界，x轴速度反向</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            speed.x = -speed.x;</span><br><span class="line">            GetComponent&lt;Rigidbody&gt;().velocity = speed;</span><br><span class="line">            Debug.Log(<span class="string">"left right bound speed:"</span> + speed);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//速度衰减</span></span><br><span class="line">        <span class="comment">//speed *= 0.999f;</span></span><br><span class="line">        <span class="comment">//GetComponent&lt;Rigidbody&gt;().velocity = speed;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">OnCollisionEnter</span>(<span class="params">Collision collision</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> hit = collision.gameObject;</span><br><span class="line">        <span class="keyword">var</span> hitPlayer = hit.GetComponent&lt;PlayerMove&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (hitPlayer != <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> ballRigid = GetComponent&lt;Rigidbody&gt;();</span><br><span class="line">            Debug.Log(<span class="string">"velocity: "</span> + ballRigid.velocity);</span><br><span class="line">            <span class="comment">//适当加速</span></span><br><span class="line">            <span class="comment">//ballRigid.velocity *= 2;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-8-注册联网冰球对象"><a href="#4-8-注册联网冰球对象" class="headerlink" title="4.8 注册联网冰球对象"></a>4.8 注册联网冰球对象</h3><p>这一步是要将冰球的预制声明为网络预制对象，以便服务器可以派生创建。</p>
+<ul>
+<li>选择 NetworkManager 并打开 “Spawn Info” 折叠</li>
+<li>用 Add 按钮添加一个新的 spawn 预制件</li>
+<li>将 Ball 预制件拖入新的 spawn 预制插槽</li>
+</ul>
+<h3 id="4-9-自己手动制作场景"><a href="#4-9-自己手动制作场景" class="headerlink" title="4.9 自己手动制作场景"></a>4.9 自己手动制作场景</h3><p>前面说了这么多场景，不如先来做一下场景。这个场景做法因人而异，因为场景也比较简单，所以自己手动搭了一个，当然调参数还是非常繁琐的，要耐心点。这里我就说一下我的场景的架构。</p>
+<ul>
+<li>架构一览图</li>
+</ul>
+<p><img src="Unity3d-hw10-联机冰球对战/desk_structure.png" alt=""></p>
+<ul>
+<li>Plane就是桌面，没改名字，和Walls并列。</li>
+<li>Walls是旁边的墙（桌沿）的组合，为空对象。<ul>
+<li>Left。左边的墙，Cube。</li>
+<li>Right。右边的墙，Cube。</li>
+<li>Line。中间的分界线（把高度设成很小很小，并且去掉Collider，假装是二维），Cube，蓝色用材质加。</li>
+<li>Bottom。下边界（下桌沿）对象的组合，空对象。下边界分为三部分组成。<ul>
+<li>Gate。球门，中间的红色部分，Cube，颜色用材质加。</li>
+<li>Left。球门左边部分，Cube。</li>
+<li>Right。球门右边部分，Cube。</li>
+</ul>
+</li>
+<li>Top。上边界（上桌沿）对象的组合，空对象。<ul>
+<li>Gate。球门，中间的红色部分，Cube，颜色用材质加。</li>
+<li>Left。球门左边部分，Cube。</li>
+<li>Right。球门右边部分，Cube。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>参数都是精确计算过的，全都是刚好无缝衔接，这里就不一给出了。</li>
+<li>给Plane添加Rigidbody刚体组件。并勾选Is Kinematic，去除运动学属性，以撑住其他物体，防止其他物体的重力导致下坠。</li>
+<li>给Walls添加Rigidbody刚体组件。墙是需要碰撞的，但是墙不能移动，所以在Constraints里冻结所有位置轴和旋转轴。</li>
+<li>近景效果图</li>
+</ul>
+<p><img src="Unity3d-hw10-联机冰球对战/desk.png" alt=""></p>
+<h3 id="4-10-玩家分数同步"><a href="#4-10-玩家分数同步" class="headerlink" title="4.10 玩家分数同步"></a>4.10 玩家分数同步</h3><p>这部分负责完成玩家分数状态的同步和相关的UI界面。</p>
+<ul>
+<li>需要同步的变量。与对战胜负有关的变量是分数，这个分数既可以在场景中单独维护，由于这里有两个玩家，因此需要有两个分数变量，另外记录游戏状态也需要一个变量，这三个值都需要在网络中同步。这里我是挂载在冰球这个对象上，其实挂载一个空对象或者其他方便管理的对象都是可以的。</li>
+<li>分数和游戏状态同步。这里要使用到的就是 [SyncVar] 标识，把一个变量标识为同步变量，也可以认为就是所有客户端共享的变量，因为这些被标记的变量都只能在服务端上修改，而所有客户端都可以通过访问服务端来获取变量。</li>
+<li><p>服务端修改权限。这里用 IsServer 来限制权限，只允许服务端修改变量值。</p>
+</li>
+<li><p>Score。以分数变量为主的共享数据类，包括一些基本的get/set方法以及对共享变量的修改方法。</p>
+</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> UnityEngine.Networking;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Score</span> : <span class="title">NetworkBehaviour</span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Use this for initialization</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Start</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// Update is called once per frame</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Update</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    [<span class="meta">SyncVar</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> score1 = <span class="number">0</span>;</span><br><span class="line">    [<span class="meta">SyncVar</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> score2 = <span class="number">0</span>;</span><br><span class="line">    [<span class="meta">SyncVar</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> game = <span class="number">0</span>; <span class="comment">// status: 0=&gt;playing; 1=&gt;player1 win; 2=&gt;player2 win;    </span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">HostWin</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//保证在服务端上修改共享变量</span></span><br><span class="line">        <span class="keyword">if</span> (!isServer)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        score1++;</span><br><span class="line">        game = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ClientWin</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//保证在服务端上修改共享变量</span></span><br><span class="line">        <span class="keyword">if</span> (!isServer)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        score2++;</span><br><span class="line">        game = <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">GetHostScore</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> score1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">GetClientScore</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> score2;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetGameStatus</span>(<span class="params"><span class="keyword">int</span> status</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        game = status;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">GetGameStatus</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> game;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>UserGUI。获取同步变量的值并以一定的UI界面呈现。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UserGUI</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    GUIStyle LabelStyle1;</span><br><span class="line">    GUIStyle LabelStyle2;</span><br><span class="line">    GUIStyle ButtonStyle;</span><br><span class="line">    Score score;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Awake</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        score = GetComponent&lt;Score&gt;();</span><br><span class="line">        Debug.Log(score);        </span><br><span class="line"></span><br><span class="line">        LabelStyle1 = <span class="keyword">new</span> GUIStyle();</span><br><span class="line">        LabelStyle1.fontSize = <span class="number">20</span>;</span><br><span class="line">        LabelStyle1.alignment = TextAnchor.MiddleCenter;</span><br><span class="line"></span><br><span class="line">        LabelStyle2 = <span class="keyword">new</span> GUIStyle();</span><br><span class="line">        LabelStyle2.fontSize = <span class="number">30</span>;</span><br><span class="line">        LabelStyle2.alignment = TextAnchor.MiddleCenter;</span><br><span class="line"></span><br><span class="line">        ButtonStyle = <span class="keyword">new</span> GUIStyle(<span class="string">"Button"</span>);</span><br><span class="line">        ButtonStyle.fontSize = <span class="number">20</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Continue</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        score.SetGameStatus(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">OnGUI</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (score != <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//playing</span></span><br><span class="line">            GUI.Label(<span class="keyword">new</span> Rect(Screen.width / <span class="number">2</span> - <span class="number">50</span>, Screen.height / <span class="number">2</span> - <span class="number">280</span>, <span class="number">100</span>, <span class="number">50</span>), <span class="string">"Host: "</span> + score.GetHostScore(), LabelStyle1);</span><br><span class="line">            GUI.Label(<span class="keyword">new</span> Rect(Screen.width / <span class="number">2</span> - <span class="number">50</span>, Screen.height / <span class="number">2</span> - <span class="number">250</span>, <span class="number">100</span>, <span class="number">50</span>), <span class="string">"Client: "</span> + score.GetClientScore(), LabelStyle1);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (score.GetGameStatus() == <span class="number">1</span>) <span class="comment">// host win</span></span><br><span class="line">            &#123;</span><br><span class="line">                GUI.Label(<span class="keyword">new</span> Rect(Screen.width / <span class="number">2</span> - <span class="number">50</span>, Screen.height / <span class="number">2</span> - <span class="number">85</span>, <span class="number">100</span>, <span class="number">50</span>), <span class="string">"Host win!"</span>, LabelStyle2);</span><br><span class="line">                <span class="keyword">if</span> (GUI.Button(<span class="keyword">new</span> Rect(Screen.width / <span class="number">2</span> - <span class="number">70</span>, Screen.height / <span class="number">2</span>, <span class="number">140</span>, <span class="number">70</span>), <span class="string">"Continue"</span>, ButtonStyle))</span><br><span class="line">                &#123;</span><br><span class="line">                    Continue();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (score.GetGameStatus() == <span class="number">2</span>) <span class="comment">// client win</span></span><br><span class="line">            &#123;</span><br><span class="line">                GUI.Label(<span class="keyword">new</span> Rect(Screen.width / <span class="number">2</span> - <span class="number">50</span>, Screen.height / <span class="number">2</span> - <span class="number">85</span>, <span class="number">100</span>, <span class="number">50</span>), <span class="string">"Client win!"</span>, LabelStyle2);</span><br><span class="line">                <span class="keyword">if</span> (GUI.Button(<span class="keyword">new</span> Rect(Screen.width / <span class="number">2</span> - <span class="number">70</span>, Screen.height / <span class="number">2</span>, <span class="number">140</span>, <span class="number">70</span>), <span class="string">"Continue"</span>, ButtonStyle))</span><br><span class="line">                &#123;</span><br><span class="line">                    Continue();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-11-运行！"><a href="#4-11-运行！" class="headerlink" title="4.11 运行！"></a>4.11 运行！</h3><p>完成前面的所有步骤后，便是创建客户端了，实现客户端和服务端联机。</p>
+<ul>
+<li>使用菜单 File -&gt; Build Settings 打开 Build Settings 对话框。</li>
+<li>按下 Add Open Scenes 按钮，将当前场景添加到版本</li>
+<li>按 Build and Run 按钮创建构建。保存可执行文件为IceBall。</li>
+<li>编译后的独立程序将启动，并显示分辨率选择对话框。</li>
+<li>选择 windowed 复选框和较低的分辨率（为保持良好的流畅性），如800x600。</li>
+<li>运行并连接（两个应用只要是一个当主机，一个当客户机即可）。<ul>
+<li>点击Play按钮，程序将启动并显示 NetworkManager HUD 的UI界面。</li>
+<li>从 NetworkManagerHUD 用户界面中，选择 LAN HOSTED 作为局域网主机启动。</li>
+<li>切换回编辑器，点击运行按钮进入运行模式。</li>
+<li>从 NetworkManagerHUD 用户界面中，选择 LAN Client 作为客户端连接到主机</li>
+</ul>
+</li>
+<li>这时会发现就出现最开始的界面了，接下来就可以尽情地玩耍了。</li>
+</ul>
+<p><img src="Unity3d-hw10-联机冰球对战/scene.png" alt=""></p>
+<hr>
+<h2 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h2><p>在学了将近一个学期的3d游戏编程后，终于来到了令人激动的网络编程模块。通过本次实战，对unity中的网络编程乃至对整个网络游戏的开发流程有了一个相对清晰了思路，对网络编程的原理和机制也有了更深的了解。虽然可能实现起来一开始会摸不着头脑，但随着对网络编程由浅入深的了解，就能慢慢体会到网络编程的乐趣所在了，而且学会网络编程这一套思想，不止是unity开发，像是web，java，cocos的开发都是通吃的。</p>
+<hr>
+<h2 id="6-各种链接"><a href="#6-各种链接" class="headerlink" title="6. 各种链接"></a>6. 各种链接</h2><ul>
+<li>b站视频地址</li>
+</ul>
+<p><a href="https://www.bilibili.com/video/av25456530/" target="_blank" rel="noopener">https://www.bilibili.com/video/av25456530/</a></p>
+<ul>
+<li>Github地址  </li>
+</ul>
+<p><a href="https://github.com/gitgiter/unity3d-learning/tree/master/homework10" target="_blank" rel="noopener">https://github.com/gitgiter/unity3d-learning/tree/master/homework10</a></p>
+<ul>
+<li>CSDN博客地址</li>
+</ul>
+<p><a href="https://blog.csdn.net/Wonderful_sky/article/details/80788546" target="_blank" rel="noopener">https://blog.csdn.net/Wonderful_sky/article/details/80788546</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/06/24/Unity3d-hw10-联机冰球对战/" data-id="cjmddk5gn0001i0q2wh0g4znd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/09/22/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/19/Unity3d-hw9-AR小游戏/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Unity3d-hw9-AR小游戏</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity3d/">Unity3d</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中级实训/">中级实训</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Unity3d/" style="font-size: 20px;">Unity3d</a> <a href="/tags/中级实训/" style="font-size: 10px;">中级实训</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/09/22/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/24/Unity3d-hw10-联机冰球对战/">Unity-hw10-联机冰球对战</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/19/Unity3d-hw9-AR小游戏/">Unity3d-hw9-AR小游戏</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/06/Unity3d-hw8-背包系统/">Unity3d-hw8-背包系统</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/28/Unity3d-hw7-粒子系统/">Unity3d-hw7-粒子系统</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

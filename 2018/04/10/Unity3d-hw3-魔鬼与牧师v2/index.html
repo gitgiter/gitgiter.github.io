@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Unity3d_hw3_魔鬼与牧师v2 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="操作与总结参考 Fantasy Skybox FREE 构建自己的游戏场景 首先要去Assets store里找到对应的资源下载，在搜索框输入Fantasy Skybox FREE有如下结果，选择第一个下载，然后import导入到项目资源中，便可以使用这个资源包了。 Skybox顾名思义，天空盒，是用来模拟游戏场景中的天空效果的。由于scene和game的视角从某种意义上来说是固定的，所以要较好的">
+<meta name="keywords" content="Unity3d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity3d_hw3_魔鬼与牧师v2">
+<meta property="og:url" content="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="操作与总结参考 Fantasy Skybox FREE 构建自己的游戏场景 首先要去Assets store里找到对应的资源下载，在搜索框输入Fantasy Skybox FREE有如下结果，选择第一个下载，然后import导入到项目资源中，便可以使用这个资源包了。 Skybox顾名思义，天空盒，是用来模拟游戏场景中的天空效果的。由于scene和game的视角从某种意义上来说是固定的，所以要较好的">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/Unity3d-hw3-魔鬼与牧师v2/skybox.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/Unity3d-hw3-魔鬼与牧师v2/scene1.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/Unity3d-hw3-魔鬼与牧师v2/scene2.png">
+<meta property="og:image" content="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil3.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil1_v2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil2_v2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil3_v2.jpg">
+<meta property="og:updated_time" content="2018-04-10T15:12:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unity3d_hw3_魔鬼与牧师v2">
+<meta name="twitter:description" content="操作与总结参考 Fantasy Skybox FREE 构建自己的游戏场景 首先要去Assets store里找到对应的资源下载，在搜索框输入Fantasy Skybox FREE有如下结果，选择第一个下载，然后import导入到项目资源中，便可以使用这个资源包了。 Skybox顾名思义，天空盒，是用来模拟游戏场景中的天空效果的。由于scene和game的视角从某种意义上来说是固定的，所以要较好的">
+<meta name="twitter:image" content="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/Unity3d-hw3-魔鬼与牧师v2/skybox.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Unity3d-hw3-魔鬼与牧师v2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/" class="article-date">
+  <time datetime="2018-04-10T14:09:05.000Z" itemprop="datePublished">2018-04-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Unity3d_hw3_魔鬼与牧师v2
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="操作与总结"><a href="#操作与总结" class="headerlink" title="操作与总结"></a>操作与总结</h1><h2 id="参考-Fantasy-Skybox-FREE-构建自己的游戏场景"><a href="#参考-Fantasy-Skybox-FREE-构建自己的游戏场景" class="headerlink" title="参考 Fantasy Skybox FREE 构建自己的游戏场景"></a>参考 Fantasy Skybox FREE 构建自己的游戏场景</h2><ul>
+<li>首先要去Assets store里找到对应的资源下载，在搜索框输入Fantasy Skybox FREE有如下结果，选择第一个下载，然后import导入到项目资源中，便可以使用这个资源包了。</li>
+<li>Skybox顾名思义，天空盒，是用来模拟游戏场景中的天空效果的。由于scene和game的视角从某种意义上来说是固定的，所以要较好的模拟天空的效果，就需要把天空当成一个六面体的盒，在每个面上贴上对应的Texture，以此来模拟天空罩住游戏场景。</li>
+<li>下图是用了天空盒构建的场景图<br><img src="Unity3d-hw3-魔鬼与牧师v2/skybox.jpg" alt=""></li>
+<li>只有天空或许显得单调，我们可以再给它加个地形Terrain，地形的贴图以及后来的花草树木在新版本的unity里面是没有自带的，也需要自行到Assets store里面下载导入。</li>
+<li>以下是最终的效果图(water environment还没来得及做)<br><img src="Unity3d-hw3-魔鬼与牧师v2/scene1.png" alt=""><br><img src="Unity3d-hw3-魔鬼与牧师v2/scene2.png" alt=""></li>
+</ul>
+<h2 id="写一个简单的总结，总结游戏对象的使用"><a href="#写一个简单的总结，总结游戏对象的使用" class="headerlink" title="写一个简单的总结，总结游戏对象的使用"></a>写一个简单的总结，总结游戏对象的使用</h2><ul>
+<li>游戏对象可以使用unity自带的正方体，圆柱体，球体等基础的资源构建</li>
+<li>游戏对象也可以通过基础游戏对象组合构建之后做成预制，以便后来重复使用</li>
+<li>游戏对象有许多属性，比较重要的有Transform属性，和纹理材质等</li>
+<li>游戏对象可以添加许多组件，来实现不同的特定功能，使效果更加炫酷</li>
+<li>游戏对象既可以在图形界面实例化，也可以通过代码实例化</li>
+<li>游戏对象可以通过添加对应的脚本来实现不同的行为</li>
+<li>等等<h1 id="编程实践—牧师与魔鬼"><a href="#编程实践—牧师与魔鬼" class="headerlink" title="编程实践—牧师与魔鬼"></a>编程实践—牧师与魔鬼</h1></li>
+<li>本项目Github地址——<a href="https://github.com/gitgiter/unity3d-learning/tree/master/homework3" target="_blank" rel="noopener">传送门</a></li>
+<li>鉴于上次写的牧师与魔鬼v1版本没有来得及写博客，这次顺便补上,以下介绍从基础MVC版本到动作分离版的过渡<h2 id="牧师与魔鬼v1——基础MVC架构版"><a href="#牧师与魔鬼v1——基础MVC架构版" class="headerlink" title="牧师与魔鬼v1——基础MVC架构版"></a>牧师与魔鬼v1——基础MVC架构版</h2></li>
+<li>MVC架构，简单来说目的是使代码分层，解耦，使每个类尽可能地行使单一的职责，以便于之后维护和扩展；另外，模块化的架构还可以使刚开始编程时尽可能少的考虑细节，使代码编写趋于简单。<blockquote>
+<p>MVC架构定义：MVC全名是Model View Controller，是模型(model)－视图(view)－控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。MVC被独特的发展起来用于映射传统的输入、处理和输出功能在一个逻辑的图形化用户界面的结构中。——百度百科</p>
+</blockquote>
+</li>
+<li>游戏规则：很经典的游戏，应该大家以前都玩过。游戏初始界面是三个牧师和三个魔鬼都在同一侧河岸，准备过河，但只有一条船且只能容纳两个对象，船必须至少有一个对象才能开动。游戏目的是采取合适的策略将全部牧师和魔鬼安全送到对岸，如果途中出现某一岸魔鬼多于牧师的情况，则游戏失败。</li>
+<li>先贴一下此版本的效果图<ul>
+<li>启动界面<br><img src="Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil1.jpg" alt="">  </li>
+<li>胜利界面<br><img src="Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil2.jpg" alt=""></li>
+<li>失败界面<br><img src="Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil3.jpg" alt="">  </li>
+</ul>
+</li>
+<li>本项目分离出来的MVC框架<br>Model: Shore, Boat, Item<br>View: UserGUI, ClickGUI<br>Controller: BoatControl, ShoreControl, ItemControl, FirstControl, Director</li>
+<li>以下是各个类的简要作用，代码较多就不一一贴上来了，可前往Github查看具体代码</li>
+<li>Model——模型（可预制）<ul>
+<li>Shore：岸的实例    </li>
+<li>Boat：船的实例</li>
+<li>Item：对象(魔鬼或牧师)的实例</li>
+</ul>
+</li>
+<li>View——视图<ul>
+<li>UserGUI<br>用户交互界面</li>
+<li>ClickGUI<br>响应点击事件</li>
+</ul>
+</li>
+<li><p>Controler——控制器</p>
+<ul>
+<li><p>Director：导演，总指挥，单例模式</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Diretor : System.Object</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Diretor _instance;</span><br><span class="line">    <span class="keyword">public</span> SceneControl sceneCtrl &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Diretor <span class="title">getInstance</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (_instance == <span class="literal">null</span>) <span class="keyword">return</span> _instance = <span class="keyword">new</span> Diretor();</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> _instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>FirstControl：第一场景控制器，是唯一加到对象上的脚本</p>
+</li>
+<li>BoatControl：船的控制器，包括记录船上空余位置，船的属性和状态等</li>
+<li>ShoreControl：岸的控制器，包括记录岸上空余位置，对象上岸离岸等</li>
+<li>ItemControl：对象的控制器，包括对象的实例化，控制对象的移动</li>
+</ul>
+</li>
+<li><p>一些接口</p>
+<ul>
+<li><p>SceneControl：负责整个场景的实例化</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">SceneControl</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">LoadPrefabs</span>(<span class="params"></span>)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>UserAction：控制动作</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">UserAction</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">BoatMove</span>(<span class="params"></span>)</span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Restart</span>(<span class="params"></span>)</span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">ItemClick</span>(<span class="params">ItemControl itemCtrl</span>)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>提一下主要的动作控制类——Moveable</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Moveable</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">float</span> time = <span class="number">3</span>; <span class="comment">//抛物时间</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">float</span> g = <span class="number">-10</span>; <span class="comment">//重力加速度</span></span><br><span class="line">    <span class="keyword">private</span> Vector3 v0; <span class="comment">//初速度</span></span><br><span class="line">    <span class="keyword">private</span> Vector3 Gravity; <span class="comment">//由重力产生的垂直速度</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> dTime = <span class="number">0</span>; <span class="comment">//记录运动时间</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> fixUpdateStep = <span class="number">0.1</span>f; <span class="comment">//设置运动速度</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">float</span> speed = <span class="number">20</span>; <span class="comment">//船的移速</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> status; <span class="comment">//运动状态</span></span><br><span class="line">    Vector3 des; <span class="comment">//终点</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (status == <span class="number">1</span>) <span class="comment">// 实现对象抛物线运动</span></span><br><span class="line">        &#123;</span><br><span class="line">            Gravity.y = g * (dTime += fixUpdateStep);</span><br><span class="line">            transform.Translate(v0 * fixUpdateStep);</span><br><span class="line">            transform.Translate(Gravity * fixUpdateStep);</span><br><span class="line">            <span class="keyword">if</span> (dTime &gt;= time - fixUpdateStep)</span><br><span class="line">            &#123;</span><br><span class="line">                transform.position = des;</span><br><span class="line">                status = <span class="number">0</span>;</span><br><span class="line">                dTime = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (status == <span class="number">2</span>) <span class="comment">// 实现船的直线运动</span></span><br><span class="line">        &#123;</span><br><span class="line">            transform.position = Vector3.MoveTowards(transform.position, des, speed * fixUpdateStep);</span><br><span class="line">            <span class="keyword">if</span> (transform.position == des) status = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">MoveTo</span>(<span class="params">Vector3 target</span>) <span class="comment">// 设置运动的终点，并以此计算抛物线的初速度</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        des = target;</span><br><span class="line">        status = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (des.y == transform.position.y) status = <span class="number">2</span>;</span><br><span class="line">        <span class="comment">//Debug.Log("From:" + transform.position);</span></span><br><span class="line">        v0 = <span class="keyword">new</span> Vector3((des.x - transform.position.x) / time,</span><br><span class="line">            (des.y - transform.position.y) / time - <span class="number">0.5</span>f * g * time, (des.z - transform.position.z) / time);</span><br><span class="line">        Gravity = Vector3.zero;</span><br><span class="line">        <span class="comment">//Debug.Log("v0:" + v0);</span></span><br><span class="line">        <span class="comment">//Debug.Log("Target:" + target);                       </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Reset</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        status = <span class="number">0</span>;</span><br><span class="line">        dTime = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="牧师与魔鬼v2——动作分离版"><a href="#牧师与魔鬼v2——动作分离版" class="headerlink" title="牧师与魔鬼v2——动作分离版"></a>牧师与魔鬼v2——动作分离版</h2><p><strong>最主要的改动——利用ActionManager的模板，实现Movable类的转移</strong><br>这里不再介绍MVC，直接开始介绍动作分离。</p>
+<ul>
+<li>先上效果图，改进了UI，现学现用加了一个天空盒<br><img src="Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil1_v2.jpg" alt=""><br><img src="Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil2_v2.jpg" alt=""><br><img src="Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil3_v2.jpg" alt=""></li>
+<li>添加的文件——Action，有关动作管理的类和实现全都转移到这个文件里，模板基本套用ppt上现成代码，略作修改</li>
+<li><p>动作的分离，以下改动主要是将v1遗留的耦合动作剔除</p>
+<ul>
+<li><p>FirstControl里的改动</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">private</span> ActionManager MyActionManager; <span class="comment">// add in v2</span></span><br><span class="line">   </span><br><span class="line">   <span class="comment">// Use this for initialization</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       Diretor diretor = Diretor.getInstance();</span><br><span class="line">       diretor.sceneCtrl = <span class="keyword">this</span>;</span><br><span class="line">       itemCtrls = <span class="keyword">new</span> ItemControl[<span class="number">6</span>];</span><br><span class="line">       LoadPrefabs();</span><br><span class="line">       user = gameObject.AddComponent&lt;UserGUI&gt;();</span><br><span class="line">       user.Restart();</span><br><span class="line">       MyActionManager = gameObject.AddComponent&lt;ActionManager&gt;() <span class="keyword">as</span> ActionManager; <span class="comment">// add in v2</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">BoatMove</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Debug.Log(<span class="string">"BoatMove"</span>);</span><br><span class="line">    <span class="keyword">if</span> (boat.IsEmpty()) <span class="keyword">return</span>;</span><br><span class="line">    <span class="comment">//boat.Move();</span></span><br><span class="line">    MyActionManager.MoveBoat(boat); <span class="comment">// add in v2</span></span><br><span class="line">    user.step++;</span><br><span class="line">    user.status = Check();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ItemClick</span>(<span class="params">ItemControl itemCtrl</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Debug.Log(<span class="string">"ItemClick"</span>);</span><br><span class="line">    <span class="keyword">if</span> (itemCtrl.isOnBoat)</span><br><span class="line">    &#123;</span><br><span class="line">        ShoreControl side;</span><br><span class="line">        <span class="keyword">if</span> (boat.status == <span class="number">1</span>) side = fromShore;</span><br><span class="line">        <span class="keyword">else</span> side = toShore;</span><br><span class="line"></span><br><span class="line">        Debug.Log(side.GetEmptyPosition());</span><br><span class="line">        boat.GetOffBoat(itemCtrl);</span><br><span class="line">        <span class="comment">//itemCtrl.MoveTo(side.GetEmptyPosition());</span></span><br><span class="line">        MyActionManager.MoveItem(itemCtrl, side.GetEmptyPosition()); <span class="comment">// add in v2</span></span><br><span class="line">        itemCtrl.GetOnShore(side);</span><br><span class="line">        side.GetOnShore(itemCtrl);</span><br><span class="line">        user.step++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (boat.IsFull()) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        Debug.Log(itemCtrl.item.name + <span class="string">" getting on boat"</span>);</span><br><span class="line">        ShoreControl side = itemCtrl.shoreCtrl;</span><br><span class="line">        <span class="keyword">if</span> (side.status != boat.status) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        side.GetOffShore(itemCtrl.item.name);</span><br><span class="line">        <span class="comment">//Debug.Log(MyActionManager);</span></span><br><span class="line">        <span class="comment">//Debug.Log(itemCtrl);</span></span><br><span class="line">        <span class="comment">//Debug.Log(boat);</span></span><br><span class="line">        <span class="comment">//itemCtrl.MoveTo(boat.GetOnBoat(itemCtrl));</span></span><br><span class="line">        MyActionManager.MoveItem(itemCtrl, boat.GetOnBoat(itemCtrl)); <span class="comment">// add in v2</span></span><br><span class="line">        itemCtrl.GetOnBoat(boat);</span><br><span class="line">        user.step++;</span><br><span class="line">    &#125;</span><br><span class="line">    user.status = Check();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>BoatControl的改动</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">BoatControl</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> GameObject boat;</span><br><span class="line">    <span class="comment">//public Moveable moveable; // remove in v2</span></span><br><span class="line">    <span class="keyword">public</span> Vector3 <span class="keyword">from</span> = <span class="keyword">new</span> Vector3(<span class="number">10</span>, <span class="number">2</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">public</span> Vector3 to = <span class="keyword">new</span> Vector3(<span class="number">-10</span>, <span class="number">2</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">public</span> Vector3[] froms;</span><br><span class="line">    <span class="keyword">public</span> Vector3[] tos;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> status; <span class="comment">// from = 1, to = 0</span></span><br><span class="line">    <span class="keyword">public</span> ItemControl leftSeat;</span><br><span class="line">    <span class="keyword">public</span> ItemControl rightSeat;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">float</span> speed = <span class="number">50</span>; <span class="comment">// add in v2</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BoatControl</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        status = <span class="number">1</span>;</span><br><span class="line">        leftSeat = <span class="literal">null</span>;</span><br><span class="line">        rightSeat = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">        froms = <span class="keyword">new</span> Vector3[] &#123; <span class="keyword">new</span> Vector3(<span class="number">9</span>, <span class="number">3</span>, <span class="number">0</span>), <span class="keyword">new</span> Vector3(<span class="number">11</span>, <span class="number">3</span>, <span class="number">0</span>) &#125;;</span><br><span class="line">        tos = <span class="keyword">new</span> Vector3[] &#123; <span class="keyword">new</span> Vector3(<span class="number">-11</span>, <span class="number">3</span>, <span class="number">0</span>), <span class="keyword">new</span> Vector3(<span class="number">-9</span>, <span class="number">3</span>, <span class="number">0</span>) &#125;;</span><br><span class="line"></span><br><span class="line">        boat = (GameObject)Object.Instantiate(Resources.Load(<span class="string">"Prefabs/Boat"</span>, <span class="keyword">typeof</span>(GameObject)), <span class="keyword">from</span>, Quaternion.identity, <span class="literal">null</span>);           </span><br><span class="line">        boat.name = <span class="string">"Boat"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//moveable = boat.AddComponent(typeof(Moveable)) as Moveable; // remove in v2</span></span><br><span class="line">        boat.AddComponent(<span class="keyword">typeof</span>(ClickGUI)); <span class="comment">// add click event</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//public void Move() // remove in v2</span></span><br><span class="line">    <span class="comment">//&#123;</span></span><br><span class="line">    <span class="comment">//    if (status == -1) moveable.MoveTo(from);</span></span><br><span class="line">    <span class="comment">//    else moveable.MoveTo(to);</span></span><br><span class="line">    <span class="comment">//    status = -status;</span></span><br><span class="line">    <span class="comment">//&#125;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">IsEmpty</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (leftSeat == <span class="literal">null</span> &amp;&amp; rightSeat == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">IsFull</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (leftSeat != <span class="literal">null</span> &amp;&amp; rightSeat != <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Vector3 <span class="title">GetOnBoat</span>(<span class="params">ItemControl item</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (leftSeat == <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            leftSeat = item;</span><br><span class="line">            <span class="keyword">return</span> status == <span class="number">-1</span> ? tos[<span class="number">0</span>] : froms[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (rightSeat == <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            rightSeat = item;</span><br><span class="line">            <span class="keyword">return</span> status == <span class="number">-1</span> ? tos[<span class="number">1</span>] : froms[<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> Vector3.zero;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ItemControl <span class="title">GetOffBoat</span>(<span class="params">ItemControl item</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// to decide which item to get off</span></span><br><span class="line">        ItemControl temp = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">if</span> (leftSeat == item)</span><br><span class="line">        &#123;</span><br><span class="line">            temp = leftSeat;</span><br><span class="line">            leftSeat = <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (rightSeat == item)</span><br><span class="line">        &#123;</span><br><span class="line">            temp = rightSeat;</span><br><span class="line">            rightSeat = <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">GetItemNum</span>(<span class="params"><span class="keyword">int</span> type</span>) <span class="comment">// get the num of item, priest or devil</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (leftSeat != <span class="literal">null</span> &amp;&amp; leftSeat.itemType == type) count++;</span><br><span class="line">        <span class="keyword">if</span> (rightSeat != <span class="literal">null</span> &amp;&amp; rightSeat.itemType == type) count++;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Reset</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//moveable.Reset(); // remove in v2</span></span><br><span class="line">        <span class="comment">//if (status == -1) Move(); // remove in v2</span></span><br><span class="line">        leftSeat = <span class="literal">null</span>;</span><br><span class="line">        rightSeat = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ItemControl的改动</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ItemControl</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> GameObject item &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125; <span class="comment">// the instance</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> itemType &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125; <span class="comment">// the type of the item</span></span><br><span class="line">    <span class="keyword">public</span> ClickGUI clickGUI; <span class="comment">// manage click event</span></span><br><span class="line">    <span class="comment">//public Moveable moveable; // remove in v2</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">bool</span> isOnBoat;</span><br><span class="line">    <span class="keyword">public</span> ShoreControl shoreCtrl;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ItemControl</span>(<span class="params"><span class="keyword">string</span> type</span>) <span class="comment">//Instantiate</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (type == <span class="string">"Priest"</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            item = Object.Instantiate(Resources.Load(<span class="string">"Prefabs/Priest"</span>, <span class="keyword">typeof</span>(GameObject)), Vector3.zero, Quaternion.identity, <span class="literal">null</span>) <span class="keyword">as</span> GameObject;</span><br><span class="line">            itemType = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            item = Object.Instantiate(Resources.Load(<span class="string">"Prefabs/Devil"</span>, <span class="keyword">typeof</span>(GameObject)), Vector3.zero, Quaternion.identity, <span class="literal">null</span>) <span class="keyword">as</span> GameObject;</span><br><span class="line">            itemType = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//moveable = item.AddComponent(typeof(Moveable)) as Moveable; // remove in v2</span></span><br><span class="line"></span><br><span class="line">        clickGUI = item.AddComponent(<span class="keyword">typeof</span>(ClickGUI)) <span class="keyword">as</span> ClickGUI; <span class="comment">// add click event</span></span><br><span class="line">        clickGUI.itemCtrl = <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//public void MoveTo(Vector3 des) // remove in v2</span></span><br><span class="line">    <span class="comment">//&#123;</span></span><br><span class="line">    <span class="comment">//    moveable.MoveTo(des);</span></span><br><span class="line">    <span class="comment">//&#125;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetOnBoat</span>(<span class="params">BoatControl boatCtrl</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        shoreCtrl = <span class="literal">null</span>;</span><br><span class="line">        item.transform.parent = boatCtrl.boat.transform;</span><br><span class="line">        isOnBoat = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetOnShore</span>(<span class="params">ShoreControl side</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        shoreCtrl = side;</span><br><span class="line">        item.transform.parent = <span class="literal">null</span>;</span><br><span class="line">        isOnBoat = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Reset</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//moveable.Reset(); // remove in v2</span></span><br><span class="line">        ShoreControl fromShore = ((FirstControl)Diretor.getInstance().sceneCtrl).fromShore;</span><br><span class="line">        GetOnShore(fromShore);</span><br><span class="line">        item.transform.position = fromShore.GetEmptyPosition();</span><br><span class="line">        fromShore.GetOnShore(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Moveable的转移<br>这里简要提一下抛物线从Moveable转移到ActionManager的处理，原本在Movable里面是将抛物线分成一小段一小段的直线位移，利用固定帧的刷新来实现抛物线的曲线效果，但是因为Moveable既管理船的动作又管理对象的动作，就避免不了要用状态来区分到底是要执行谁的动作，这样看起来代码就不是很美观，可读性也有所下降。而在ActionManager中，虽然也是同时管理船的动作和对象的动作，但是却可以用<strong>单运动</strong>和<strong>组合运动</strong>来区分两者，单运动的处理就不用再赘述了，关于组合运动这里有个重要的方法就是SequenceAction，要知道把动作看成一小段一小段的直线运动的组合，就能实现几乎所有的曲线运动，也就是说，ActionManager完美解决了所有的曲线运动。在这里，虽然我也是将抛物线分成一小段一小段的直线运动，但并不是像Moveable里一样直接使用帧刷新来完成运动，而是通过将分段后的动作顺序放入一个Action的List中，交由SequenceAction来处理多个动作的连贯组合，就很好地避免了Moveable里面区分状态的尴尬局面。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ActionManager</span> : <span class="title">SSActionManager</span></span><br><span class="line">&#123;   </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">MoveBoat</span>(<span class="params">BoatControl boatCtrl</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        SSMoveToAction action;</span><br><span class="line">        <span class="keyword">if</span> (boatCtrl.status == <span class="number">-1</span>) </span><br><span class="line">            action = SSMoveToAction.GetSSMoveToAction(boatCtrl.<span class="keyword">from</span>, BoatControl.speed);</span><br><span class="line">        <span class="keyword">else</span> action = SSMoveToAction.GetSSMoveToAction(boatCtrl.to, BoatControl.speed);</span><br><span class="line">        boatCtrl.status = -boatCtrl.status;</span><br><span class="line">        AddAction(boatCtrl.boat, action, <span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">MoveItem</span>(<span class="params">ItemControl itemCtrl, Vector3 finalDes</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//Debug.Log("enter MoveItem!");</span></span><br><span class="line">        <span class="keyword">float</span> time = <span class="number">3</span>;</span><br><span class="line">        <span class="keyword">float</span> g = <span class="number">-10</span>;</span><br><span class="line">        Vector3 v0;</span><br><span class="line">        <span class="keyword">float</span> vy_ByGravity = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">float</span> stepTime = <span class="number">0.1</span>f;</span><br><span class="line">        Vector3 currentDes = itemCtrl.item.transform.position;</span><br><span class="line"></span><br><span class="line">        List&lt;SSAction&gt; divide = <span class="keyword">new</span> List&lt;SSAction&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// the des here is the final des</span></span><br><span class="line">        v0 = <span class="keyword">new</span> Vector3((finalDes.x - itemCtrl.item.transform.position.x) / time,</span><br><span class="line">            (finalDes.y - itemCtrl.item.transform.position.y) / time - <span class="number">0.5</span>f * g * time, (finalDes.z - itemCtrl.item.transform.position.z) / time);</span><br><span class="line">        <span class="comment">//Debug.Log(v0);</span></span><br><span class="line">        <span class="comment">//Debug.Log(time / stepTime);</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// divide the curve to many parts</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; time / stepTime - <span class="number">1</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//Debug.Log(divide[i]);</span></span><br><span class="line">            <span class="comment">//Debug.Log(currentDes);</span></span><br><span class="line">            <span class="comment">// change the vy</span></span><br><span class="line">            vy_ByGravity += g * stepTime;</span><br><span class="line">            <span class="comment">// set current des</span></span><br><span class="line">            currentDes += v0 * stepTime;</span><br><span class="line">            currentDes.y += vy_ByGravity * stepTime;</span><br><span class="line">            <span class="comment">// get the current speed</span></span><br><span class="line">            <span class="keyword">float</span> currentSpeed = Mathf.Sqrt(v0.x * v0.x + (v0.y + vy_ByGravity) * (v0.y + vy_ByGravity));</span><br><span class="line">            <span class="comment">// add one of the movements</span></span><br><span class="line">            SSAction temp = SSMoveToAction.GetSSMoveToAction(currentDes, currentSpeed * <span class="number">10</span>);</span><br><span class="line">            divide.Add(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        SSAction seqAction = SequenceAction.GetSequenceAction(<span class="number">1</span>, <span class="number">0</span>, divide);</span><br><span class="line">        AddAction(itemCtrl.item, seqAction, <span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/" data-id="cjmddk5gv0005i0q2tsz2jrm3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/04/15/SYSU-SE-2018-Part1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          SYSU-SE-2018-Part1
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Unity3d-hw2-太阳系-魔鬼与牧师v1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity3d/">Unity3d</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中级实训/">中级实训</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Unity3d/" style="font-size: 20px;">Unity3d</a> <a href="/tags/中级实训/" style="font-size: 10px;">中级实训</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/09/22/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/24/Unity3d-hw10-联机冰球对战/">Unity-hw10-联机冰球对战</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/19/Unity3d-hw9-AR小游戏/">Unity3d-hw9-AR小游戏</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/06/Unity3d-hw8-背包系统/">Unity3d-hw8-背包系统</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/28/Unity3d-hw7-粒子系统/">Unity3d-hw7-粒子系统</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
