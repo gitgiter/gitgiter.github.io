@@ -5,17 +5,17 @@
   
 
   
-  <title>Hexo</title>
+  <title>gitgiter&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="gitgiter&#39;s blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="gitgiter&#39;s blog">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="gitgiter&#39;s blog">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="gitgiter&#39;s blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -34,7 +34,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">gitgiter&#39;s blog</a>
       </h1>
       
     </div>
@@ -97,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/22/hello-world/" data-id="cjmddk5h8000ji0q2p7kbw6xi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/09/22/hello-world/" data-id="cjmde5kxf000hikq276tf244z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -135,11 +135,11 @@
 <h2 id="2-效果"><a href="#2-效果" class="headerlink" title="2. 效果"></a>2. 效果</h2><ul>
 <li>静态图</li>
 </ul>
-<p><img src="Unity3d-hw10-联机冰球对战/scene.png" alt=""></p>
+<p><img src="/2018/06/24/Unity3d-hw10-联机冰球对战/scene.png" alt=""></p>
 <ul>
 <li>动态图</li>
 </ul>
-<p><img src="Unity3d-hw10-联机冰球对战/GIF.gif" alt=""></p>
+<p><img src="/2018/06/24/Unity3d-hw10-联机冰球对战/GIF.gif" alt=""></p>
 <hr>
 <h2 id="3-预备知识——Unity网络编程相关组件"><a href="#3-预备知识——Unity网络编程相关组件" class="headerlink" title="3. 预备知识——Unity网络编程相关组件"></a>3. 预备知识——Unity网络编程相关组件</h2><h3 id="3-1-浅谈个人对多人游戏与网络的一些看法"><a href="#3-1-浅谈个人对多人游戏与网络的一些看法" class="headerlink" title="3.1 浅谈个人对多人游戏与网络的一些看法"></a>3.1 浅谈个人对多人游戏与网络的一些看法</h3><ul>
 <li>网络游戏可以说是目前最吸引各路游戏开发者的一大热点，尤其是多人游戏。因此，大多数游戏引擎及基本的开发语言都配有基本的成套的网络编程相关的功能或接口，如果一门开发语言或是游戏引擎不支持网络编程，那这个语言或是这类IDE肯定是走不远的。网络编程的运用在unity现在的游戏里面是必须的。完整的游戏都需要提供网络功能。</li>
@@ -151,13 +151,13 @@
 <li>HOST：主机，运行服务器程序的机器</li>
 <li>Server：服务器，游戏程序实例。它连接所有客户端，并管理所有客户端共享的游戏对象及部分需要同步的状态（属性）</li>
 <li>Client：客户端，游戏程序实例。玩家游戏主机运行的程序</li>
-<li>重要的关系图<br><img src="Unity3d-hw10-联机冰球对战/relation.png" alt=""></li>
+<li>重要的关系图<br><img src="/2018/06/24/Unity3d-hw10-联机冰球对战/relation.png" alt=""></li>
 </ul>
 </li>
 <li>游戏对象<ul>
 <li><strong>网络游戏对象（Networked GameObjects）</strong> ：在服务器上注册，由孵化（也叫派生）系统（Spawning System）管理的对象，它必须包含 NetworkIdentity 组件，并用 NetworkBehaviour 脚本编程。</li>
 <li><strong>玩家游戏对象（player GameObjects）</strong> ：是特殊的网络游戏对象，指一个 client 加入网络游戏，服务器创建并孵化到客户端，由玩家控制的游戏对象。客户端代码可以控制它们的状态，并自动有服务器同步到其他玩家的客户端。例如：联网赛车游戏，每个玩家都有属于自己的赛车。</li>
-<li>关系图<br><img src="Unity3d-hw10-联机冰球对战/spawn.png" alt=""></li>
+<li>关系图<br><img src="/2018/06/24/Unity3d-hw10-联机冰球对战/spawn.png" alt=""></li>
 </ul>
 </li>
 </ul>
@@ -284,7 +284,7 @@
 <ul>
 <li>架构一览图</li>
 </ul>
-<p><img src="Unity3d-hw10-联机冰球对战/desk_structure.png" alt=""></p>
+<p><img src="/2018/06/24/Unity3d-hw10-联机冰球对战/desk_structure.png" alt=""></p>
 <ul>
 <li>Plane就是桌面，没改名字，和Walls并列。</li>
 <li>Walls是旁边的墙（桌沿）的组合，为空对象。<ul>
@@ -310,7 +310,7 @@
 <li>给Walls添加Rigidbody刚体组件。墙是需要碰撞的，但是墙不能移动，所以在Constraints里冻结所有位置轴和旋转轴。</li>
 <li>近景效果图</li>
 </ul>
-<p><img src="Unity3d-hw10-联机冰球对战/desk.png" alt=""></p>
+<p><img src="/2018/06/24/Unity3d-hw10-联机冰球对战/desk.png" alt=""></p>
 <h3 id="4-10-玩家分数同步"><a href="#4-10-玩家分数同步" class="headerlink" title="4.10 玩家分数同步"></a>4.10 玩家分数同步</h3><p>这部分负责完成玩家分数状态的同步和相关的UI界面。</p>
 <ul>
 <li>需要同步的变量。与对战胜负有关的变量是分数，这个分数既可以在场景中单独维护，由于这里有两个玩家，因此需要有两个分数变量，另外记录游戏状态也需要一个变量，这三个值都需要在网络中同步。这里我是挂载在冰球这个对象上，其实挂载一个空对象或者其他方便管理的对象都是可以的。</li>
@@ -341,7 +341,7 @@
 </li>
 <li>这时会发现就出现最开始的界面了，接下来就可以尽情地玩耍了。</li>
 </ul>
-<p><img src="Unity3d-hw10-联机冰球对战/scene.png" alt=""></p>
+<p><img src="/2018/06/24/Unity3d-hw10-联机冰球对战/scene.png" alt=""></p>
 <hr>
 <h2 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h2><p>在学了将近一个学期的3d游戏编程后，终于来到了令人激动的网络编程模块。通过本次实战，对unity中的网络编程乃至对整个网络游戏的开发流程有了一个相对清晰了思路，对网络编程的原理和机制也有了更深的了解。虽然可能实现起来一开始会摸不着头脑，但随着对网络编程由浅入深的了解，就能慢慢体会到网络编程的乐趣所在了，而且学会网络编程这一套思想，不止是unity开发，像是web，java，cocos的开发都是通吃的。</p>
 <hr>
@@ -361,7 +361,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/24/Unity3d-hw10-联机冰球对战/" data-id="cjmddk5gn0001i0q2wh0g4znd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/24/Unity3d-hw10-联机冰球对战/" data-id="cjmde5kww0004ikq2khkaj5g6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -398,8 +398,8 @@
         <h1 id="Unity3d之AR小游戏"><a href="#Unity3d之AR小游戏" class="headerlink" title="Unity3d之AR小游戏"></a>Unity3d之AR小游戏</h1><hr>
 <h2 id="游戏简介"><a href="#游戏简介" class="headerlink" title="游戏简介"></a>游戏简介</h2><p>一个控制小飞龙躲避障碍物的小型AR跑酷游戏，有两个虚拟按钮可以控制飞龙向上或向下移动。</p>
 <h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><ul>
-<li>静态图<br><img src="Unity3d-hw9-AR小游戏/effect.png" alt=""></li>
-<li>动态图<br><img src="Unity3d-hw9-AR小游戏/GIF.gif" alt=""></li>
+<li>静态图<br><img src="/2018/06/19/Unity3d-hw9-AR小游戏/effect.png" alt=""></li>
+<li>动态图<br><img src="/2018/06/19/Unity3d-hw9-AR小游戏/GIF.gif" alt=""></li>
 </ul>
 <hr>
 <h2 id="AR模型识别"><a href="#AR模型识别" class="headerlink" title="AR模型识别"></a>AR模型识别</h2><h3 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h3><p>这里网上教程很多，就不详细阐述了，大致过程就是去高通（vuforia）官网注册一个账号同意相关协议，下载sdk并导入。然后创建一个app关联数据库，数据库中上传待识别的图像，然后等vuforia分析完识别图的特征点之后，将target作为一个unity editor的选项下载下来后也导入unity项目。最后是项目内的配置，需要配置根据之前创建app时密钥配置unity项目，然后将预制ImageTarget的目标设置成你要识别的图片。运行项目时将待识别的图片放置在电脑摄像头范围内即可。</p>
@@ -438,7 +438,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/19/Unity3d-hw9-AR小游戏/" data-id="cjmddk5h6000hi0q2ztt469is" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/19/Unity3d-hw9-AR小游戏/" data-id="cjmde5kxk000jikq2tbwtmj7t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -474,8 +474,8 @@
       
         <h1 id="Unity3d实战之背包系统"><a href="#Unity3d实战之背包系统" class="headerlink" title="Unity3d实战之背包系统"></a>Unity3d实战之背包系统</h1><h2 id="选题要求"><a href="#选题要求" class="headerlink" title="选题要求"></a>选题要求</h2><p>参考unity官网的背包系统例子，实现一个简单的背包系统</p>
 <h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><ul>
-<li>静态图<br><img src="Unity3d-hw8-背包系统/scene.png" alt=""></li>
-<li>动态图<br><img src="Unity3d-hw8-背包系统/GIF.gif" alt=""></li>
+<li>静态图<br><img src="/2018/06/06/Unity3d-hw8-背包系统/scene.png" alt=""></li>
+<li>动态图<br><img src="/2018/06/06/Unity3d-hw8-背包系统/GIF.gif" alt=""></li>
 </ul>
 <h2 id="知识准备"><a href="#知识准备" class="headerlink" title="知识准备"></a>知识准备</h2><ul>
 <li>摄像机渲染<ul>
@@ -563,9 +563,9 @@
 </tbody>
 </table>
 <h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ul>
-<li>第一步，搭建UI界面。新建一个画布（Canvas），再创建一个Panel容器，里面包含UI界面的所有UI控件，比如背包区的九个格子和装备区的三个格子，每个格子都是一个Button控件，背包区和装备区的这些按钮的父级分别是Bag和Equip两个空对象，主要是为了添加GridLayout控件来控制子对象的布局，以及相应的控制脚本。基本的控件创建好之后，将画布设置成UI层，接着再创建一个保存鼠标图片的Image控件，这是为了暂存移动的图片达到交换目的，最后创建一个专门渲染UI层的摄像机，将其Culling Mask设置成UI层。这样UI层的搭建基本完成，剩下的就是对控件位置、大小等的参数调整，以及更改控件的图片。这里要注意的一点是，<strong>添加图片时必须先把原来的图片转成Sprite类型才可以被Image组件识别</strong>。<br>搭建完成后的文件结构<br><img src="Unity3d-hw8-背包系统/step1.png" alt=""><br>UI Camera设置<br><img src="Unity3d-hw8-背包系统/step1_2.png" alt=""><br>GridLayout组件的设置<br><img src="Unity3d-hw8-背包系统/step1_3.png" alt=""></li>
-<li>第二步，搭建背景界面。这个比布置UI界面容易多了。为了让背景有点简单的动态特效，这里用到了一点粒子系统。首先新建一个空对象scene，然后右键scene-&gt;Effects-&gt;Particle System，便可把例子系统添加为其子对象。接着再新建一个空对象，用来显示背景图片，修改其Sprite Renderer的Sprite为要添加的背景图片即可。最后把主摄像机放到这个空对象下面，其渲染的层是默认层，无需修改。要注意的是必须确保UI层的渲染要介于背景层渲染和英雄层渲染之间，用摄像机的深度Depth控制。<br>搭建完成后的文件结构<br><img src="Unity3d-hw8-背包系统/step2.png" alt=""><br>主摄像机设置<br><img src="Unity3d-hw8-背包系统/step2_2.png" alt=""></li>
-<li>第三步，搭建英雄层。这层就是用来渲染英雄的，为了和UI层区分开来以便拓展更多的功能。新建一个摄像机，负责渲染英雄层，将英雄作为该摄像机的子对象，并将英雄的所在层设置成英雄层（自定义的一个层）。<br>搭建完成后的总的文件结构<br><img src="Unity3d-hw8-背包系统/step3_1.png" alt=""><br>英雄摄像机的设置<br><img src="Unity3d-hw8-背包系统/step3_2.png" alt=""></li>
+<li>第一步，搭建UI界面。新建一个画布（Canvas），再创建一个Panel容器，里面包含UI界面的所有UI控件，比如背包区的九个格子和装备区的三个格子，每个格子都是一个Button控件，背包区和装备区的这些按钮的父级分别是Bag和Equip两个空对象，主要是为了添加GridLayout控件来控制子对象的布局，以及相应的控制脚本。基本的控件创建好之后，将画布设置成UI层，接着再创建一个保存鼠标图片的Image控件，这是为了暂存移动的图片达到交换目的，最后创建一个专门渲染UI层的摄像机，将其Culling Mask设置成UI层。这样UI层的搭建基本完成，剩下的就是对控件位置、大小等的参数调整，以及更改控件的图片。这里要注意的一点是，<strong>添加图片时必须先把原来的图片转成Sprite类型才可以被Image组件识别</strong>。<br>搭建完成后的文件结构<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step1.png" alt=""><br>UI Camera设置<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step1_2.png" alt=""><br>GridLayout组件的设置<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step1_3.png" alt=""></li>
+<li>第二步，搭建背景界面。这个比布置UI界面容易多了。为了让背景有点简单的动态特效，这里用到了一点粒子系统。首先新建一个空对象scene，然后右键scene-&gt;Effects-&gt;Particle System，便可把例子系统添加为其子对象。接着再新建一个空对象，用来显示背景图片，修改其Sprite Renderer的Sprite为要添加的背景图片即可。最后把主摄像机放到这个空对象下面，其渲染的层是默认层，无需修改。要注意的是必须确保UI层的渲染要介于背景层渲染和英雄层渲染之间，用摄像机的深度Depth控制。<br>搭建完成后的文件结构<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step2.png" alt=""><br>主摄像机设置<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step2_2.png" alt=""></li>
+<li>第三步，搭建英雄层。这层就是用来渲染英雄的，为了和UI层区分开来以便拓展更多的功能。新建一个摄像机，负责渲染英雄层，将英雄作为该摄像机的子对象，并将英雄的所在层设置成英雄层（自定义的一个层）。<br>搭建完成后的总的文件结构<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step3_1.png" alt=""><br>英雄摄像机的设置<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step3_2.png" alt=""></li>
 <li><p>第四步，实现画布随鼠标旋转。这里用的是老师上课提供的一个源码，我外加做了一些修改，原本是整个画布的旋转，但是感觉看起来怪怪的，我将其改成以中轴线为界，两边（背包区和装备区）分别旋转，鼠标在背包区的时候装备区不动，鼠标在装备区的时候背包区不动。因此便有了两份类似的代码，分别挂载在背包区的父级元素Bag上和装备区的父级元素Equip上。<br>以控制背包区随鼠标旋转的代码为例</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">BagTilt</span> : <span class="title">MonoBehaviour</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Vector2 range = <span class="keyword">new</span> Vector2(<span class="number">50</span>f, <span class="number">30</span>f);</span><br><span class="line"></span><br><span class="line">    Transform mTrans;</span><br><span class="line">    Quaternion mStart;</span><br><span class="line">    Vector2 mRot = Vector2.zero;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        mTrans = transform;</span><br><span class="line">        mStart = mTrans.localRotation;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Update is called once per frame</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Vector3 pos = Input.mousePosition;</span><br><span class="line">        <span class="comment">//Debug.Log(pos);        </span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">float</span> halfWidth = Screen.width * <span class="number">0.5</span>f;</span><br><span class="line">        <span class="keyword">float</span> halfHeight = Screen.height * <span class="number">0.5</span>f;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (pos.x - halfWidth &lt; <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">float</span> x = Mathf.Clamp((pos.x - halfWidth) / halfWidth, <span class="number">-1</span>f, <span class="number">1</span>f);</span><br><span class="line">        <span class="keyword">float</span> y = Mathf.Clamp((pos.y - halfHeight) / halfHeight, <span class="number">-1</span>f, <span class="number">1</span>f);</span><br><span class="line">        mRot = Vector2.Lerp(mRot, <span class="keyword">new</span> Vector2(x, y), Time.deltaTime * <span class="number">5</span>f);</span><br><span class="line"></span><br><span class="line">        mTrans.localRotation = mStart * Quaternion.Euler(-mRot.y * range.y, -mRot.x * range.x, <span class="number">0</span>f);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -596,20 +596,20 @@
 <tbody>
 <tr>
 <td style="text-align:center">处理前</td>
-<td style="text-align:center"><img src="Unity3d-hw8-背包系统/weapon1.jpg" alt=""></td>
-<td style="text-align:center"><img src="Unity3d-hw8-背包系统/weapon2.jpg" alt=""></td>
-<td style="text-align:center"><img src="Unity3d-hw8-背包系统/weapon3.jpg" alt=""></td>
+<td style="text-align:center"><img src="/2018/06/06/Unity3d-hw8-背包系统/weapon1.jpg" alt=""></td>
+<td style="text-align:center"><img src="/2018/06/06/Unity3d-hw8-背包系统/weapon2.jpg" alt=""></td>
+<td style="text-align:center"><img src="/2018/06/06/Unity3d-hw8-背包系统/weapon3.jpg" alt=""></td>
 </tr>
 <tr>
 <td style="text-align:center">处理后</td>
-<td style="text-align:center"><img src="Unity3d-hw8-背包系统/weapon1.png" alt=""></td>
-<td style="text-align:center"><img src="Unity3d-hw8-背包系统/weapon2.png" alt=""></td>
-<td style="text-align:center"><img src="Unity3d-hw8-背包系统/weapon3.png" alt=""></td>
+<td style="text-align:center"><img src="/2018/06/06/Unity3d-hw8-背包系统/weapon1.png" alt=""></td>
+<td style="text-align:center"><img src="/2018/06/06/Unity3d-hw8-背包系统/weapon2.png" alt=""></td>
+<td style="text-align:center"><img src="/2018/06/06/Unity3d-hw8-背包系统/weapon3.png" alt=""></td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>最后一步。核对所有代码挂载情况、文件结构以及摄像机的渲染情况，耐心慢慢调参。调好合适的位置后变可以正常的运行了。到此便和一开始展示的效果完全一致了。<br><img src="Unity3d-hw8-背包系统/GIF.gif" alt=""></li>
+<li>最后一步。核对所有代码挂载情况、文件结构以及摄像机的渲染情况，耐心慢慢调参。调好合适的位置后变可以正常的运行了。到此便和一开始展示的效果完全一致了。<br><img src="/2018/06/06/Unity3d-hw8-背包系统/GIF.gif" alt=""></li>
 </ul>
 <hr>
 <h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
@@ -623,7 +623,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/" data-id="cjmddk5h2000ei0q2oyzm54rb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/" data-id="cjmde5kx7000eikq2a958u62x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -659,20 +659,20 @@
       
         <h1 id="Unity3d实战之粒子系统"><a href="#Unity3d实战之粒子系统" class="headerlink" title="Unity3d实战之粒子系统"></a>Unity3d实战之粒子系统</h1><h2 id="选题要求"><a href="#选题要求" class="headerlink" title="选题要求"></a>选题要求</h2><p>参考 <a href="http://i-remember.fr/en" target="_blank" rel="noopener">http://i-remember.fr/en</a> 这类网站，使用粒子流编程控制制作一些效果， 如“粒子光环”</p>
 <h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><ul>
-<li>静态图<br><img src="Unity3d-hw7-粒子系统/scene.png" alt=""></li>
-<li>动态图<br><img src="Unity3d-hw7-粒子系统/GIF.gif" alt=""></li>
+<li>静态图<br><img src="/2018/05/28/Unity3d-hw7-粒子系统/scene.png" alt=""></li>
+<li>动态图<br><img src="/2018/05/28/Unity3d-hw7-粒子系统/GIF.gif" alt=""></li>
 </ul>
 <h2 id="知识准备"><a href="#知识准备" class="headerlink" title="知识准备"></a>知识准备</h2><p>粒子系统有许多大模块，比如最常用的有初始化模块、发射模块、粒子群形状模块，颜色随存活时间、速度变化的模块等。这里重点学习了一下最重要的初始化模块中各个参数的作用。<br>|参数|功能|<br>|:—:|:—:|<br>|持续时间（Duration）|粒子系统发射粒子的持续时间|<br>|循环（Looping）|粒子系统是否循环|<br>|预热（Prewarm）|当looping开启时，才能启动预热（Prewarm），游戏开始时粒子已经发射了一个周期|<br>|初始延迟（Start Delay）|粒子系统发射粒子之前的延迟。注意在prewarm（预热）启用下不能使用此项|<br>|初始生命（Start Lifetime）|以秒为单位，粒子存活数量|<br>|初始速度（Start Speed）|粒子发射时的速度|<br>|初始大小（Start Size）|粒子发射时的大小|<br>|初始旋转（Start Rotation）|粒子发射时的旋转值|<br>|初始颜色（Start Color）|粒子发射时的颜色|<br>|重力修改器（Gravity Modifier）|粒子在发射时受到的重力影响|<br>|继承速度（Inherit Velocity）|控制粒子速率的因素将继承自粒子系统的移动（对于移动中的粒子系统）|<br>|模拟空间（Simulation Space）|粒子系统在自身坐标系还是世界坐标系|<br>|唤醒时播放（Play On Awake）|如果启用粒子系统当在创建时，自动开始播放|<br>|最大粒子数（Max Particles）|粒子发射的最大数量|</p>
 <h2 id="思路确定"><a href="#思路确定" class="headerlink" title="思路确定"></a>思路确定</h2><p>对 <a href="http://i-remember.fr/en" target="_blank" rel="noopener">http://i-remember.fr/en</a> 上的例子进行了一定的学习后，最后打算做一些改进和创新，利用其原理实现一个卫星带，再用这个卫星带实现一个卫星带围绕行星转的效果。详细过程请见实现步骤。</p>
 <h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ul>
-<li>第一步，新建一个空对象StarRing，注意将其位置设置成（0，0，0），然后添加一个粒子系统的组件，叫ParticleSystem，组建里面的各种参数先不用改动，<strong>推荐通过代码来修改</strong>，可以批量修改，方便快捷而且有利于团队合作、给别人参考等方面。如果直接在组件里改，其他人每次都需要加载对应的场景才看得到修改的参数，而且粒子系统参数众多，这样也不能很直观地看出修改了哪些参数。因此还是推荐写在代码里。<br><img src="Unity3d-hw7-粒子系统/step1.png" alt=""><br><img src="Unity3d-hw7-粒子系统/step1_2.png" alt=""></li>
-<li>第二步，从上一步可以看出，最开始默认的粒子似乎出现了材质丢失的情况，可能是因为<strong>新老版本材质球不兼容</strong>的原因导致的，也正好，我们可以自己找一些想要的材质，将其拖到承载ParticleSystem的对象上，就完成了对粒子的贴图。我在网上找了一张土壤表面的材质，大致充当一些小卫星的样子（拉近看可能效果没那么好）<br><img src="Unity3d-hw7-粒子系统/step2.png" alt=""></li>
-<li>第三步，为了匹配星空的背景，原来这样的默认背景肯定是不合适的，无法营造出那种效果。因此要将天空盒改成纯黑色的模仿宇宙中的光吞噬。更改步骤是上面菜单栏Window-&gt;Lighting-&gt;Settings-&gt;Skybox Material的材质改成黑色的即可，这里我是改成Defualt Material。<br><img src="Unity3d-hw7-粒子系统/step3_1.png" alt=""><br><img src="Unity3d-hw7-粒子系统/step3_2.png" alt=""></li>
-<li>第四步，创建一个球体Star，贴上木星贴图，充当大行星，位置设置在（0，0，0），位于粒子群中心，并让其自转，目的是模仿木星环围绕着木星转的情景，这里就没有设置木星的公转了，涉及到镜头跟随等其他一系列操作，不是这次作业的主要重点。<br><img src="Unity3d-hw7-粒子系统/step4.png" alt=""></li>
+<li>第一步，新建一个空对象StarRing，注意将其位置设置成（0，0，0），然后添加一个粒子系统的组件，叫ParticleSystem，组建里面的各种参数先不用改动，<strong>推荐通过代码来修改</strong>，可以批量修改，方便快捷而且有利于团队合作、给别人参考等方面。如果直接在组件里改，其他人每次都需要加载对应的场景才看得到修改的参数，而且粒子系统参数众多，这样也不能很直观地看出修改了哪些参数。因此还是推荐写在代码里。<br><img src="/2018/05/28/Unity3d-hw7-粒子系统/step1.png" alt=""><br><img src="/2018/05/28/Unity3d-hw7-粒子系统/step1_2.png" alt=""></li>
+<li>第二步，从上一步可以看出，最开始默认的粒子似乎出现了材质丢失的情况，可能是因为<strong>新老版本材质球不兼容</strong>的原因导致的，也正好，我们可以自己找一些想要的材质，将其拖到承载ParticleSystem的对象上，就完成了对粒子的贴图。我在网上找了一张土壤表面的材质，大致充当一些小卫星的样子（拉近看可能效果没那么好）<br><img src="/2018/05/28/Unity3d-hw7-粒子系统/step2.png" alt=""></li>
+<li>第三步，为了匹配星空的背景，原来这样的默认背景肯定是不合适的，无法营造出那种效果。因此要将天空盒改成纯黑色的模仿宇宙中的光吞噬。更改步骤是上面菜单栏Window-&gt;Lighting-&gt;Settings-&gt;Skybox Material的材质改成黑色的即可，这里我是改成Defualt Material。<br><img src="/2018/05/28/Unity3d-hw7-粒子系统/step3_1.png" alt=""><br><img src="/2018/05/28/Unity3d-hw7-粒子系统/step3_2.png" alt=""></li>
+<li>第四步，创建一个球体Star，贴上木星贴图，充当大行星，位置设置在（0，0，0），位于粒子群中心，并让其自转，目的是模仿木星环围绕着木星转的情景，这里就没有设置木星的公转了，涉及到镜头跟随等其他一系列操作，不是这次作业的主要重点。<br><img src="/2018/05/28/Unity3d-hw7-粒子系统/step4.png" alt=""></li>
 <li><p>第五步，添加一个c#脚本，挂载到Star上，来控制Star的自转。这个代码只需要在update中添加如下代码，即可实现自转，相关原理有在之前的太阳系作业中学习过，这里就算是巩固复习了。</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.transform.Rotate(Vector3.up * <span class="number">30</span> * Time.deltaTime);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>第六步，添加一个c#脚本，用来挂载到StarRing上，开始主要代码的编写，实现对粒子系统的控制。<br><img src="Unity3d-hw7-粒子系统/step6.png" alt=""></p>
+<li><p>第六步，添加一个c#脚本，用来挂载到StarRing上，开始主要代码的编写，实现对粒子系统的控制。<br><img src="/2018/05/28/Unity3d-hw7-粒子系统/step6.png" alt=""></p>
 </li>
 <li><p>第七步，为方便起见，创建一个类，来记录每个粒子所应该具有的基本信息。这样有利于提升代码<strong>美观度</strong>，<strong>可读性</strong>，也使得可<strong>扩展性</strong>大大增强，如果往后需要给每个粒子加基本属性信息的话，只需要在类中加一个成员，不用大幅度改动重要代码。</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ParticleInfo</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">float</span> radius = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">float</span> angle = <span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ParticleInfo</span>(<span class="params"><span class="keyword">float</span> radius, <span class="keyword">float</span> angle</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.radius = radius;   <span class="comment">// 半径  </span></span><br><span class="line">        <span class="keyword">this</span>.angle = angle;     <span class="comment">// 角度  </span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -689,12 +689,12 @@
 <li><p>最后一步！重写update方法，每帧刷新以实现粒子群移动的效果，对i模2是为了是粒子运动效果更加丰富，可以同时有顺时针和逆时针移动的粒子。但是在真实情况中卫星带中的小卫星旋转方向应该都是大致一致的，不然会出大事，这里主要是为了体验一下粒子系统强大运算能力的魅力。</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 除以半径是为了使速度更加多样化</span></span><br><span class="line">        <span class="keyword">float</span> rotateSpeed = (speed / info[i].radius) * (i % <span class="number">10</span> + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 一半粒子顺时针转，一半粒子逆时针转</span></span><br><span class="line">        <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            info[i].angle -= rotateSpeed;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            info[i].angle += rotateSpeed;</span><br><span class="line">        &#125;                </span><br><span class="line"></span><br><span class="line">        <span class="comment">// 保证角度合法</span></span><br><span class="line">        info[i].angle %= <span class="number">360.0</span>f;</span><br><span class="line">        <span class="comment">// 转换成弧度制</span></span><br><span class="line">        <span class="keyword">float</span> radian = info[i].angle * Mathf.PI / <span class="number">180</span>;     </span><br><span class="line"></span><br><span class="line">        particleArr[i].position = <span class="keyword">new</span> Vector3(info[i].radius * Mathf.Cos(radian), <span class="number">0</span>f, info[i].radius * Mathf.Sin(radian));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 通过粒子数组设置粒子系统</span></span><br><span class="line">    particleSys.SetParticles(particleArr, particleArr.Length);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>经历过之前的所有方法后，我们就可以把代码跑起来了，内心激动，但是一看效果，贼尬，卫星带边缘如此明显，看着极其不自然。<br><img src="Unity3d-hw7-粒子系统/edge.png" alt=""></p>
+<li><p>经历过之前的所有方法后，我们就可以把代码跑起来了，内心激动，但是一看效果，贼尬，卫星带边缘如此明显，看着极其不自然。<br><img src="/2018/05/28/Unity3d-hw7-粒子系统/edge.png" alt=""></p>
 </li>
 <li>于是上网搜了搜柔滑边缘的方法，看到大神是这么处理的。巧妙地使用比例随机来柔滑边缘，一看似乎很有道理，决定参照模仿一下，效果惊人。主要改动如下：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">IniAll</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;          </span><br><span class="line">    <span class="keyword">float</span> minRadius = <span class="number">6.0f</span>;  <span class="comment">// 最小半径  </span></span><br><span class="line">    <span class="keyword">float</span> maxRadius = <span class="number">10.0f</span>; <span class="comment">// 最大半径           </span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; ++i)</span><br><span class="line">    &#123;   </span><br><span class="line">        <span class="comment">// 随机每个粒子半径，集中于平均半径附近  </span></span><br><span class="line">        <span class="keyword">float</span> midRadius = (maxRadius + minRadius) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">float</span> minRate = Random.Range(<span class="number">1.0f</span>, midRadius / minRadius);</span><br><span class="line">        <span class="keyword">float</span> maxRate = Random.Range(midRadius / maxRadius, <span class="number">1.0f</span>);</span><br><span class="line">        <span class="keyword">float</span> radius = Random.Range(minRadius * minRate, maxRadius * maxRate);</span><br><span class="line"></span><br><span class="line">        ...         </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 通过初始化好的粒子数组设置粒子系统</span></span><br><span class="line">    particleSys.SetParticles(particleArr, particleArr.Length);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>改后效果：<br><img src="Unity3d-hw7-粒子系统/NoEdge.png" alt=""></p>
+<p>改后效果：<br><img src="/2018/05/28/Unity3d-hw7-粒子系统/NoEdge.png" alt=""></p>
 <ul>
 <li>优化，采用类似的原理，可以让每个粒子在一个很小的位置范围内抖动，让画面更加真实带感，实现方法是在update方法中可以加入一下随机的偏移量。<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 粒子在半径方向上抖动           </span></span><br><span class="line">        <span class="keyword">float</span> offset = Random.Range(<span class="number">-0.01</span>f, <span class="number">0.01</span>f);  <span class="comment">// 偏移范围</span></span><br><span class="line">        info[i].radius += offset;</span><br><span class="line"></span><br><span class="line">        particleArr[i].position = <span class="keyword">new</span> Vector3(info[i].radius * Mathf.Cos(radian), <span class="number">0</span>f, info[i].radius * Mathf.Sin(radian));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 通过粒子数组设置粒子系统</span></span><br><span class="line">    particleSys.SetParticles(particleArr, particleArr.Length);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -712,7 +712,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/28/Unity3d-hw7-粒子系统/" data-id="cjmddk5h1000ci0q2cwi7tksi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/28/Unity3d-hw7-粒子系统/" data-id="cjmde5kx5000cikq2deu3p7wa" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -796,12 +796,12 @@
 <li>本次的项目的应用<br>当玩家得分或游戏结束时，都会GameEventManager的得分/游戏结束方法，但是具体怎么实现不用管。因为有可能后期需求更改，得分/游戏结束后需要实现更多效果。而此时我们只需要让这些效果订阅GameEventManager发布的得分/游戏结束信息，即可产生作用。实现功能的分类，降低代码耦合。</li>
 </ul>
 <h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><ul>
-<li>基本地形<br><img src="Unity3d-hw6-巡逻兵/scene.jpg" alt=""></li>
-<li>英雄模型<br><img src="Unity3d-hw6-巡逻兵/hero.jpg" alt=""></li>
-<li>怪物模型<br><img src="Unity3d-hw6-巡逻兵/patrol.jpg" alt=""></li>
+<li>基本地形<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/scene.jpg" alt=""></li>
+<li>英雄模型<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/hero.jpg" alt=""></li>
+<li>怪物模型<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/patrol.jpg" alt=""></li>
 </ul>
 <h2 id="重要类实现，代码请直接在项目中查看"><a href="#重要类实现，代码请直接在项目中查看" class="headerlink" title="重要类实现，代码请直接在项目中查看"></a>重要类实现，代码请直接在项目中查看</h2><ul>
-<li>文件框架结构<br><img src="Unity3d-hw6-巡逻兵/file.jpg" alt=""><ul>
+<li>文件框架结构<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/file.jpg" alt=""><ul>
 <li>ActionControl.cs，基础的动作管理类的集合，该文件里都是一些和动作管理有关的类。相当于动作的controller。</li>
 <li>BaseCode.cs，一些最基本的类和接口的集合，如单实例导演类，控制场景的切换，IUserAction、回调接口等</li>
 <li>FirstControl.cs，只包含FirstControl—控制第一个场景的类</li>
@@ -815,11 +815,11 @@
 </ul>
 </li>
 <li>脚本挂载与组件添加情况  <ul>
-<li>camera<br><img src="Unity3d-hw6-巡逻兵/camera.jpg" alt=""></li>
-<li>空对象<br><img src="Unity3d-hw6-巡逻兵/empty.jpg" alt=""></li>
-<li>英雄<br><img src="Unity3d-hw6-巡逻兵/hero1.jpg" alt=""></li>
-<li>巡逻兵<br><img src="Unity3d-hw6-巡逻兵/patrol1.jpg" alt=""></li>
-<li>地形<br><img src="Unity3d-hw6-巡逻兵/scene1.jpg" alt=""></li>
+<li>camera<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/camera.jpg" alt=""></li>
+<li>空对象<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/empty.jpg" alt=""></li>
+<li>英雄<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/hero1.jpg" alt=""></li>
+<li>巡逻兵<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/patrol1.jpg" alt=""></li>
+<li>地形<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/scene1.jpg" alt=""></li>
 </ul>
 </li>
 <li><p>代码</p>
@@ -859,7 +859,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/11/Unity3d-hw6-巡逻兵/" data-id="cjmddk5gy0009i0q22aiikj8r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/05/11/Unity3d-hw6-巡逻兵/" data-id="cjmde5kx20009ikq2lrzh8d8c" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -956,13 +956,13 @@
 <li>适配器模式的意义<br>适配器的主要作用，就是将多个类接入同一个接口，或者转接“不兼容”接口。有动机地修改一个正常运行的系统的接口，将一个类的接口转换成客户希望的另外一个接口。适配器模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。</li>
 </ul>
 <h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><ul>
-<li>Round1<br><img src="Unity3d-hw5-打飞碟-混合版/round1.jpg" alt=""></li>
-<li>Round2<br><img src="Unity3d-hw5-打飞碟-混合版/round2.jpg" alt=""></li>
-<li>Round3<br><img src="Unity3d-hw5-打飞碟-混合版/round3.jpg" alt=""></li>
+<li>Round1<br><img src="/2018/04/24/Unity3d-hw5-打飞碟-混合版/round1.jpg" alt=""></li>
+<li>Round2<br><img src="/2018/04/24/Unity3d-hw5-打飞碟-混合版/round2.jpg" alt=""></li>
+<li>Round3<br><img src="/2018/04/24/Unity3d-hw5-打飞碟-混合版/round3.jpg" alt=""></li>
 </ul>
 <h2 id="重要代码实现"><a href="#重要代码实现" class="headerlink" title="重要代码实现"></a>重要代码实现</h2><ul>
-<li>文件框架结构<br><img src="Unity3d-hw5-打飞碟-混合版/file.jpg" alt=""></li>
-<li>脚本挂载情况<br><img src="Unity3d-hw5-打飞碟-混合版/script.jpg" alt=""></li>
+<li>文件框架结构<br><img src="/2018/04/24/Unity3d-hw5-打飞碟-混合版/file.jpg" alt=""></li>
+<li>脚本挂载情况<br><img src="/2018/04/24/Unity3d-hw5-打飞碟-混合版/script.jpg" alt=""></li>
 <li><p>ActionManager，基础动作管理器</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ActionManager</span> : <span class="title">SSActionManager</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> FirstControl sceneController;</span><br><span class="line">    <span class="keyword">public</span> DiskFactory diskFactory;</span><br><span class="line">    <span class="keyword">public</span> RecordControl scoreRecorder;</span><br><span class="line">    <span class="keyword">public</span> Emit EmitDisk;</span><br><span class="line">    <span class="keyword">public</span> GameObject Disk;</span><br><span class="line">    <span class="comment">// Use this for initialization</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        sceneController = (FirstControl)Director.getInstance().sceneCtrl;</span><br><span class="line">        diskFactory = sceneController.factory;</span><br><span class="line">        scoreRecorder = sceneController.scoreRecorder;</span><br><span class="line">        <span class="comment">//sceneController.MyActionManager = this;</span></span><br><span class="line">        sceneController.myAdapter.SetNormalAM(<span class="keyword">this</span>); <span class="comment">//修改的地方</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Update is called once per frame</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> new <span class="keyword">void</span> <span class="title">Update</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">base</span>.Update();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">playDisk</span>(<span class="params"><span class="keyword">int</span> round</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//Debug.Log(diskFactory);</span></span><br><span class="line">        EmitDisk = Emit.GetSSAction();</span><br><span class="line">        Disk = diskFactory.getDisk(round);</span><br><span class="line">        <span class="keyword">this</span>.AddAction(Disk, EmitDisk, <span class="keyword">this</span>);</span><br><span class="line">        Disk.GetComponent&lt;DiskControl&gt;().action = EmitDisk;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SSActionEvent</span>(<span class="params">SSAction source</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!source.GameObject.GetComponent&lt;DiskControl&gt;().hit)</span><br><span class="line">            scoreRecorder.miss();</span><br><span class="line">        diskFactory.freeDisk(source.GameObject);</span><br><span class="line">        source.GameObject.GetComponent&lt;DiskControl&gt;().hit = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -991,7 +991,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/24/Unity3d-hw5-打飞碟-混合版/" data-id="cjmddk5gw0008i0q2cxgatlao" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/24/Unity3d-hw5-打飞碟-混合版/" data-id="cjmde5kx00008ikq20rahsvp5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -1428,7 +1428,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/15/SYSU-SE-2018-Part1/" data-id="cjmddk5gi0000i0q28rog5mpj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/15/SYSU-SE-2018-Part1/" data-id="cjmde5kwl0000ikq2dejfh75v" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/中级实训/">中级实训</a></li></ul>
@@ -1465,9 +1465,9 @@
         <h1 id="操作与总结"><a href="#操作与总结" class="headerlink" title="操作与总结"></a>操作与总结</h1><h2 id="参考-Fantasy-Skybox-FREE-构建自己的游戏场景"><a href="#参考-Fantasy-Skybox-FREE-构建自己的游戏场景" class="headerlink" title="参考 Fantasy Skybox FREE 构建自己的游戏场景"></a>参考 Fantasy Skybox FREE 构建自己的游戏场景</h2><ul>
 <li>首先要去Assets store里找到对应的资源下载，在搜索框输入Fantasy Skybox FREE有如下结果，选择第一个下载，然后import导入到项目资源中，便可以使用这个资源包了。</li>
 <li>Skybox顾名思义，天空盒，是用来模拟游戏场景中的天空效果的。由于scene和game的视角从某种意义上来说是固定的，所以要较好的模拟天空的效果，就需要把天空当成一个六面体的盒，在每个面上贴上对应的Texture，以此来模拟天空罩住游戏场景。</li>
-<li>下图是用了天空盒构建的场景图<br><img src="Unity3d-hw3-魔鬼与牧师v2/skybox.jpg" alt=""></li>
+<li>下图是用了天空盒构建的场景图<br><img src="/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/skybox.jpg" alt=""></li>
 <li>只有天空或许显得单调，我们可以再给它加个地形Terrain，地形的贴图以及后来的花草树木在新版本的unity里面是没有自带的，也需要自行到Assets store里面下载导入。</li>
-<li>以下是最终的效果图(water environment还没来得及做)<br><img src="Unity3d-hw3-魔鬼与牧师v2/scene1.png" alt=""><br><img src="Unity3d-hw3-魔鬼与牧师v2/scene2.png" alt=""></li>
+<li>以下是最终的效果图(water environment还没来得及做)<br><img src="/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/scene1.png" alt=""><br><img src="/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/scene2.png" alt=""></li>
 </ul>
 <h2 id="写一个简单的总结，总结游戏对象的使用"><a href="#写一个简单的总结，总结游戏对象的使用" class="headerlink" title="写一个简单的总结，总结游戏对象的使用"></a>写一个简单的总结，总结游戏对象的使用</h2><ul>
 <li>游戏对象可以使用unity自带的正方体，圆柱体，球体等基础的资源构建</li>
@@ -1485,9 +1485,9 @@
 </li>
 <li>游戏规则：很经典的游戏，应该大家以前都玩过。游戏初始界面是三个牧师和三个魔鬼都在同一侧河岸，准备过河，但只有一条船且只能容纳两个对象，船必须至少有一个对象才能开动。游戏目的是采取合适的策略将全部牧师和魔鬼安全送到对岸，如果途中出现某一岸魔鬼多于牧师的情况，则游戏失败。</li>
 <li>先贴一下此版本的效果图<ul>
-<li>启动界面<br><img src="Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil1.jpg" alt="">  </li>
-<li>胜利界面<br><img src="Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil2.jpg" alt=""></li>
-<li>失败界面<br><img src="Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil3.jpg" alt="">  </li>
+<li>启动界面<br><img src="/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil1.jpg" alt="">  </li>
+<li>胜利界面<br><img src="/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil2.jpg" alt=""></li>
+<li>失败界面<br><img src="/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil3.jpg" alt="">  </li>
 </ul>
 </li>
 <li>本项目分离出来的MVC框架<br>Model: Shore, Boat, Item<br>View: UserGUI, ClickGUI<br>Controller: BoatControl, ShoreControl, ItemControl, FirstControl, Director</li>
@@ -1531,7 +1531,7 @@
 </ul>
 <h2 id="牧师与魔鬼v2——动作分离版"><a href="#牧师与魔鬼v2——动作分离版" class="headerlink" title="牧师与魔鬼v2——动作分离版"></a>牧师与魔鬼v2——动作分离版</h2><p><strong>最主要的改动——利用ActionManager的模板，实现Movable类的转移</strong><br>这里不再介绍MVC，直接开始介绍动作分离。</p>
 <ul>
-<li>先上效果图，改进了UI，现学现用加了一个天空盒<br><img src="Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil1_v2.jpg" alt=""><br><img src="Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil2_v2.jpg" alt=""><br><img src="Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil3_v2.jpg" alt=""></li>
+<li>先上效果图，改进了UI，现学现用加了一个天空盒<br><img src="/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil1_v2.jpg" alt=""><br><img src="/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil2_v2.jpg" alt=""><br><img src="/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/PriestAndDevil3_v2.jpg" alt=""></li>
 <li>添加的文件——Action，有关动作管理的类和实现全都转移到这个文件里，模板基本套用ppt上现成代码，略作修改</li>
 <li><p>动作的分离，以下改动主要是将v1遗留的耦合动作剔除</p>
 <ul>
@@ -1555,7 +1555,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/" data-id="cjmddk5gv0005i0q2tsz2jrm3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/10/Unity3d-hw3-魔鬼与牧师v2/" data-id="cjmde5kwy0005ikq2r8a9swq2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -1623,8 +1623,8 @@
 <li>修改背景以显示阴影效果</li>
 </ul>
 </li>
-<li>效果图<br><img src="Unity3d-hw2-太阳系-魔鬼与牧师v1/Solar1.jpg" alt="solar1"><br><img src="Unity3d-hw2-太阳系-魔鬼与牧师v1/Solar2.jpg" alt="solar2"></li>
-<li>对象结构<br><img src="Unity3d-hw2-太阳系-魔鬼与牧师v1/Solar3.jpg" alt="solar3"></li>
+<li>效果图<br><img src="/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/Solar1.jpg" alt="solar1"><br><img src="/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/Solar2.jpg" alt="solar2"></li>
+<li>对象结构<br><img src="/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/Solar3.jpg" alt="solar3"></li>
 </ul>
 </li>
 </ol>
@@ -1676,9 +1676,9 @@
 </ul>
 </li>
 <li>效果图<ul>
-<li>游戏界面<br><img src="Unity3d-hw2-太阳系-魔鬼与牧师v1/PriestAndDevil1.jpg" alt="PriestAndDevil1"></li>
-<li>胜利界面<br><img src="Unity3d-hw2-太阳系-魔鬼与牧师v1/PriestAndDevil2.jpg" alt="PriestAndDevil2"></li>
-<li>失败界面<br><img src="Unity3d-hw2-太阳系-魔鬼与牧师v1/PriestAndDevil3.jpg" alt="PriestAndDevil3"></li>
+<li>游戏界面<br><img src="/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/PriestAndDevil1.jpg" alt="PriestAndDevil1"></li>
+<li>胜利界面<br><img src="/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/PriestAndDevil2.jpg" alt="PriestAndDevil2"></li>
+<li>失败界面<br><img src="/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/PriestAndDevil3.jpg" alt="PriestAndDevil3"></li>
 </ul>
 </li>
 <li>本项目Github地址——<a href="https://github.com/gitgiter/unity3d-learning/tree/master/homework2" target="_blank" rel="noopener">传送门</a></li>
@@ -1687,7 +1687,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/" data-id="cjmddk5gr0003i0q2mt1oejnm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/03/Unity3d-hw2-太阳系-魔鬼与牧师v1/" data-id="cjmde5kwu0003ikq2yzpj907e" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/">Unity3d</a></li></ul>
@@ -1780,7 +1780,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
+      &copy; 2018 xie tao<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
