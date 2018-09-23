@@ -160,7 +160,7 @@
 <h2 id="游戏简介"><a href="#游戏简介" class="headerlink" title="游戏简介"></a>游戏简介</h2><p>一个控制小飞龙躲避障碍物的小型AR跑酷游戏，有两个虚拟按钮可以控制飞龙向上或向下移动。</p>
 <h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><ul>
 <li>静态图<br><img src="/2018/06/19/Unity3d-hw9-AR小游戏/effect.png" alt=""></li>
-<li>动态图<br><img src="/2018/06/19/Unity3d-hw9-AR小游戏/GIF.gif" alt=""></li>
+<li>动态图（比较大，加载稍微慢一些）<br><img src="https://github.com/gitgiter/unity3d-learning/raw/master/homework9/img/GIF.gif" alt=""></li>
 </ul>
 <hr>
 <h2 id="AR模型识别"><a href="#AR模型识别" class="headerlink" title="AR模型识别"></a>AR模型识别</h2><h3 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h3><p>这里网上教程很多，就不详细阐述了，大致过程就是去高通（vuforia）官网注册一个账号同意相关协议，下载sdk并导入。然后创建一个app关联数据库，数据库中上传待识别的图像，然后等vuforia分析完识别图的特征点之后，将target作为一个unity editor的选项下载下来后也导入unity项目。最后是项目内的配置，需要配置根据之前创建app时密钥配置unity项目，然后将预制ImageTarget的目标设置成你要识别的图片。运行项目时将待识别的图片放置在电脑摄像头范围内即可。</p>
