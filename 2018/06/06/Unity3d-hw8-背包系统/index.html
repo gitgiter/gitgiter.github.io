@@ -1,0 +1,755 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    gitgiter's blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">gitgiter</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/gitgiter" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://blog.csdn.net/Wonderful_sky" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/gitgiter/unity3d-learning/raw/master/homework8/img/GIF.gif);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Unity3d-hw8-背包系统</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="Unity3d实战之背包系统"><a href="#Unity3d实战之背包系统" class="headerlink" title="Unity3d实战之背包系统"></a>Unity3d实战之背包系统</h1><h2 id="选题要求"><a href="#选题要求" class="headerlink" title="选题要求"></a>选题要求</h2><p>参考unity官网的背包系统例子，实现一个简单的背包系统</p>
+<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><ul>
+<li>静态图<br><img src="/2018/06/06/Unity3d-hw8-背包系统/scene.png" alt=""></li>
+<li>动态图<br><img src="/2018/06/06/Unity3d-hw8-背包系统/GIF.gif" alt=""></li>
+</ul>
+<h2 id="知识准备"><a href="#知识准备" class="headerlink" title="知识准备"></a>知识准备</h2><ul>
+<li>摄像机渲染<ul>
+<li>Clearing Flags：<ul>
+<li>Skybox：天空盒(默认项)。在屏幕空白处显示当前摄像机的天空盒，如果没有指定天空盒，则会显示默认背景色。</li>
+<li>Solid Color：空白处将显示默认此处设置的背景色。</li>
+<li>Depth only：仅深度，该模式用于对象不被裁剪。</li>
+<li>Don’t Clear：不清除，该模式不清楚任何颜色和或深度缓存，但这样做每帧渲染的结果都会叠加在下一帧之上。</li>
+</ul>
+</li>
+<li>Culling Mask： 摄像机渲染的层</li>
+<li>Layers： 摄像机所在的层</li>
+<li>Depth： 指定多个摄像机的渲染顺序</li>
+<li>Rendering Path：渲染路径，设定摄像机的渲染方法</li>
+<li>Projection：投影方式，分为透视和正交</li>
+<li>Clipping Planes：剪裁平面，摄像机的渲染范围。Near为最近的点，Far为最远的点</li>
+</ul>
+</li>
+<li>粒子系统<br>  粒子系统有许多大模块，比如最常用的有初始化模块、发射模块、粒子群形状模块，颜色随存活时间、速度变化的模块等。方便起见这里再把上次的粒子系统贴一遍。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">持续时间（Duration）</td>
+<td style="text-align:center">粒子系统发射粒子的持续时间</td>
+</tr>
+<tr>
+<td style="text-align:center">循环（Looping）</td>
+<td style="text-align:center">粒子系统是否循环</td>
+</tr>
+<tr>
+<td style="text-align:center">预热（Prewarm）</td>
+<td style="text-align:center">当looping开启时，才能启动预热（Prewarm），游戏开始时粒子已经发射了一个周期</td>
+</tr>
+<tr>
+<td style="text-align:center">初始延迟（Start Delay）</td>
+<td style="text-align:center">粒子系统发射粒子之前的延迟。注意在prewarm（预热）启用下不能使用此项</td>
+</tr>
+<tr>
+<td style="text-align:center">初始生命（Start Lifetime）</td>
+<td style="text-align:center">以秒为单位，粒子存活数量</td>
+</tr>
+<tr>
+<td style="text-align:center">初始速度（Start Speed）</td>
+<td style="text-align:center">粒子发射时的速度</td>
+</tr>
+<tr>
+<td style="text-align:center">初始大小（Start Size）</td>
+<td style="text-align:center">粒子发射时的大小</td>
+</tr>
+<tr>
+<td style="text-align:center">初始旋转（Start Rotation）</td>
+<td style="text-align:center">粒子发射时的旋转值</td>
+</tr>
+<tr>
+<td style="text-align:center">初始颜色（Start Color）</td>
+<td style="text-align:center">粒子发射时的颜色</td>
+</tr>
+<tr>
+<td style="text-align:center">重力修改器（Gravity Modifier）</td>
+<td style="text-align:center">粒子在发射时受到的重力影响</td>
+</tr>
+<tr>
+<td style="text-align:center">继承速度（Inherit Velocity）</td>
+<td style="text-align:center">控制粒子速率的因素将继承自粒子系统的移动（对于移动中的粒子系统）</td>
+</tr>
+<tr>
+<td style="text-align:center">模拟空间（Simulation Space）</td>
+<td style="text-align:center">粒子系统在自身坐标系还是世界坐标系</td>
+</tr>
+<tr>
+<td style="text-align:center">唤醒时播放（Play On Awake）</td>
+<td style="text-align:center">如果启用粒子系统当在创建时，自动开始播放</td>
+</tr>
+<tr>
+<td style="text-align:center">最大粒子数（Max Particles）</td>
+<td style="text-align:center">粒子发射的最大数量</td>
+</tr>
+</tbody>
+</table>
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ul>
+<li>第一步，搭建UI界面。新建一个画布（Canvas），再创建一个Panel容器，里面包含UI界面的所有UI控件，比如背包区的九个格子和装备区的三个格子，每个格子都是一个Button控件，背包区和装备区的这些按钮的父级分别是Bag和Equip两个空对象，主要是为了添加GridLayout控件来控制子对象的布局，以及相应的控制脚本。基本的控件创建好之后，将画布设置成UI层，接着再创建一个保存鼠标图片的Image控件，这是为了暂存移动的图片达到交换目的，最后创建一个专门渲染UI层的摄像机，将其Culling Mask设置成UI层。这样UI层的搭建基本完成，剩下的就是对控件位置、大小等的参数调整，以及更改控件的图片。这里要注意的一点是，<strong>添加图片时必须先把原来的图片转成Sprite类型才可以被Image组件识别</strong>。<br>搭建完成后的文件结构<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step1.png" alt=""><br>UI Camera设置<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step1_2.png" alt=""><br>GridLayout组件的设置<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step1_3.png" alt=""></li>
+<li>第二步，搭建背景界面。这个比布置UI界面容易多了。为了让背景有点简单的动态特效，这里用到了一点粒子系统。首先新建一个空对象scene，然后右键scene-&gt;Effects-&gt;Particle System，便可把例子系统添加为其子对象。接着再新建一个空对象，用来显示背景图片，修改其Sprite Renderer的Sprite为要添加的背景图片即可。最后把主摄像机放到这个空对象下面，其渲染的层是默认层，无需修改。要注意的是必须确保UI层的渲染要介于背景层渲染和英雄层渲染之间，用摄像机的深度Depth控制。<br>搭建完成后的文件结构<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step2.png" alt=""><br>主摄像机设置<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step2_2.png" alt=""></li>
+<li>第三步，搭建英雄层。这层就是用来渲染英雄的，为了和UI层区分开来以便拓展更多的功能。新建一个摄像机，负责渲染英雄层，将英雄作为该摄像机的子对象，并将英雄的所在层设置成英雄层（自定义的一个层）。<br>搭建完成后的总的文件结构<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step3_1.png" alt=""><br>英雄摄像机的设置<br><img src="/2018/06/06/Unity3d-hw8-背包系统/step3_2.png" alt=""></li>
+<li><p>第四步，实现画布随鼠标旋转。这里用的是老师上课提供的一个源码，我外加做了一些修改，原本是整个画布的旋转，但是感觉看起来怪怪的，我将其改成以中轴线为界，两边（背包区和装备区）分别旋转，鼠标在背包区的时候装备区不动，鼠标在装备区的时候背包区不动。因此便有了两份类似的代码，分别挂载在背包区的父级元素Bag上和装备区的父级元素Equip上。<br>以控制背包区随鼠标旋转的代码为例</p>
+<pre class="line-numbers language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BagTilt</span> <span class="token punctuation">:</span> MonoBehaviour <span class="token punctuation">{</span>
+
+  <span class="token keyword">public</span> Vector2 range <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vector2</span><span class="token punctuation">(</span><span class="token number">50f</span><span class="token punctuation">,</span> <span class="token number">30f</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  Transform mTrans<span class="token punctuation">;</span>
+  Quaternion mStart<span class="token punctuation">;</span>
+  Vector2 mRot <span class="token operator">=</span> Vector2<span class="token punctuation">.</span>zero<span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// Use this for initialization</span>
+  <span class="token keyword">void</span> <span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      mTrans <span class="token operator">=</span> transform<span class="token punctuation">;</span>
+      mStart <span class="token operator">=</span> mTrans<span class="token punctuation">.</span>localRotation<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// Update is called once per frame</span>
+  <span class="token keyword">void</span> <span class="token function">Update</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      Vector3 pos <span class="token operator">=</span> Input<span class="token punctuation">.</span>mousePosition<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">//Debug.Log(pos);        </span>
+
+      <span class="token keyword">float</span> halfWidth <span class="token operator">=</span> Screen<span class="token punctuation">.</span>width <span class="token operator">*</span> <span class="token number">0.5f</span><span class="token punctuation">;</span>
+      <span class="token keyword">float</span> halfHeight <span class="token operator">=</span> Screen<span class="token punctuation">.</span>height <span class="token operator">*</span> <span class="token number">0.5f</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>pos<span class="token punctuation">.</span>x <span class="token operator">-</span> halfWidth <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">float</span> x <span class="token operator">=</span> Mathf<span class="token punctuation">.</span><span class="token function">Clamp</span><span class="token punctuation">(</span><span class="token punctuation">(</span>pos<span class="token punctuation">.</span>x <span class="token operator">-</span> halfWidth<span class="token punctuation">)</span> <span class="token operator">/</span> halfWidth<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1f</span><span class="token punctuation">,</span> <span class="token number">1f</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">float</span> y <span class="token operator">=</span> Mathf<span class="token punctuation">.</span><span class="token function">Clamp</span><span class="token punctuation">(</span><span class="token punctuation">(</span>pos<span class="token punctuation">.</span>y <span class="token operator">-</span> halfHeight<span class="token punctuation">)</span> <span class="token operator">/</span> halfHeight<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1f</span><span class="token punctuation">,</span> <span class="token number">1f</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      mRot <span class="token operator">=</span> Vector2<span class="token punctuation">.</span><span class="token function">Lerp</span><span class="token punctuation">(</span>mRot<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Vector2</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">,</span> Time<span class="token punctuation">.</span>deltaTime <span class="token operator">*</span> <span class="token number">5f</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      mTrans<span class="token punctuation">.</span>localRotation <span class="token operator">=</span> mStart <span class="token operator">*</span> Quaternion<span class="token punctuation">.</span><span class="token function">Euler</span><span class="token punctuation">(</span><span class="token operator">-</span>mRot<span class="token punctuation">.</span>y <span class="token operator">*</span> range<span class="token punctuation">.</span>y<span class="token punctuation">,</span> <span class="token operator">-</span>mRot<span class="token punctuation">.</span>x <span class="token operator">*</span> range<span class="token punctuation">.</span>x<span class="token punctuation">,</span> <span class="token number">0f</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>第五步，实现游戏的管理者。挂载到任何一个对象上都行，因为其执行与所挂在的对象无关，是对整个游戏场景的控制。这里我是挂载到Canvas上。游戏的管理者主要负责跟踪装备区的装备情况、装备类型的判断以及鼠标对象的单例化。这里为了方便添加脚本，在构造函数中采用循环为每个Button添加对应的脚本。</p>
+<pre class="line-numbers language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Manager</span> <span class="token punctuation">:</span> MonoBehaviour <span class="token punctuation">{</span>
+
+  <span class="token keyword">private</span> MouseImage mouse<span class="token punctuation">;</span>
+  <span class="token keyword">private</span> <span class="token keyword">int</span> IsWeapon1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">private</span> <span class="token keyword">int</span> IsWeapon2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">private</span> <span class="token keyword">int</span> IsWeapon3 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// Use this for initialization</span>
+  <span class="token keyword">void</span> <span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      mouse <span class="token operator">=</span> <span class="token punctuation">(</span>MouseImage<span class="token punctuation">)</span><span class="token function">FindObjectOfType</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>MouseImage<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">9</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Grid"</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">AddComponent<span class="token punctuation">&lt;</span>Bag<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Weapon"</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">AddComponent<span class="token punctuation">&lt;</span>Equip<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// Update is called once per frame</span>
+  <span class="token keyword">public</span> MouseImage <span class="token function">getMouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> mouse<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setMouse</span><span class="token punctuation">(</span>MouseImage m<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>mouse <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          mouse <span class="token operator">=</span> m<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getWeapon1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> IsWeapon1<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getWeapon2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> IsWeapon2<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getWeapon3</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> IsWeapon3<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setWeapon1</span><span class="token punctuation">(</span><span class="token keyword">int</span> w1<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      IsWeapon1 <span class="token operator">=</span> w1<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setWeapon2</span><span class="token punctuation">(</span><span class="token keyword">int</span> w2<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      IsWeapon2 <span class="token operator">=</span> w2<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setWeapon3</span><span class="token punctuation">(</span><span class="token keyword">int</span> w3<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      IsWeapon3 <span class="token operator">=</span> w3<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>第六步，实现对鼠标对象的维护。新建一个C#脚本MouseImage，挂载在MouseImage这个Image对象上。目的也就是，使得点击装备区或是背包区的时候，如果点击的格子里面有装备，则和鼠标上的图片发生交换，以达到将装备取出的效果，而且实现点击图片，图片跟随鼠标移动的效果。这个脚本主要负责装备类型的检测、鼠标图片的设置和图片跟随鼠标移动。Update部分鼠标坐标减去的值是为了不让鼠标上的图片阻挡了对按钮的点击。</p>
+<pre class="line-numbers language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MouseImage</span> <span class="token punctuation">:</span> MonoBehaviour <span class="token punctuation">{</span>
+
+  <span class="token keyword">private</span> Manager GM<span class="token punctuation">;</span>
+  <span class="token keyword">private</span> Image mouseImage<span class="token punctuation">;</span>
+  <span class="token keyword">private</span> <span class="token keyword">int</span> mouseType <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">private</span> <span class="token keyword">int</span> z<span class="token punctuation">;</span>
+
+  <span class="token keyword">public</span> Sprite none<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> Sprite weapon1<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> Sprite weapon2<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> Sprite weapon3<span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// Use this for initialization</span>
+  <span class="token keyword">void</span> <span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      GM <span class="token operator">=</span> <span class="token punctuation">(</span>Manager<span class="token punctuation">)</span><span class="token function">FindObjectOfType</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>Manager<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      GM<span class="token punctuation">.</span><span class="token function">setMouse</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      mouseImage <span class="token operator">=</span> <span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        
+      z <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">400</span><span class="token punctuation">;</span>
+
+      weapon1 <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Grid1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sprite<span class="token punctuation">;</span>
+      weapon2 <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Grid2"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sprite<span class="token punctuation">;</span>
+      weapon3 <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Grid3"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sprite<span class="token punctuation">;</span>
+      none <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"MouseImage"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sprite<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getMouseType</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> mouseType<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setMouseType</span><span class="token punctuation">(</span><span class="token keyword">int</span> m<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      mouseType <span class="token operator">=</span> m<span class="token punctuation">;</span>
+      <span class="token keyword">switch</span> <span class="token punctuation">(</span>m<span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          <span class="token keyword">case</span> <span class="token number">0</span><span class="token punctuation">:</span>
+              mouseImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> none<span class="token punctuation">;</span>
+              z <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">400</span><span class="token punctuation">;</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+              mouseImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon1<span class="token punctuation">;</span>
+              z <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
+              mouseImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon2<span class="token punctuation">;</span>
+              z <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
+              mouseImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon3<span class="token punctuation">;</span>
+              z <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token keyword">default</span><span class="token punctuation">:</span>
+              mouseImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> none<span class="token punctuation">;</span>
+              z <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">400</span><span class="token punctuation">;</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>        
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// Update is called once per frame</span>
+  <span class="token keyword">void</span> <span class="token function">Update</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      transform<span class="token punctuation">.</span>position <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vector3</span><span class="token punctuation">(</span>Input<span class="token punctuation">.</span>mousePosition<span class="token punctuation">.</span>x <span class="token operator">-</span> <span class="token number">26</span><span class="token punctuation">,</span> Input<span class="token punctuation">.</span>mousePosition<span class="token punctuation">.</span>y <span class="token operator">-</span> <span class="token number">26</span><span class="token punctuation">,</span> z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>第七步，实现背包区的交换逻辑。这里主要是要赋予背包区按钮对点击事件的响应能力。比如做一些基本的判断：不管鼠标图片是否为空，如果点中有装备的格子，那么将发生交换，交换的时候要记录装备类型，其他情况一律不交换。为了避免重复添加的繁琐，我是直接在代码里面绑定点击事件，这样也便于修改。</p>
+<pre class="line-numbers language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Bag</span> <span class="token punctuation">:</span> MonoBehaviour <span class="token punctuation">{</span>
+
+  <span class="token keyword">private</span> Manager GM<span class="token punctuation">;</span>
+  <span class="token keyword">private</span> Image gridImage<span class="token punctuation">;</span>
+  <span class="token keyword">private</span> <span class="token keyword">int</span> mouseType <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">public</span> Sprite none<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> Sprite weapon1<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> Sprite weapon2<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> Sprite weapon3<span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// Use this for initialization</span>
+  <span class="token keyword">void</span> <span class="token function">Start</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      GM <span class="token operator">=</span> <span class="token punctuation">(</span>Manager<span class="token punctuation">)</span><span class="token function">FindObjectOfType</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>Manager<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      gridImage <span class="token operator">=</span> <span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      weapon1 <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Grid1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sprite<span class="token punctuation">;</span>
+      weapon2 <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Grid2"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sprite<span class="token punctuation">;</span>
+      weapon3 <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Grid3"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sprite<span class="token punctuation">;</span>
+      none <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Grid4"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sprite<span class="token punctuation">;</span>
+      Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span>gridImage<span class="token punctuation">.</span>sprite <span class="token operator">==</span> weapon1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span>weapon1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span>weapon2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span>weapon3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Button<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>onClick<span class="token punctuation">.</span><span class="token function">AddListener</span><span class="token punctuation">(</span>OnBagButton<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// Update is called once per frame</span>
+  <span class="token keyword">void</span> <span class="token function">Update</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">OnBagButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//Debug.Log("grid click");</span>
+      mouseType <span class="token operator">=</span> GM<span class="token punctuation">.</span><span class="token function">getMouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMouseType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>gridImage<span class="token punctuation">.</span>sprite <span class="token operator">==</span> none <span class="token operator">&amp;&amp;</span> mouseType <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          <span class="token keyword">switch</span> <span class="token punctuation">(</span>mouseType<span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+              <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+                  gridImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon1<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
+                  gridImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon2<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
+                  gridImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon3<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">default</span><span class="token punctuation">:</span>
+                  gridImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> none<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          GM<span class="token punctuation">.</span><span class="token function">getMouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setMouseType</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          
+      <span class="token punctuation">}</span>
+      <span class="token keyword">else</span>
+      <span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true">//Debug.Log(gridImage.sprite);</span>
+          <span class="token comment" spellcheck="true">//Debug.Log(mouseType);</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>gridImage<span class="token punctuation">.</span>sprite <span class="token operator">==</span> none<span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+              GM<span class="token punctuation">.</span><span class="token function">getMouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setMouseType</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>gridImage<span class="token punctuation">.</span>sprite <span class="token operator">==</span> weapon1<span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+              GM<span class="token punctuation">.</span><span class="token function">getMouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setMouseType</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>gridImage<span class="token punctuation">.</span>sprite <span class="token operator">==</span> weapon2<span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+              GM<span class="token punctuation">.</span><span class="token function">getMouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setMouseType</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>gridImage<span class="token punctuation">.</span>sprite <span class="token operator">==</span> weapon3<span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+              GM<span class="token punctuation">.</span><span class="token function">getMouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setMouseType</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+
+          <span class="token keyword">switch</span> <span class="token punctuation">(</span>mouseType<span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+              <span class="token keyword">case</span> <span class="token number">0</span><span class="token punctuation">:</span>                    
+                  gridImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> none<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+                  gridImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon1<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
+                  gridImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon2<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
+                  gridImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon3<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">default</span><span class="token punctuation">:</span>
+                  gridImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> none<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>                 
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>第八步，实现装备区的交换逻辑。这里同样是要赋予装备区按钮对点击事件的响应能力。比如稍有不同的简单判断：类似在背包区交换的原理和基础上，外加检测交换的装备类型是否符合该格子所应装备的类型，如果符合才允许交换。同样的，也是在代码里面绑定点击事件。这里我为了弥补添加装备时没有动画的遗憾，规定每次添加动作时英雄都播放一次攻击动画，播放完成后回到Idle状态。</p>
+<pre class="line-numbers language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Equip</span> <span class="token punctuation">:</span> MonoBehaviour <span class="token punctuation">{</span>
+
+  <span class="token keyword">private</span> Manager GM<span class="token punctuation">;</span>
+  <span class="token keyword">private</span> Image weaponImage<span class="token punctuation">;</span>
+  <span class="token keyword">private</span> GameObject hero<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span> mouseType<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> Sprite weapon1<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> Sprite weapon2<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> Sprite weapon3<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> Sprite none<span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// Use this for initialization</span>
+  <span class="token keyword">void</span> <span class="token function">Start</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      GM <span class="token operator">=</span> <span class="token punctuation">(</span>Manager<span class="token punctuation">)</span><span class="token function">FindObjectOfType</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>Manager<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      weaponImage <span class="token operator">=</span> <span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      hero <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Hero"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      weapon1 <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Grid1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sprite<span class="token punctuation">;</span>
+      weapon2 <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Grid2"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sprite<span class="token punctuation">;</span>
+      weapon3 <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Grid3"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sprite<span class="token punctuation">;</span>
+      none <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"Grid4"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Image<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sprite<span class="token punctuation">;</span>
+      Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span>weapon1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span>weapon2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span>weapon3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span>none<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Button<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>onClick<span class="token punctuation">.</span><span class="token function">AddListener</span><span class="token punctuation">(</span>OnEquipButton<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      mouseType <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">.</span>Length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">;</span>
+      Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span>mouseType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// Update is called once per frame</span>
+  <span class="token keyword">void</span> <span class="token function">Update</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>hero<span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Animation<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">IsPlaying</span><span class="token punctuation">(</span><span class="token string">"Attack"</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token keyword">false</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          hero<span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Animation<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Play</span><span class="token punctuation">(</span><span class="token string">"idle"</span><span class="token punctuation">,</span> PlayMode<span class="token punctuation">.</span>StopAll<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>mouseType <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> GM<span class="token punctuation">.</span><span class="token function">getWeapon1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          GM<span class="token punctuation">.</span><span class="token function">setWeapon1</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          weaponImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon1<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>mouseType <span class="token operator">==</span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> GM<span class="token punctuation">.</span><span class="token function">getWeapon2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          GM<span class="token punctuation">.</span><span class="token function">setWeapon2</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          weaponImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon2<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>mouseType <span class="token operator">==</span> <span class="token number">3</span> <span class="token operator">&amp;&amp;</span> GM<span class="token punctuation">.</span><span class="token function">getWeapon3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          GM<span class="token punctuation">.</span><span class="token function">setWeapon3</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          weaponImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon3<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">OnEquipButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//Debug.Log("equiping");</span>
+      <span class="token keyword">int</span> _mouseType <span class="token operator">=</span> GM<span class="token punctuation">.</span><span class="token function">getMouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMouseType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span>_mouseType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>weaponImage<span class="token punctuation">.</span>sprite <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> _mouseType <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          weaponImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> none<span class="token punctuation">;</span>
+          GM<span class="token punctuation">.</span><span class="token function">getMouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setMouseType</span><span class="token punctuation">(</span>mouseType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>weaponImage<span class="token punctuation">.</span>sprite <span class="token operator">==</span> none <span class="token operator">&amp;&amp;</span> _mouseType <span class="token operator">==</span> mouseType<span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          <span class="token keyword">switch</span> <span class="token punctuation">(</span>_mouseType<span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+              <span class="token keyword">case</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                  weaponImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> none<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+                  GM<span class="token punctuation">.</span><span class="token function">setWeapon1</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  weaponImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon1<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
+                  GM<span class="token punctuation">.</span><span class="token function">setWeapon2</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  weaponImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon2<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
+                  GM<span class="token punctuation">.</span><span class="token function">setWeapon3</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  weaponImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> weapon3<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">default</span><span class="token punctuation">:</span>
+                  weaponImage<span class="token punctuation">.</span>sprite <span class="token operator">=</span> none<span class="token punctuation">;</span>
+                  <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          GM<span class="token punctuation">.</span><span class="token function">getMouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setMouseType</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          Animation animation <span class="token operator">=</span> hero<span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Animation<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          animation<span class="token punctuation">.</span><span class="token function">Play</span><span class="token punctuation">(</span><span class="token string">"Attack"</span><span class="token punctuation">,</span> PlayMode<span class="token punctuation">.</span>StopAll<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          animation<span class="token punctuation">.</span>wrapMode <span class="token operator">=</span> WrapMode<span class="token punctuation">.</span>Once<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>        
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>第九步，图片加工。在网上进行了一番搜索和筛选之后，选到比较符合心意的图，但是都是白底不透明的，放在界面上感觉很生硬。为了更加逼真地模仿，我用了ps对筛选好的图片进行了简单的抠图处理，使得每个装备除装备实体以外的部分都是透明的，同样美观起见，将没有装备时的鼠标图片也设置成一张全透明的图片。<br>效果对比（深色背景下才看得出差别）：  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">武器</th>
+<th style="text-align:center">袖箭</th>
+<th style="text-align:center">匕首</th>
+<th style="text-align:center">斧子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">处理前</td>
+<td style="text-align:center"><img src="/2018/06/06/Unity3d-hw8-背包系统/weapon1.jpg" alt=""></td>
+<td style="text-align:center"><img src="/2018/06/06/Unity3d-hw8-背包系统/weapon2.jpg" alt=""></td>
+<td style="text-align:center"><img src="/2018/06/06/Unity3d-hw8-背包系统/weapon3.jpg" alt=""></td>
+</tr>
+<tr>
+<td style="text-align:center">处理后</td>
+<td style="text-align:center"><img src="/2018/06/06/Unity3d-hw8-背包系统/weapon1.png" alt=""></td>
+<td style="text-align:center"><img src="/2018/06/06/Unity3d-hw8-背包系统/weapon2.png" alt=""></td>
+<td style="text-align:center"><img src="/2018/06/06/Unity3d-hw8-背包系统/weapon3.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>最后一步。核对所有代码挂载情况、文件结构以及摄像机的渲染情况，耐心慢慢调参。调好合适的位置后变可以正常的运行了。到此便和一开始展示的效果完全一致了。<br><img src="/2018/06/06/Unity3d-hw8-背包系统/GIF.gif" alt=""></li>
+</ul>
+<hr>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>以上为个人理解，可能有误，仅供参考。</li>
+<li>如感兴趣，可访问笔者Gayhub地址—<a href="https://github.com/gitgiter/unity3d-learning/tree/master/homework8" target="_blank" rel="noopener">传送门</a></li>
+<li>视频演示地址—<a href="https://www.bilibili.com/video/av24424927/" target="_blank" rel="noopener">传送门</a></li>
+<li>csdn博客地址—<a href="https://blog.csdn.net/Wonderful_sky/article/details/80589009" target="_blank" rel="noopener">传送门</a></li>
+</ul>
+<hr>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/06/06/Unity3d-hw8-背包系统/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

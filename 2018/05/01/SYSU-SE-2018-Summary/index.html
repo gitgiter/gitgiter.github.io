@@ -1,0 +1,862 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    gitgiter's blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">gitgiter</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/gitgiter" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://blog.csdn.net/Wonderful_sky" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://img-blog.csdn.net/2018050616242448?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d5eHd5eDQ2OTQxMDkzMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >SYSU-SE-2018-Summary</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="se-2018-中级实训总结"><a href="#se-2018-中级实训总结" class="headerlink" title="se-2018 中级实训总结"></a>se-2018 中级实训总结</h1><hr>
+<ul>
+<li><strong>本篇总结报告说明</strong>：由于第一阶段的自学报告写得非常详细，所以本次总结着重介绍和记录后两阶段的学习内容、遇到的问题及其解决方案</li>
+</ul>
+<hr>
+<h2 id="第一阶段"><a href="#第一阶段" class="headerlink" title="第一阶段"></a>第一阶段</h2><p>本次实训第一阶段自学了Vi,Java,Ant,Junit的相关知识。熟悉了Vi的三种开发模式和基本的使用方法，初步了解和认识Java的语法，实现简单的helloworld和图形计算器，掌握利用Ant编译和运行项目的方法，利用Junit实现对类方法的测试。同时也更加熟悉了Linux命令行的开发环境。<br>相关的详细学习过程请见第一阶段的学习报告（真的非常详细Orz）。<br><a href="https://gitgiter.github.io/2018/04/15/SYSU-SE-2018-Part1/" target="_blank" rel="noopener">传送门</a></p>
+<h2 id="第二阶段"><a href="#第二阶段" class="headerlink" title="第二阶段"></a>第二阶段</h2><p>本阶段实训主要完成Part2、Part3、Part4和Part5的任务要求以及大量的简答题。具体过程大致如下。</p>
+<ul>
+<li><p>Part2</p>
+<ul>
+<li>CircleBug<br>CircleBug继承Bug，实现该类的目的是使虫子能按类似圆圈的路径运动，其实就是一个多边形，在原来BoxBug的基础上将每次要转向时转两次改成转一次，就能将其运动轨迹改为多边形。<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">act</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>steps <span class="token operator">&lt;</span> sideLength <span class="token operator">&amp;&amp;</span> <span class="token function">canMove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">move</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      steps<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">turn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      steps <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>SpiralBug<br>SpiralBug继承Bug，实现该类的目的是使虫子能按不断螺旋状扩散的路线运动，只需要在原来BoxBug的基础上，每次转向的时候增加下一条要走的边，就能将其运动轨迹的边长不断扩增，最后形成一个螺旋状的路线。<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">act</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>steps <span class="token operator">&lt;</span> sideLength <span class="token operator">&amp;&amp;</span> <span class="token function">canMove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token function">move</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      steps<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">else</span>
+  <span class="token punctuation">{</span>
+      <span class="token function">turn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">turn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      steps <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      sideLength<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>ZBug<br>ZBug继承Bug，实现该类的目的是使虫子能走Z字型路线，这个实现比之前两个就要稍微多一些判断，主要是起点和终点的判断以及判断是在Z字的第几个拐点（因为在第一个拐点和第二个拐点的转向次数不一样，一个是3一个是5）。<br>核心代码如下，其中turnTimes函数是为了简化转向次数而抽象出来的函数，参数是几就是转几下。比如一开始的时候要让ZBug面朝东边，就需要在构造函数里调用turnTimes(2)。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">act</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>        
+  <span class="token comment" spellcheck="true">// if end</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>end<span class="token punctuation">)</span> 
+  <span class="token punctuation">{</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>     
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>steps <span class="token operator">&lt;</span> sideLength <span class="token operator">&amp;&amp;</span> <span class="token function">canMove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token function">move</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      steps<span class="token operator">++</span><span class="token punctuation">;</span>
+
+      <span class="token comment" spellcheck="true">// if the bug has turned twice</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>turns <span class="token operator">>=</span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> steps <span class="token operator">==</span> sideLength<span class="token punctuation">)</span> 
+      <span class="token punctuation">{</span>
+          end <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>   
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">else</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>steps <span class="token operator">>=</span> sideLength<span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>turns <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+              <span class="token function">turnTimes</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>                    
+          <span class="token keyword">else</span> <span class="token punctuation">{</span>
+              <span class="token function">turnTimes</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>                
+          <span class="token comment" spellcheck="true">//turns == 0 ? turnTimes(3) : turnTimes(5);</span>
+          steps <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+          turns<span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">else</span> 
+      <span class="token punctuation">{</span>
+          end <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>DancingBug<br>DancingBug继承Bug，相比于前面几个类型的Bug，DancingBug相对改动比较多一些。主要是处理构造时传进来的一个数组，数组中的元素的值代表DancingBug每次要转向的时候按照数组中规定的值来决定转多少下，数组中的值依次且循环使用。<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">act</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>steps <span class="token operator">&lt;</span> sideLength <span class="token operator">&amp;&amp;</span> <span class="token function">canMove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token function">move</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      steps<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> 
+  <span class="token keyword">else</span> 
+  <span class="token punctuation">{</span>
+      <span class="token function">turnTimes</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>count<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">==</span> sideLength<span class="token punctuation">)</span> 
+      <span class="token punctuation">{</span>
+          count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      steps <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p>Part3</p>
+<ul>
+<li>Jumper类<br>Jumper继承Actor，主要实现以下两个方法，jump()和canJump()。jump()是move()的改写版，区别就是move()移动一个格子，jump()移动两格。为此要沿着当前Jumper面朝的方向连续搜索两格。canJump()则是负责判断当前Jumper所处状态是否允许jump，要考虑的状态主要是将要跳向的格子里是否有其他Actor或者越界，如果是Actor，则再区分石头和花以及其他Bug或Jumper本身。<br><code>`</code>java<br>/**</li>
+</ul>
+<ul>
+<li>check the second cell that in front of the jumper,</li>
+<li>if can jump, then moveTo the cell and remove itself,</li>
+<li><p>and not to put a flower in old cell.<br>*/<br>public void jump() {<br>  Grid<actor> gr = getGrid();<br>  if (gr == null) {</actor></p>
+<pre><code>  return;
+</code></pre><p>  }<br>  Location loc = getLocation();<br>  Location oneNext = loc.getAdjacentLocation(getDirection());<br>  Location twoNext = oneNext.getAdjacentLocation(getDirection());<br>  if (gr.isValid(twoNext)) {</p>
+<pre><code>  moveTo(twoNext);
+</code></pre><p>  } else {</p>
+<pre><code>  removeSelfFromGrid();
+</code></pre><p>  }<br>}</p>
+<p>/**</p>
+</li>
+<li>Tests whether this jumper can jump forward into a location that is empty or</li>
+<li>contains a flower.<br>*</li>
+<li>@return true if the jumper can jump.<br>*/<br>public boolean canJump() {<br>  Grid<actor> gr = getGrid();<br>  if (gr == null) {<pre><code>  return false;
+</code></pre>  }<br>  Location loc = getLocation();<br>  Location oneNext = loc.getAdjacentLocation(getDirection());<br>  Location twoNext = oneNext.getAdjacentLocation(getDirection());<br>  if (!gr.isValid(twoNext)) {<pre><code>  return false;
+</code></pre>  }<br>  Actor neighbor = gr.get(twoNext);<br>  return (neighbor == null) || (neighbor instanceof Flower);<br>  // ok to move into empty location or onto flower<br>  // not ok to move onto any other actor<br>}<br><code>`</code></actor></li>
+</ul>
+<ul>
+<li>Junit测试<br>Junit测试主要是将各个函数的执行结果测试一遍，以及碰见各种Actor后的canJump()做出的判断是否正确。<br>下面以测试canJump函数为例，依次测试了Jumper将要跳向的格子里面有rock，flower，越界，其他jumper，其他bug的情况，对应的canJump应该只有是跳向flower的时候才返回true<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+* check the canJump method.
+*/</span>
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testCanJump</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  world<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Location</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> jumper<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  world<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Location</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> rock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> jumper<span class="token punctuation">.</span><span class="token function">canJump</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  jumper<span class="token punctuation">.</span><span class="token function">turn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  world<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Location</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> flower<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span> jumper<span class="token punctuation">.</span><span class="token function">canJump</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  jumper<span class="token punctuation">.</span><span class="token function">jump</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> jumper<span class="token punctuation">.</span><span class="token function">canJump</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  jumper<span class="token punctuation">.</span><span class="token function">turn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  jumper<span class="token punctuation">.</span><span class="token function">turn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  jumper<span class="token punctuation">.</span><span class="token function">turn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  world<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Location</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> jumper2<span class="token punctuation">)</span><span class="token punctuation">;</span>        
+  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> jumper<span class="token punctuation">.</span><span class="token function">canJump</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  jumper<span class="token punctuation">.</span><span class="token function">turn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  world<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Location</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> bug<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> jumper<span class="token punctuation">.</span><span class="token function">canJump</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p>Part4</p>
+<ul>
+<li><p>ModifiedChameleonCritter<br>ModifiedChameleonCritter继承Critter，在和ChameleonCritter相同功能的基础上，再实现一个没吃到东西时会变暗的效果。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">processActors</span><span class="token punctuation">(</span>ArrayList<span class="token operator">&lt;</span>Actor<span class="token operator">></span> actors<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">int</span> n <span class="token operator">=</span> actors<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">darken</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">int</span> r <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">setColor</span><span class="token punctuation">(</span>actors<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">darken</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Color color <span class="token operator">=</span> <span class="token function">getColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">setColor</span><span class="token punctuation">(</span>color<span class="token punctuation">.</span><span class="token function">darker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>ChameleonKid<br>题目要求是ChameleonKid继承ChameleonCritter，但是由于ChameleonKid一样也要实现变暗效果，于是我干脆让ChameleonKid继承有变暗效果的ModifiedChameleonCritter，在其基础上，再实现一个只在碰见前后有其他Actor的时候才会变成与其同色的效果，因为原来的ModifiedChameleonCritter也有会变色的效果，所以只需要改getActor函数，使其只获得前后的Actor。<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> ArrayList<span class="token operator">&lt;</span>Actor<span class="token operator">></span> <span class="token function">getActors</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  ArrayList<span class="token operator">&lt;</span>Actor<span class="token operator">></span> actors <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span>Actor<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dirs <span class="token operator">=</span> <span class="token punctuation">{</span>Location<span class="token punctuation">.</span>AHEAD<span class="token punctuation">,</span> Location<span class="token punctuation">.</span>HALF_CIRCLE<span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>Location loc <span class="token operator">:</span> <span class="token function">getLocationsInDirections</span><span class="token punctuation">(</span>dirs<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      Actor a <span class="token operator">=</span> <span class="token function">getGrid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>loc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          actors<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> actors<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>RockHound<br>RockHound继承Critter，目的是要实现一个能把其相邻格子的石块去掉的功能。<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">processActors</span><span class="token punctuation">(</span>ArrayList<span class="token operator">&lt;</span>Actor<span class="token operator">></span> actors<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>Actor a <span class="token operator">:</span> actors<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token keyword">instanceof</span> <span class="token class-name">Rock</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          a<span class="token punctuation">.</span><span class="token function">removeSelfFromGrid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>BlusterCritter<br>BlusterCritter继承Critter，主要是实现一个courage的维护和管理。计算其相邻的两层格子内的所有其他critter，如果数量超过BlusterCritter自身的勇气值courage，BlusterCritter的颜色就会渐渐变暗，否则越来越亮。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">processActors</span><span class="token punctuation">(</span>ArrayList<span class="token operator">&lt;</span>Actor<span class="token operator">></span> actors<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>Actor a <span class="token operator">:</span> actors<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token keyword">instanceof</span> <span class="token class-name">Critter</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          count<span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">&lt;</span> courage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">colorChange</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> 
+  <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">colorChange</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">colorChange</span><span class="token punctuation">(</span><span class="token keyword">int</span> choice<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Color color <span class="token operator">=</span> <span class="token function">getColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>choice <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">setColor</span><span class="token punctuation">(</span>color<span class="token punctuation">.</span><span class="token function">darker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">setColor</span><span class="token punctuation">(</span>color<span class="token punctuation">.</span><span class="token function">brighter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>QuickCrab<br>QuickCrab继承CrabCritter，处理Actor的方法一致，只是在其基础上实现移动时随机向左或右一次性移动两步。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> ArrayList<span class="token operator">&lt;</span>Location<span class="token operator">></span> <span class="token function">getMoveLocations</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  ArrayList<span class="token operator">&lt;</span>Location<span class="token operator">></span> locs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span>Location<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dirs <span class="token operator">=</span> <span class="token punctuation">{</span>Location<span class="token punctuation">.</span>LEFT<span class="token punctuation">,</span> Location<span class="token punctuation">.</span>RIGHT<span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">getMoveLocationsInDirection</span><span class="token punctuation">(</span>locs<span class="token punctuation">,</span> <span class="token function">getDirection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> dirs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">getMoveLocationsInDirection</span><span class="token punctuation">(</span>locs<span class="token punctuation">,</span> <span class="token function">getDirection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> dirs<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>locs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getMoveLocations</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> locs<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getMoveLocationsInDirection</span><span class="token punctuation">(</span>ArrayList<span class="token operator">&lt;</span>Location<span class="token operator">></span> locs<span class="token punctuation">,</span> <span class="token keyword">int</span> direction<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Grid gr <span class="token operator">=</span> <span class="token function">getGrid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Location currentLoc <span class="token operator">=</span> <span class="token function">getLocation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  Location neighbor1 <span class="token operator">=</span> currentLoc<span class="token punctuation">.</span><span class="token function">getAdjacentLocation</span><span class="token punctuation">(</span>direction<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>gr<span class="token punctuation">.</span><span class="token function">isValid</span><span class="token punctuation">(</span>neighbor1<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> gr<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>neighbor1<span class="token punctuation">)</span> <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      Location neighbor2 <span class="token operator">=</span> neighbor1<span class="token punctuation">.</span><span class="token function">getAdjacentLocation</span><span class="token punctuation">(</span>direction<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>gr<span class="token punctuation">.</span><span class="token function">isValid</span><span class="token punctuation">(</span>neighbor2<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> gr<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>neighbor2<span class="token punctuation">)</span> <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          locs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>neighbor2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>KingCrab<br>KingCrab继承CrabCritter，主要实现是使其可以推动在其前面的石头。<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">processActors</span><span class="token punctuation">(</span>ArrayList<span class="token operator">&lt;</span>Actor<span class="token operator">></span> actors<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Grid gr <span class="token operator">=</span> <span class="token function">getGrid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> direction <span class="token operator">=</span> <span class="token function">getDirection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>Actor a <span class="token operator">:</span> actors<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      Location temp <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">getLocation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getAdjacentLocation</span><span class="token punctuation">(</span>direction <span class="token operator">+</span> Location<span class="token punctuation">.</span>AHEAD<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>gr<span class="token punctuation">.</span><span class="token function">isValid</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          a<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> 
+      <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          a<span class="token punctuation">.</span><span class="token function">removeSelfFromGrid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p>Part5</p>
+<ul>
+<li><p>SparseBoundedGrid1<br>用链表实现一个有界gridworld。因为当gridworld中的元素是稀疏的时候，采用原来的数组的实现方式很浪费空间，查找起来也比较费劲。采用链表的方式，可以将每个行视为一个链表，每个链表连接该行上的已存在（占用了格子）的元素。这样一个gridworld就可以用一个大小为行数的链表数组表示了，相对节省空间且查找效率高。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> E <span class="token function">get</span><span class="token punctuation">(</span>Location loc<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// get the node related to the loc from the list</span>
+  SparseGridNode node <span class="token operator">=</span> <span class="token function">getNode</span><span class="token punctuation">(</span>loc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>E<span class="token punctuation">)</span> node<span class="token punctuation">.</span><span class="token function">getOccupant</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> 
+  <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> null<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> E <span class="token function">put</span><span class="token punctuation">(</span>Location loc<span class="token punctuation">,</span> E obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isValid</span><span class="token punctuation">(</span>loc<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"Location "</span> <span class="token operator">+</span> loc <span class="token operator">+</span> <span class="token string">" is not valid"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>obj <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NullPointerException</span><span class="token punctuation">(</span><span class="token string">"obj == null"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// Add the object to the grid. </span>
+  <span class="token comment" spellcheck="true">// Remove the old object from the grid.</span>
+  <span class="token comment" spellcheck="true">// Push the new occupant into the list.</span>
+  E oldOccupant <span class="token operator">=</span> <span class="token function">remove</span><span class="token punctuation">(</span>loc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  SparseGridNode oldHead <span class="token operator">=</span> occupantArray<span class="token punctuation">[</span>loc<span class="token punctuation">.</span><span class="token function">getRow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  SparseGridNode newHead <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SparseGridNode</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> loc<span class="token punctuation">.</span><span class="token function">getCol</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> null<span class="token punctuation">,</span> oldHead<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>oldHead <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      oldHead<span class="token punctuation">.</span><span class="token function">setPre</span><span class="token punctuation">(</span>newHead<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  occupantArray<span class="token punctuation">[</span>loc<span class="token punctuation">.</span><span class="token function">getRow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> newHead<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> oldOccupant<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> E <span class="token function">remove</span><span class="token punctuation">(</span>Location loc<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isValid</span><span class="token punctuation">(</span>loc<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"Location "</span> <span class="token operator">+</span> loc <span class="token operator">+</span> <span class="token string">" is not valid"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// Remove the object from the grid. </span>
+  <span class="token comment" spellcheck="true">// if no found return null</span>
+  SparseGridNode removeNode <span class="token operator">=</span> <span class="token function">getNode</span><span class="token punctuation">(</span>loc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>removeNode <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> null<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// cast the type to E in order to return</span>
+  E ENode <span class="token operator">=</span> <span class="token function">get</span><span class="token punctuation">(</span>removeNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// modify the list</span>
+  SparseGridNode preNode <span class="token operator">=</span> removeNode<span class="token punctuation">.</span><span class="token function">getPre</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  SparseGridNode nextNode <span class="token operator">=</span> removeNode<span class="token punctuation">.</span><span class="token function">getNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>preNode <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// link the preNode to the nextNode</span>
+      preNode<span class="token punctuation">.</span><span class="token function">setNext</span><span class="token punctuation">(</span>nextNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> 
+  <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>occupantArray<span class="token punctuation">[</span>loc<span class="token punctuation">.</span><span class="token function">getRow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// reset the head to nextNode because the removeNode is the head</span>
+      occupantArray<span class="token punctuation">[</span>loc<span class="token punctuation">.</span><span class="token function">getRow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> nextNode<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// link the nextNode to the preNode</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>nextNode <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      nextNode<span class="token punctuation">.</span><span class="token function">setPre</span><span class="token punctuation">(</span>preNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> ENode<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>SparseBoundedGrid2<br>用map实现一个有界gridworld。目的同样是解决原来数组记录的弊端。这里是利用Hashmap来记录对应的location和对象模板E，location为键值，对应的E则为value，每在gridworld中新增或删除一个元素时，只需要在Hashmap中插入和移除对应的键值对即可。相比于上一个链表的解决方案，使用Hashmap的方法总体效率还要更高些，许多访问操作的复杂度通常情况都在o(1)左右。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> E <span class="token function">get</span><span class="token punctuation">(</span>Location loc<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isValid</span><span class="token punctuation">(</span>loc<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"Location "</span> <span class="token operator">+</span> loc <span class="token operator">+</span> <span class="token string">" is not valid"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> occupantMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>loc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> E <span class="token function">put</span><span class="token punctuation">(</span>Location loc<span class="token punctuation">,</span> E obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isValid</span><span class="token punctuation">(</span>loc<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"Location "</span> <span class="token operator">+</span> loc <span class="token operator">+</span> <span class="token string">" is not valid"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>obj <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NullPointerException</span><span class="token punctuation">(</span><span class="token string">"obj == null"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>           
+  <span class="token keyword">return</span> occupantMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>loc<span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> E <span class="token function">remove</span><span class="token punctuation">(</span>Location loc<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isValid</span><span class="token punctuation">(</span>loc<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"Location "</span> <span class="token operator">+</span> loc <span class="token operator">+</span> <span class="token string">" is not valid"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> occupantMap<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>loc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>UnboundedGrid2<br>用数组实现一个无界gridworld。实现方式类似原来的有界gridworld的实现。主要的区别是无界的数组可以扩展。当一个新插入的元素超出原来的数组记录范围的时候，数组的大小会一直倍增直至数组能记录该越界的元素。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">resize</span><span class="token punctuation">(</span>Location loc<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// double the size until it is greater than needed</span>
+  <span class="token keyword">int</span> size <span class="token operator">=</span> dimension<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>loc<span class="token punctuation">.</span><span class="token function">getRow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">>=</span> size <span class="token operator">||</span> loc<span class="token punctuation">.</span><span class="token function">getCol</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">>=</span> size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      size <span class="token operator">*=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// create a new resized array</span>
+  Object<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> temp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">[</span>size<span class="token punctuation">]</span><span class="token punctuation">[</span>size<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// move the old array to the new array</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> r <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> r <span class="token operator">&lt;</span> dimension<span class="token punctuation">;</span> r<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> c <span class="token operator">&lt;</span> dimension<span class="token punctuation">;</span> c<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          temp<span class="token punctuation">[</span>r<span class="token punctuation">]</span><span class="token punctuation">[</span>c<span class="token punctuation">]</span> <span class="token operator">=</span> occupantArray<span class="token punctuation">[</span>r<span class="token punctuation">]</span><span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// reset the properties</span>
+  occupantArray <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+  dimension <span class="token operator">=</span> size<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="第三阶段"><a href="#第三阶段" class="headerlink" title="第三阶段"></a>第三阶段</h2><ul>
+<li><p>ImageReader</p>
+<ul>
+<li>ImplementImageIO<ul>
+<li>实现IImageIO的myRead接口<br>使用二进制读取图片文件的方式，解析读到的位图文件的位图头、位图信息。主要是对读到的位图信息的一个解析，要将每四个字节代表的数字转成Java数字变量，以进行后面的运算和判断。转化的方法就是对这四个字节代表的数字赋予不同的位权，也就是移位，有了位权之后再将四个字节组合起来看就可以得到这四个字节代表的数字。另外一个重点是，RGB像素的理解。这里用的是24位彩图，每个像素是3个字节，分别对应红绿蓝三种颜色。除了24位图还有的就是，1位（八个像素一个字节），4位（两个像素一个字节），8位（一个像素一个字节），这三种都需要用调色板来对自己表示的颜色进行编号，24位则不用。需要注意的是，Java里面的Image是需要每个像素四个字节的，其中第四个字节是指图片的透明度。因为保存到图片文件里面的时候是不记录透明度的，所以在用从文件里读取和解析出来的RGB像素信息构造Java的Image时需要对每个像素再加一个字节，代表透明度（默认不透明）。</li>
+<li>实现IImageIO的myWrite接口（使用ImageIO.write()）</li>
+</ul>
+</li>
+<li>ImplementImageProcessor<br>实现IImageProcessor的四个色彩通道筛选接口，红绿蓝三种色彩通道的实现方法是类似的，都可以通过只提取RGB三色中对应的一种颜色来完成颜色筛选，而灰色稍有不同，灰色的RGB需要由计算得出，因此用到一条灰度公式 I = 0.299 <em> R + 0.587 </em> G + 0.114 * B。通过这条公式可以将原来的彩色图像的RGB转化为灰色图像的RGB，这条公式的大致原理就是使RGB三色的值大致趋同，三色对应的RGB值越接近，就越接近灰色。<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">filterRGB</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">,</span> <span class="token keyword">int</span> rgb<span class="token punctuation">)</span><span class="token punctuation">{</span>   
+  <span class="token keyword">if</span><span class="token punctuation">(</span>colorNum<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  
+      <span class="token comment" spellcheck="true">//red</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span> rgb <span class="token operator">&amp;</span> <span class="token number">0xffff0000</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  <span class="token punctuation">}</span>
+  <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>colorNum<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  
+      <span class="token comment" spellcheck="true">//green</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span> rgb <span class="token operator">&amp;</span> <span class="token number">0xff00ff00</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  <span class="token punctuation">}</span>
+  <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>colorNum<span class="token operator">==</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  
+      <span class="token comment" spellcheck="true">//blue</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span> rgb <span class="token operator">&amp;</span> <span class="token number">0xff0000ff</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  <span class="token punctuation">}</span>
+  <span class="token keyword">else</span><span class="token punctuation">{</span>  
+      <span class="token comment" spellcheck="true">//gray, I = 0.299 * R + 0.587 * G + 0.114 *B</span>
+      <span class="token keyword">int</span> g <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">(</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>rgb <span class="token operator">&amp;</span> <span class="token number">0x00ff0000</span><span class="token punctuation">)</span> <span class="token operator">>></span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">0.299</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>rgb <span class="token operator">&amp;</span> <span class="token number">0x0000ff00</span><span class="token punctuation">)</span> <span class="token operator">>></span> <span class="token number">8</span> <span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">0.587</span>  
+              <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>rgb <span class="token operator">&amp;</span> <span class="token number">0x000000ff</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">0.114</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>  
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>rgb <span class="token operator">&amp;</span> <span class="token number">0xff000000</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>g <span class="token operator">&lt;&lt;</span> <span class="token number">16</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>g <span class="token operator">&lt;&lt;</span> <span class="token number">8</span><span class="token punctuation">)</span> <span class="token operator">+</span> g<span class="token punctuation">;</span>  
+  <span class="token punctuation">}</span>  
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>ImageProcessorTest<br>一共进行了八个测试，基本上涵盖了所有该测试的功能。分别测试了1.bmp的四个色彩通道提取和2.bmp的四个色彩通道的提取，在测试色彩通道提取的过程中也顺带测试了图片的读取。因为图片的输出是调用的ImageIO.write()所以没有测试。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testmyBlue1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> IOException <span class="token punctuation">{</span>
+  <span class="token function">testOne</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token string">"blue"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testmyBlue2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> IOException <span class="token punctuation">{</span>
+  <span class="token function">testOne</span><span class="token punctuation">(</span><span class="token string">"2"</span><span class="token punctuation">,</span> <span class="token string">"blue"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGreen1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> IOException <span class="token punctuation">{</span>
+  <span class="token function">testOne</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token string">"green"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGreen2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> IOException <span class="token punctuation">{</span>
+  <span class="token function">testOne</span><span class="token punctuation">(</span><span class="token string">"2"</span><span class="token punctuation">,</span> <span class="token string">"green"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testRed1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> IOException <span class="token punctuation">{</span>
+  <span class="token function">testOne</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token string">"red"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testRed2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> IOException <span class="token punctuation">{</span>
+  <span class="token function">testOne</span><span class="token punctuation">(</span><span class="token string">"2"</span><span class="token punctuation">,</span> <span class="token string">"red"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGray1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> IOException <span class="token punctuation">{</span>
+  <span class="token function">testOne</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token string">"gray"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGray2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> IOException <span class="token punctuation">{</span>
+  <span class="token function">testOne</span><span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token string">"gray"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这里提一下图片对比的思路，要求是比较自己处理的图片和目标图片的位图宽度、位图高度以及像素值，像素值其实也就是RGB的值。而由前面位图信息的知识可以得知，下面这个是为了减少代码重复度抽取出来的一个函数，可以根据传入的参数决定测试哪幅图和对应的哪种色彩通道测试。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testOne</span><span class="token punctuation">(</span>String which<span class="token punctuation">,</span> String color<span class="token punctuation">)</span> <span class="token keyword">throws</span> IOException <span class="token punctuation">{</span>
+
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token comment" spellcheck="true">//省略图片的读取实现</span>
+
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>color<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">case</span> <span class="token string">"blue"</span><span class="token operator">:</span>
+          myProcessedImage <span class="token operator">=</span> processor<span class="token punctuation">.</span><span class="token function">showChanelB</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">case</span> <span class="token string">"green"</span><span class="token operator">:</span>
+          myProcessedImage <span class="token operator">=</span> processor<span class="token punctuation">.</span><span class="token function">showChanelG</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">case</span> <span class="token string">"red"</span><span class="token operator">:</span>
+          myProcessedImage <span class="token operator">=</span> processor<span class="token punctuation">.</span><span class="token function">showChanelR</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token keyword">case</span> <span class="token string">"gray"</span><span class="token operator">:</span>
+          myProcessedImage <span class="token operator">=</span> processor<span class="token punctuation">.</span><span class="token function">showGray</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token comment" spellcheck="true">//省略图片的处理</span>
+  <span class="token comment" spellcheck="true">//比较颜色值</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> goalImage<span class="token punctuation">.</span><span class="token function">getWidth</span><span class="token punctuation">(</span>null<span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> goalImage<span class="token punctuation">.</span><span class="token function">getHeight</span><span class="token punctuation">(</span>null<span class="token punctuation">)</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">assertEquals</span><span class="token punctuation">(</span>goalImage<span class="token punctuation">.</span><span class="token function">getRGB</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">,</span> myBufferedImage<span class="token punctuation">.</span><span class="token function">getRGB</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>                
+  <span class="token punctuation">}</span>            
+  <span class="token comment" spellcheck="true">//比较宽高</span>
+  <span class="token function">assertEquals</span><span class="token punctuation">(</span>myProcessedImage<span class="token punctuation">.</span><span class="token function">getWidth</span><span class="token punctuation">(</span>null<span class="token punctuation">)</span><span class="token punctuation">,</span> goalImage<span class="token punctuation">.</span><span class="token function">getWidth</span><span class="token punctuation">(</span>null<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">assertEquals</span><span class="token punctuation">(</span>myProcessedImage<span class="token punctuation">.</span><span class="token function">getHeight</span><span class="token punctuation">(</span>null<span class="token punctuation">)</span><span class="token punctuation">,</span> goalImage<span class="token punctuation">.</span><span class="token function">getHeight</span><span class="token punctuation">(</span>null<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p>MazeBug</p>
+<ul>
+<li><p>基础—八方向-&gt;四方向<br>这里只需要修改提供的MazeBug.java里面的getValid函数，使其在原来八个方向都valid的情况下，只挑出四个方向valid即上下左右，即返回的ArrayList<location>最多只有四个元素。</location></p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//the four valid locations</span>
+<span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dirs <span class="token operator">=</span>
+  <span class="token punctuation">{</span> Location<span class="token punctuation">.</span>AHEAD<span class="token punctuation">,</span> Location<span class="token punctuation">.</span>RIGHT<span class="token punctuation">,</span> Location<span class="token punctuation">.</span>HALF_CIRCLE<span class="token punctuation">,</span> Location<span class="token punctuation">.</span>LEFT <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> d <span class="token operator">:</span> dirs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">//test each directions</span>
+  Location neighborLoc <span class="token operator">=</span> loc<span class="token punctuation">.</span><span class="token function">getAdjacentLocation</span><span class="token punctuation">(</span><span class="token function">getDirection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>提高—dfs  <ul>
+<li>深度优先搜索算法的基本思想。是沿着树的深度遍历树的节点，尽可能深地搜索树的分支，换句话说就是一条路走到黑。深度优先算法将不停地一直搜索，直至搜索到想要的节点或者所有节点都已被访问过（即没搜到）。所以将深度优先算法应用于走迷宫是个很合适的选择，前提是要解的迷宫是无环的，否则会导致深度优先算法无法遍历所有节点，可能会出现节点存在但搜不到的情况。</li>
+<li>深度优先搜索算法的基本步骤。<ul>
+<li>先将树的所有节点标记为”未访问”状态。</li>
+<li>输出起始节点，将起始节点标记为”已访问”状态。</li>
+<li>将起始节点入栈。</li>
+<li>当栈非空时重复执行以下步骤：<ol>
+<li>取当前栈顶节点。</li>
+<li>如果当前栈顶节点是结束节点（迷宫出口），输出该节点，结束搜索。</li>
+<li>如果当前栈顶节点存在”未访问”状态的邻接节点，则选择一个未访问节点，置为”已访问”状态，并将它入栈，继续步骤1。</li>
+<li>如果当前栈顶节点不存在”未访问”状态的邻接节点，则将栈顶节点出栈，继续步骤1。            </li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>进阶—方向概率选择<ul>
+<li>原理。五个评估成绩的迷宫都有一定的方向偏向性，如图四就有向上和向左的偏向性。在行走正确路径时，对四个方向的选择次数进行统计，从而控制随机选择时选择某个方向的概率。增加方向的概率估计后能有效地提高走迷宫的效率。</li>
+<li>方向次数数组的维护。四个方向选择次数默认都是1，如果第一个节点选择向左，则向左次数加1，同理，其他方向和其他节点，选什么方向就什么方向次数加1。而减少的时候是在搜索到一条死路准备回退时，回退的时候要注意的是，每回退一格，就要将该回退方向的反方向的次数减1（一不注意可能忘记取反方向了）。<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//the posibility in this direction increases</span>
+<span class="token keyword">int</span> dir <span class="token operator">=</span> <span class="token function">getLocation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDirectionToward</span><span class="token punctuation">(</span>next<span class="token punctuation">)</span><span class="token punctuation">;</span>
+estimate<span class="token punctuation">[</span>dir <span class="token operator">/</span> <span class="token number">90</span><span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//the posibility in this direction decreases</span>
+<span class="token keyword">int</span> dir <span class="token operator">=</span> <span class="token function">getLocation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDirectionToward</span><span class="token punctuation">(</span>next<span class="token punctuation">)</span><span class="token punctuation">;</span>
+estimate<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token punctuation">(</span>dir <span class="token operator">+</span> <span class="token number">180</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">360</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">90</span><span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>概率的选择。在每步进行决策的时候，根据当前的方向次数数组的值中每个方向的步数，来进行概率计算，这里做的一点优化就是，概率的分母只取有效的方向的总和，效果出奇得好。比如如果此时方向数组的值是 {3，4，5，6}，如果四个方向都能走，则第一个方向的概率都是 3/(3+4+5+6)，如果只有前两个方向能走，则第一个方向的概率是 3/(3+4)，这样就能防止在决策的时候被其他无效方向的概率影响。<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//compute the total turns that is valid</span>
+<span class="token keyword">int</span> totalValidTurns <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> validLocsNum<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">int</span> dir <span class="token operator">=</span> <span class="token function">getLocation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDirectionToward</span><span class="token punctuation">(</span>validLocs<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  totalValidTurns <span class="token operator">+=</span> estimate<span class="token punctuation">[</span>dir <span class="token operator">/</span> <span class="token number">90</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//get random num among the total valid turns</span>
+<span class="token keyword">int</span> random <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> totalValidTurns<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//to find which dir we get, by using posibility</span>
+<span class="token keyword">int</span> compare <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> validLocsNum<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">int</span> dir <span class="token operator">=</span> <span class="token function">getLocation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDirectionToward</span><span class="token punctuation">(</span>validLocs<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  compare <span class="token operator">+=</span> estimate<span class="token punctuation">[</span>dir <span class="token operator">/</span> <span class="token number">90</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>random <span class="token operator">&lt;</span> compare<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      random <span class="token operator">=</span> i<span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>N-puzzle<ul>
+<li>bfs<ul>
+<li>广度优先搜索算法的基本思想。</li>
+<li>广度优先搜索算法的基本步骤。<ul>
+<li>将起始节点放入一个open队列中。</li>
+<li>如果open队列为空，则搜索失败，问题无解；否则重复以下步骤：<ol>
+<li>访问open队列中的第一个节点v，若v为目标节点，则搜索成功，退出。</li>
+<li>从open队列中删除节点v，放入close集合中。</li>
+<li>将所有与v邻接且未曾被访问的节点放入open队列中</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><strong>优化</strong><ul>
+<li>问题的发现。在运行main测试样例的时候，发现总是要卡个近十秒才出结果。虽然后面结果出来的时候总是显示运行平均时间才50来毫秒，但是一想这似乎不匹配啊，然后仔细看了main函数的测试方法后才发现原来真正耗时的是前面的bfs，显示的平均运行时间仅仅是A*算法的时间。这样一来，转念一想就知道bfs的查询部分是最耗时的了，每步广度优先搜索都有一个要判断是否在当前查询节点是否在队列中的操作，而队列是个线性表，广搜涉及的节点非常之多，所以在一个超长队列里进行查询是非常不妥的。因此用来查询的应该必须是像close那样，是一个集合，集合的查询是非常快的，尤其是哈希集合。我的close一开始就是用的哈希集合，所以自然而然地想到了这一点。</li>
+<li>问题的解决。因为集合里的元素是无序的，所以集合没有像队列一样的操作，然而广搜是需要通过队列来实现的，所以一个折中的方案就是，仅仅查询的时候是用集合来查询，算法的正常运作还是得靠队列来维护。因此我新建了一个和open队列保持一样元素的哈希集合，这个集合在队列add的时候同时add，remove的时候同时remove，始终保持一致。集合的作用就仅仅是用来执行查询。虽然听起来有点浪费空间，但这在时间上快得还真不止一点点，和之前的运行时间完全不是一个量级，所以我认为这点空间冗余完全是值得的，改进之后的bfs，几乎都是秒出结果。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>estimate<ul>
+<li>估价函数。主要作用是用来估计节点n的重要性，表示为：从起始节点，经过节点n，到达目标节点的代价。代价越小，节点就越优良，在搜索的时候就应该更优先搜索，这就是所谓的启发式搜索。我的估价函数主要是用了三个评估方法，分别是：<ul>
+<li>后续节点不正确的个数。当前位置的节点后面的节点不是本来应该在其后面的节点。将有这种情况的节点都记个数统计起来，某种意义上当成是一种代价。</li>
+<li>曼哈顿距离。曼哈顿距离通俗地说其实就是折线距离。计算当前节点所在位置到其本来应该在的位置的曼哈顿距离，充当一种代价。</li>
+<li>欧几里得距离。欧几里得距离是平常所说的直线距离。计算当前节点所在位置到其本来应该在的位置的欧几里得距离，充当一种代价。</li>
+</ul>
+</li>
+<li>权值。既然三种评估方法都各有其代价，而且代价的衡量尺度也无法从某种意义上找到联系。就只能人为地给每种评估方式的代价加上一个权重，代表该种评估方法的重要性，以实现将这三种不相关的估计方式联系起来。权重的参数是需要慢慢调整的，所以真正花时间的是调参。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这次实训还是相当充实的，和大一实训相比，本次实训应用性更强，所以也比较有意思，而且没有蛋疼的机器测试，自由度比较大。很喜欢gridworld的架构，可扩展性很强。这次实训最大的收获就是锻炼了强大的快速学习的能力，能够熟练地进行Linux命令行Java编译、引用、运行和Jdb调试（因为不习惯用eclipse），更有Ant、Junit、Sonar等集成编译、运行、测试和代码规范检查的黑科技。还有就是对待Linux的报错的态度也前后发生了360°变化，从一开始的小心翼翼不想碰到任何一个报错，一碰到就gg的心态，变成了尽管来，报错了我乖乖查的心态，可以说是很强大了。</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/05/01/SYSU-SE-2018-Summary/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/05/01/SYSU-SE-2018-Summary/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

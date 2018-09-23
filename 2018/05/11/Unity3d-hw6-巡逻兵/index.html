@@ -1,0 +1,831 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    gitgiter's blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">gitgiter</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/gitgiter" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://blog.csdn.net/Wonderful_sky" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://img-blog.csdn.net/20180512003812811?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dvbmRlcmZ1bF9za3k=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Unity3d-hw6-巡逻兵</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="巡逻兵——MVC-工厂-订阅与发布模式"><a href="#巡逻兵——MVC-工厂-订阅与发布模式" class="headerlink" title="巡逻兵——MVC+工厂+订阅与发布模式"></a>巡逻兵——MVC+工厂+订阅与发布模式</h1><h2 id="游戏简介"><a href="#游戏简介" class="headerlink" title="游戏简介"></a>游戏简介</h2><p>巡逻兵游戏是一款敏捷类游戏，我将游戏规则制定如下：</p>
+<ul>
+<li>英雄：玩家</li>
+<li>怪物：巡逻兵</li>
+<li>当英雄出现在怪物一定范围内，怪物会开启追捕模式，即速度加快</li>
+<li>每躲过一个巡逻兵的追捕，获得1分</li>
+<li>当英雄没有进入怪物的搜寻范围时，怪物随机移动</li>
+<li>被怪物追捕到即游戏结束</li>
+<li>创新点：规则简单，游戏地形较复杂<h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2></li>
+</ul>
+<ol>
+<li>MVC模式<br>MVC模式在之前的有关牧师与魔鬼的博客中有详细解释过，这里沿用的是牧师与魔鬼的MVC框架，在此基础上做了一些改动，如果有兴趣可以到我的相关博客查看，这次主要解释下面两个模式。</li>
+<li>工厂模式</li>
+</ol>
+<ul>
+<li>为什么需要工厂模式<br>游戏对象的创建与销毁成本较高，所以当游戏涉及大量游戏对象的创建与销毁时，必须考虑减少销毁次数，比如这次的打飞碟游戏，或者像其他类型的射击游戏，其中子弹或者中弹对象的创建与销毁是很频繁的。</li>
+<li>工厂模式的定义<br>工厂模式是我们最常用的实例化对象模式了，是用工厂方法代替new操作的一种模式。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。</li>
+<li>工厂模式的结构<br>游戏对象的创建与销毁，分别对应工厂里面的两个List，这两个List分别存放正在使用的游戏对象，已失效的游戏对象。同时保存两个List的目的是，减少游戏对象的创建与销毁的性能开销。如果已失效的List里面还有item，而这时工厂又需要完成一个新的“订单”，便可以从这些回收的item中拿出来再加工（一些逻辑处理），再返回给用户（调用方）。  </li>
+<li>工厂模式的优缺点<ul>
+<li>优点 <ul>
+<li>一个调用者想创建一个对象，只要知道其名称就可以了。 - 扩展性高，如果想增加一个产品，只要扩展一个工厂类就可以。 </li>
+<li>屏蔽产品的具体实现，调用者只关心产品的接口。</li>
+<li>例子，如果一个客户需要一辆汽车，可以直接从工厂里面提货，而不用去管这辆汽车是怎么做出来的，以及这个汽车里面的具体实现。</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>一开始实现会比较复杂，需要用心设计一下工厂的结构</li>
+<li>每增加一个产品，可能都需要对工厂进行一次较大的“整改”</li>
+<li>如果工厂太大，实时保存的所有游戏对象的开销可能要大于游戏对象直接创建与销毁</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>工厂模式的意义（以上次打飞碟代码为例，我觉得上次的比较典型）<br>体现了面向对象设计的核心——抽象、包装、隐藏。道具工厂通过场景单实例，构建了可以被方便获取的disk类。包装了复杂的disk生产和回收逻辑，易于使用。包装了disk的产生规则，有利于应对未来游戏规则的变化，易于维护。</li>
+<li>本次作业的工厂模式<br>本次巡逻兵的项目作业，还是按照要求套用了工厂模式，但由于我的规则设置比较简单，在套用上次的工厂模式框架后其实发现没什么必要，因为我的巡逻兵数目是固定的，从头到尾就是6个，没有新增也没有销毁，当时有想过随着时间的增加而增加巡逻兵的数量以增加游戏难度，以及玩家攻击巡逻兵可以导致巡逻兵销毁。但在我的地形的基础上，6个巡逻兵其实刚好，少了太简单，多了又难到玩不下去，要说玩家可以攻击巡逻兵以达到控制巡逻兵数量的话，那每个巡逻兵都可以被攻击，玩家就没有逃跑的必要了。所以在用完工厂模式的时候，其实还是有点想删掉工厂模式的，但是想想如果后面需要对这次游戏规则做一些改变的话，工厂模式留着还是挺有用的。</li>
+</ul>
+<ol start="3">
+<li>订阅与发布模式</li>
+</ol>
+<ul>
+<li>为什么需要订阅与发布模式<br>就像我们订阅报刊，有什么时事新闻出现，报社（发布者）可以第一时间印刷数百份乃至数千份报纸（传播媒介），发到各个订阅了该报纸的人（订阅者）手上，这样就完成了信息传播。</li>
+<li>订阅与发布模式的定义<br>在计算机编程中，订阅与发布模式与观察者模式比较容易混淆。用几张图来说明，他们之间主要的区别<ul>
+<li>观察者模式的结构<br>在观察者模式中，观察者需要直接订阅目标事件；在目标发出内容改变的事件后，直接接收事件并作出响应<br><img src="http://5b0988e595225.cdn.sohucs.com/images/20171128/ad665eccfa2a488b9628f6e36b762c02.jpeg" alt=""></li>
+<li>订阅与发布模式的结构<br>在发布订阅模式中，发布者和订阅者之间多了一个发布通道；一方面从发布者接收事件，另一方面向订阅者发布事件；订阅者需要从事件通道订阅事件。以此避免发布者和订阅者之间产生依赖关系。<br><img src="http://5b0988e595225.cdn.sohucs.com/images/20171128/72bb65ed99dd44c48eb6962b9d140ea1.jpeg" alt=""></li>
+<li>主要区别，直接和间接<br><img src="http://5b0988e595225.cdn.sohucs.com/images/20171128/7c5a95aa8ee348d9b7dff8417e4edb4e.jpeg" alt=""></li>
+</ul>
+</li>
+<li>本次的项目的应用<br>当玩家得分或游戏结束时，都会GameEventManager的得分/游戏结束方法，但是具体怎么实现不用管。因为有可能后期需求更改，得分/游戏结束后需要实现更多效果。而此时我们只需要让这些效果订阅GameEventManager发布的得分/游戏结束信息，即可产生作用。实现功能的分类，降低代码耦合。</li>
+</ul>
+<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><ul>
+<li>基本地形<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/scene.jpg" alt=""></li>
+<li>英雄模型<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/hero.jpg" alt=""></li>
+<li>怪物模型<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/patrol.jpg" alt=""></li>
+</ul>
+<h2 id="重要类实现，代码请直接在项目中查看"><a href="#重要类实现，代码请直接在项目中查看" class="headerlink" title="重要类实现，代码请直接在项目中查看"></a>重要类实现，代码请直接在项目中查看</h2><ul>
+<li>文件框架结构<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/file.jpg" alt=""><ul>
+<li>ActionControl.cs，基础的动作管理类的集合，该文件里都是一些和动作管理有关的类。相当于动作的controller。</li>
+<li>BaseCode.cs，一些最基本的类和接口的集合，如单实例导演类，控制场景的切换，IUserAction、回调接口等</li>
+<li>FirstControl.cs，只包含FirstControl—控制第一个场景的类</li>
+<li>GameEventManager.cs，只包含GameEventManager—发布者</li>
+<li>UserGUI.cs，只包含UserGUI—订阅者兼用户界面管理器，比如显示分数、游戏状态以及监听键盘事件以控制角色的动画（走跑跳停等）</li>
+<li>GameModel.cs，只包含GameModel—游戏模型，包括一些判定规则和运动规则</li>
+<li>PatrolControl.cs，只包含PatrolControl—怪物（巡逻兵）的controller</li>
+<li>HeroControl.cs，只包含HeroControl—英雄的controller</li>
+<li>PatrolFactory.cs，只包含PatrolFactory—巡逻兵的制造工厂</li>
+<li>Follow.cs，摄像机跟随人物移动的脚本</li>
+</ul>
+</li>
+<li>脚本挂载与组件添加情况  <ul>
+<li>camera<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/camera.jpg" alt=""></li>
+<li>空对象<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/empty.jpg" alt=""></li>
+<li>英雄<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/hero1.jpg" alt=""></li>
+<li>巡逻兵<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/patrol1.jpg" alt=""></li>
+<li>地形<br><img src="/2018/05/11/Unity3d-hw6-巡逻兵/scene1.jpg" alt=""></li>
+</ul>
+</li>
+<li><p>代码</p>
+<ul>
+<li>ActionControl，这部分很长，但是基本套用模板，不需要改动太多，因此不放出来。</li>
+<li><p>BaseCode.cs</p>
+<pre class="line-numbers language-csharp"><code class="language-csharp"><span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">;</span>
+<span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic<span class="token punctuation">;</span>
+<span class="token keyword">using</span> UnityEngine<span class="token punctuation">;</span>
+
+<span class="token keyword">namespace</span> MyGame
+<span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Director</span> <span class="token punctuation">:</span> System<span class="token punctuation">.</span>Object
+  <span class="token punctuation">{</span>
+      <span class="token keyword">private</span> <span class="token keyword">static</span> Director _instance<span class="token punctuation">;</span>
+      <span class="token keyword">public</span> ISceneControl sceneCtrl <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+      <span class="token keyword">public</span> <span class="token keyword">bool</span> playing <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">//</span>
+
+      <span class="token keyword">public</span> <span class="token keyword">static</span> Director <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>_instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> _instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Director</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">else</span> <span class="token keyword">return</span> _instance<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getFPS</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> Application<span class="token punctuation">.</span>targetFrameRate<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setFPS</span><span class="token punctuation">(</span><span class="token keyword">int</span> fps<span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          Application<span class="token punctuation">.</span>targetFrameRate <span class="token operator">=</span> fps<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Singleton</span><span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token punctuation">:</span> MonoBehaviour <span class="token keyword">where</span> T <span class="token punctuation">:</span> MonoBehaviour
+  <span class="token punctuation">{</span>
+
+      <span class="token keyword">protected</span> <span class="token keyword">static</span> T instance<span class="token punctuation">;</span>
+      <span class="token keyword">public</span> <span class="token keyword">static</span> T Instance
+      <span class="token punctuation">{</span>
+          <span class="token keyword">get</span>
+          <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+              <span class="token punctuation">{</span>
+                  <span class="token comment" spellcheck="true">//instance = new GameObject(typeof(T).Name).AddComponent&lt;T>();</span>
+                  instance <span class="token operator">=</span> <span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token function">FindObjectOfType</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token keyword">if</span> <span class="token punctuation">(</span>instance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+                  <span class="token punctuation">{</span>
+                      Debug<span class="token punctuation">.</span><span class="token function">LogError</span><span class="token punctuation">(</span><span class="token string">"no scene instance"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span>
+              <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ISSActionCallback</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">void</span> <span class="token function">ActionDone</span><span class="token punctuation">(</span>SSAction source<span class="token punctuation">,</span> <span class="token keyword">bool</span> catchState <span class="token operator">=</span> <span class="token keyword">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ISceneControl</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">void</span> <span class="token function">LoadPrefabs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IUserAction</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">void</span> <span class="token function">heroMove</span><span class="token punctuation">(</span><span class="token keyword">int</span> dir<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">void</span> <span class="token function">Restart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Diretion</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">public</span> <span class="token keyword">const</span> <span class="token keyword">int</span> UP <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token keyword">public</span> <span class="token keyword">const</span> <span class="token keyword">int</span> DOWN <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+      <span class="token keyword">public</span> <span class="token keyword">const</span> <span class="token keyword">int</span> LEFT <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token keyword">public</span> <span class="token keyword">const</span> <span class="token keyword">int</span> RIGHT <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IAddAction</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">void</span> <span class="token function">addRandomMovement</span><span class="token punctuation">(</span>GameObject sourceObj<span class="token punctuation">,</span> <span class="token keyword">bool</span> isActive<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">void</span> <span class="token function">addDirectMovement</span><span class="token punctuation">(</span>GameObject sourceObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IGameStatusOp</span>
+  <span class="token punctuation">{</span>
+      Transform <span class="token function">getHeroPosition</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">void</span> <span class="token function">heroEscapeAndScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">void</span> <span class="token function">patrolHitHeroAndGameover</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>FirstControl</p>
+<pre class="line-numbers language-csharp"><code class="language-csharp"><span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">;</span>
+<span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic<span class="token punctuation">;</span>
+<span class="token keyword">using</span> UnityEngine<span class="token punctuation">;</span>
+<span class="token keyword">using</span> UnityEngine<span class="token punctuation">.</span>UI<span class="token punctuation">;</span>
+<span class="token keyword">using</span> MyGame<span class="token punctuation">;</span>
+<span class="token keyword">using</span> UnityEngine<span class="token punctuation">.</span>SceneManagement<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FirstControl</span> <span class="token punctuation">:</span> MonoBehaviour<span class="token punctuation">,</span> ISceneControl<span class="token punctuation">,</span> IGameStatusOp<span class="token punctuation">,</span> IUserAction<span class="token punctuation">,</span> IAddAction
+<span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">//public ActionManager MyActionManager { get; set; }</span>
+  <span class="token keyword">public</span> GameEventManager gameEventManager<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> GameModel gameModel<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> PatrolFactory factory <span class="token punctuation">{</span> <span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token keyword">public</span> UserGUI user<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">float</span> time <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">void</span> <span class="token function">Awake</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      Director diretor <span class="token operator">=</span> Director<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      diretor<span class="token punctuation">.</span>sceneCtrl <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>                              
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// Use this for initialization</span>
+  <span class="token keyword">void</span> <span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token function">Begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">LoadPrefabs</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">Begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token function">LoadPrefabs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">//MyActionManager = gameObject.AddComponent&lt;ActionManager>() as ActionManager;        </span>
+      gameEventManager <span class="token operator">=</span> gameObject<span class="token punctuation">.</span><span class="token generic-method function">AddComponent<span class="token punctuation">&lt;</span>GameEventManager<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> GameEventManager<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">//gameModel = gameObject.AddComponent&lt;GameModel>() as GameModel;</span>
+      Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span><span class="token string">"game model init"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      user <span class="token operator">=</span> gameObject<span class="token punctuation">.</span><span class="token generic-method function">AddComponent<span class="token punctuation">&lt;</span>UserGUI<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      user<span class="token punctuation">.</span><span class="token function">Begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">Restart</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      SceneManager<span class="token punctuation">.</span><span class="token function">LoadScene</span><span class="token punctuation">(</span><span class="token string">"scene"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">heroMove</span><span class="token punctuation">(</span><span class="token keyword">int</span> dir<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      gameModel<span class="token punctuation">.</span><span class="token function">heroMove</span><span class="token punctuation">(</span>dir<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addRandomMovement</span><span class="token punctuation">(</span>GameObject sourceObj<span class="token punctuation">,</span> <span class="token keyword">bool</span> isActive<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      gameModel<span class="token punctuation">.</span><span class="token function">addRandomMovement</span><span class="token punctuation">(</span>sourceObj<span class="token punctuation">,</span> isActive<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addDirectMovement</span><span class="token punctuation">(</span>GameObject sourceObj<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      gameModel<span class="token punctuation">.</span><span class="token function">addDirectMovement</span><span class="token punctuation">(</span>sourceObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> Transform <span class="token function">getHeroPosition</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> gameModel<span class="token punctuation">.</span><span class="token function">getHeroPosition</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">heroEscapeAndScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      gameEventManager<span class="token punctuation">.</span><span class="token function">heroEscapeAndScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">patrolHitHeroAndGameover</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      gameEventManager<span class="token punctuation">.</span><span class="token function">patrolHitHeroAndGameover</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>GameEventManager</p>
+<pre class="line-numbers language-csharp"><code class="language-csharp"><span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">;</span>
+<span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic<span class="token punctuation">;</span>
+<span class="token keyword">using</span> UnityEngine<span class="token punctuation">;</span>
+<span class="token keyword">using</span> MyGame<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GameEventManager</span> <span class="token punctuation">:</span> MonoBehaviour <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">delegate</span> <span class="token keyword">void</span> <span class="token function">GameScoreAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">event</span> GameScoreAction myGameScoreAction<span class="token punctuation">;</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">delegate</span> <span class="token keyword">void</span> <span class="token function">GameOverAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">event</span> GameOverAction myGameOverAction<span class="token punctuation">;</span>
+
+  <span class="token keyword">private</span> FirstControl scene<span class="token punctuation">;</span>
+
+  <span class="token keyword">void</span> <span class="token function">Start</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      scene <span class="token operator">=</span> <span class="token punctuation">(</span>FirstControl<span class="token punctuation">)</span>Director<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sceneCtrl<span class="token punctuation">;</span>
+      scene<span class="token punctuation">.</span>gameEventManager <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>        
+
+  <span class="token comment" spellcheck="true">//hero escape, get score</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">heroEscapeAndScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>myGameScoreAction <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+          <span class="token function">myGameScoreAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">//hero gets caught, game over</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">patrolHitHeroAndGameover</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>myGameOverAction <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+          <span class="token function">myGameOverAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>UserGUI</p>
+<pre class="line-numbers language-csharp"><code class="language-csharp"><span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">;</span>
+<span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic<span class="token punctuation">;</span>
+<span class="token keyword">using</span> UnityEngine<span class="token punctuation">;</span>
+<span class="token keyword">using</span> UnityEngine<span class="token punctuation">.</span>UI<span class="token punctuation">;</span>
+<span class="token keyword">using</span> MyGame<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserGUI</span> <span class="token punctuation">:</span> MonoBehaviour
+<span class="token punctuation">{</span>
+  <span class="token keyword">private</span> IUserAction action<span class="token punctuation">;</span>
+  GUIStyle LabelStyle1<span class="token punctuation">;</span>
+  GUIStyle LabelStyle2<span class="token punctuation">;</span>
+  GUIStyle ButtonStyle<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span> score <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">float</span> time <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">int</span> round <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span> CoolTimes <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">int</span> game <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// status</span>
+
+  <span class="token comment" spellcheck="true">// Use this for initialization</span>
+  <span class="token keyword">void</span> <span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      action <span class="token operator">=</span> <span class="token punctuation">(</span>IUserAction<span class="token punctuation">)</span>Director<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sceneCtrl<span class="token punctuation">;</span>
+
+      LabelStyle1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GUIStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      LabelStyle1<span class="token punctuation">.</span>fontSize <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+      LabelStyle1<span class="token punctuation">.</span>alignment <span class="token operator">=</span> TextAnchor<span class="token punctuation">.</span>MiddleCenter<span class="token punctuation">;</span>
+
+      LabelStyle2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GUIStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      LabelStyle2<span class="token punctuation">.</span>fontSize <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+      LabelStyle2<span class="token punctuation">.</span>alignment <span class="token operator">=</span> TextAnchor<span class="token punctuation">.</span>MiddleCenter<span class="token punctuation">;</span>
+
+      ButtonStyle <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GUIStyle</span><span class="token punctuation">(</span><span class="token string">"Button"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      ButtonStyle<span class="token punctuation">.</span>fontSize <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">Update</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//check key input and decide whether the hero should play animation</span>
+      GameObject hero <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>FirstControl<span class="token punctuation">)</span>Director<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sceneCtrl<span class="token punctuation">)</span><span class="token punctuation">.</span>gameModel<span class="token punctuation">.</span><span class="token function">getHero</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        
+      <span class="token keyword">bool</span> keyPressed <span class="token operator">=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>        
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>Input<span class="token punctuation">.</span><span class="token function">GetKey</span><span class="token punctuation">(</span>KeyCode<span class="token punctuation">.</span>UpArrow<span class="token punctuation">)</span> <span class="token operator">||</span> Input<span class="token punctuation">.</span><span class="token function">GetKey</span><span class="token punctuation">(</span>KeyCode<span class="token punctuation">.</span>W<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          hero<span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Animation<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Play</span><span class="token punctuation">(</span><span class="token string">"Run"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          keyPressed <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+          action<span class="token punctuation">.</span><span class="token function">heroMove</span><span class="token punctuation">(</span>Diretion<span class="token punctuation">.</span>UP<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>Input<span class="token punctuation">.</span><span class="token function">GetKey</span><span class="token punctuation">(</span>KeyCode<span class="token punctuation">.</span>DownArrow<span class="token punctuation">)</span> <span class="token operator">||</span> Input<span class="token punctuation">.</span><span class="token function">GetKey</span><span class="token punctuation">(</span>KeyCode<span class="token punctuation">.</span>S<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          hero<span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Animation<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Play</span><span class="token punctuation">(</span><span class="token string">"Run"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          keyPressed <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+          action<span class="token punctuation">.</span><span class="token function">heroMove</span><span class="token punctuation">(</span>Diretion<span class="token punctuation">.</span>DOWN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>Input<span class="token punctuation">.</span><span class="token function">GetKey</span><span class="token punctuation">(</span>KeyCode<span class="token punctuation">.</span>LeftArrow<span class="token punctuation">)</span> <span class="token operator">||</span> Input<span class="token punctuation">.</span><span class="token function">GetKey</span><span class="token punctuation">(</span>KeyCode<span class="token punctuation">.</span>A<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          hero<span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Animation<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Play</span><span class="token punctuation">(</span><span class="token string">"Run"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          keyPressed <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+          action<span class="token punctuation">.</span><span class="token function">heroMove</span><span class="token punctuation">(</span>Diretion<span class="token punctuation">.</span>LEFT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>Input<span class="token punctuation">.</span><span class="token function">GetKey</span><span class="token punctuation">(</span>KeyCode<span class="token punctuation">.</span>RightArrow<span class="token punctuation">)</span> <span class="token operator">||</span> Input<span class="token punctuation">.</span><span class="token function">GetKey</span><span class="token punctuation">(</span>KeyCode<span class="token punctuation">.</span>D<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          hero<span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Animation<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Play</span><span class="token punctuation">(</span><span class="token string">"Run"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          keyPressed <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+          action<span class="token punctuation">.</span><span class="token function">heroMove</span><span class="token punctuation">(</span>Diretion<span class="token punctuation">.</span>RIGHT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>Input<span class="token punctuation">.</span><span class="token function">GetKey</span><span class="token punctuation">(</span>KeyCode<span class="token punctuation">.</span>J<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          keyPressed <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+          hero<span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Animation<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Play</span><span class="token punctuation">(</span><span class="token string">"Attack"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>Input<span class="token punctuation">.</span><span class="token function">GetKey</span><span class="token punctuation">(</span>KeyCode<span class="token punctuation">.</span>Space<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          keyPressed <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+          hero<span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Animation<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Play</span><span class="token punctuation">(</span><span class="token string">"Jump"</span><span class="token punctuation">,</span> PlayMode<span class="token punctuation">.</span>StopAll<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>keyPressed <span class="token operator">==</span> <span class="token keyword">false</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>                    
+          hero<span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>Animation<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Play</span><span class="token punctuation">(</span><span class="token string">"idle"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment" spellcheck="true">//cool time system</span>
+      time <span class="token operator">+</span><span class="token operator">=</span> Time<span class="token punctuation">.</span>deltaTime<span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>time <span class="token operator">&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span>
+          <span class="token keyword">return</span><span class="token punctuation">;</span>
+      time <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>game <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>CoolTimes <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span> CoolTimes<span class="token operator">--</span><span class="token punctuation">;</span>
+          <span class="token keyword">else</span> game <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>        
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">Restart</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      CoolTimes <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+      game <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+      score <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">Begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token function">Restart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">OnGUI</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>game <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// playing</span>
+      <span class="token punctuation">{</span>
+          GUI<span class="token punctuation">.</span><span class="token function">Label</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rect</span><span class="token punctuation">(</span>Screen<span class="token punctuation">.</span>width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> Screen<span class="token punctuation">.</span>height <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">160</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"Score: "</span> <span class="token operator">+</span> score<span class="token punctuation">,</span> LabelStyle1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>game <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// game over</span>
+      <span class="token punctuation">{</span>
+          GUI<span class="token punctuation">.</span><span class="token function">Label</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rect</span><span class="token punctuation">(</span>Screen<span class="token punctuation">.</span>width <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">50</span><span class="token punctuation">,</span> Screen<span class="token punctuation">.</span>height <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">85</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"Gameover!"</span><span class="token punctuation">,</span> LabelStyle2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>GUI<span class="token punctuation">.</span><span class="token function">Button</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rect</span><span class="token punctuation">(</span>Screen<span class="token punctuation">.</span>width <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">70</span><span class="token punctuation">,</span> Screen<span class="token punctuation">.</span>height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">140</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"Restart"</span><span class="token punctuation">,</span> ButtonStyle<span class="token punctuation">)</span><span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+              game <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+              action<span class="token punctuation">.</span><span class="token function">Restart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>game <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// win</span>
+      <span class="token punctuation">{</span>
+          GUI<span class="token punctuation">.</span><span class="token function">Label</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rect</span><span class="token punctuation">(</span>Screen<span class="token punctuation">.</span>width <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">50</span><span class="token punctuation">,</span> Screen<span class="token punctuation">.</span>height <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">85</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"You win!"</span><span class="token punctuation">,</span> LabelStyle2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>GUI<span class="token punctuation">.</span><span class="token function">Button</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rect</span><span class="token punctuation">(</span>Screen<span class="token punctuation">.</span>width <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">70</span><span class="token punctuation">,</span> Screen<span class="token punctuation">.</span>height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">140</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"Restart"</span><span class="token punctuation">,</span> ButtonStyle<span class="token punctuation">)</span><span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+              game <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+              action<span class="token punctuation">.</span><span class="token function">Restart</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>game <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ready</span>
+      <span class="token punctuation">{</span>
+          GUI<span class="token punctuation">.</span><span class="token function">Label</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Rect</span><span class="token punctuation">(</span>Screen<span class="token punctuation">.</span>width <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">30</span><span class="token punctuation">,</span> Screen<span class="token punctuation">.</span>height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span> CoolTimes<span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> LabelStyle2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">OnEnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      GameEventManager<span class="token punctuation">.</span>myGameScoreAction <span class="token operator">+</span><span class="token operator">=</span> getScore<span class="token punctuation">;</span>
+      GameEventManager<span class="token punctuation">.</span>myGameOverAction <span class="token operator">+</span><span class="token operator">=</span> gameOver<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">OnDisable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      GameEventManager<span class="token punctuation">.</span>myGameScoreAction <span class="token operator">-</span><span class="token operator">=</span> getScore<span class="token punctuation">;</span>
+      GameEventManager<span class="token punctuation">.</span>myGameOverAction <span class="token operator">-</span><span class="token operator">=</span> gameOver<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">getScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      score<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">gameOver</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      game <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>PatrolControl</p>
+<pre class="line-numbers language-csharp"><code class="language-csharp"><span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">;</span>
+<span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic<span class="token punctuation">;</span>
+<span class="token keyword">using</span> UnityEngine<span class="token punctuation">;</span>
+<span class="token keyword">using</span> MyGame<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PatrolControl</span> <span class="token punctuation">:</span> MonoBehaviour <span class="token punctuation">{</span>
+  <span class="token keyword">private</span> IAddAction addAction<span class="token punctuation">;</span>
+  <span class="token keyword">private</span> IGameStatusOp gameStatusOp<span class="token punctuation">;</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">int</span> whichPatrol<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">bool</span> isCatching<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//whether found hero</span>
+
+  <span class="token keyword">private</span> <span class="token keyword">float</span> CATCH_RADIUS <span class="token operator">=</span> <span class="token number">3.0f</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// Use this for initialization</span>
+  <span class="token keyword">void</span> <span class="token function">Start</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      addAction <span class="token operator">=</span> <span class="token punctuation">(</span>FirstControl<span class="token punctuation">)</span>Director<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sceneCtrl <span class="token keyword">as</span> IAddAction<span class="token punctuation">;</span>
+      gameStatusOp <span class="token operator">=</span> <span class="token punctuation">(</span>FirstControl<span class="token punctuation">)</span>Director<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sceneCtrl <span class="token keyword">as</span> IGameStatusOp<span class="token punctuation">;</span>
+
+      whichPatrol <span class="token operator">=</span> <span class="token function">getIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      isCatching <span class="token operator">=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// Update is called once per frame</span>
+  <span class="token keyword">void</span> <span class="token function">Update</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//check</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>Vector3<span class="token punctuation">.</span><span class="token function">Distance</span><span class="token punctuation">(</span>gameStatusOp<span class="token punctuation">.</span><span class="token function">getHeroPosition</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>position<span class="token punctuation">,</span> gameObject<span class="token punctuation">.</span>transform<span class="token punctuation">.</span>position<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">20f</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>   
+          <span class="token comment" spellcheck="true">//hero go in the area</span>
+          <span class="token comment" spellcheck="true">//start catching</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isCatching<span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+              Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>gameObject <span class="token operator">+</span> <span class="token string">" is catching"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              isCatching <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>                
+          <span class="token punctuation">}</span>
+          <span class="token comment" spellcheck="true">//moves direct to the hero</span>
+          addAction<span class="token punctuation">.</span><span class="token function">addDirectMovement</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>gameObject<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">else</span>
+      <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>isCatching<span class="token punctuation">)</span>
+          <span class="token punctuation">{</span>
+              Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>gameObject <span class="token operator">+</span> <span class="token string">" stops catching"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token comment" spellcheck="true">//hero has moved out of the area</span>
+              <span class="token comment" spellcheck="true">//stop catching </span>
+              gameStatusOp<span class="token punctuation">.</span><span class="token function">heroEscapeAndScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              isCatching <span class="token operator">=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>                
+          <span class="token punctuation">}</span>
+          <span class="token comment" spellcheck="true">//then moves randomly</span>
+          addAction<span class="token punctuation">.</span><span class="token function">addRandomMovement</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>gameObject<span class="token punctuation">,</span> <span class="token keyword">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//get the index of patrol</span>
+      <span class="token keyword">string</span> name <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>gameObject<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+      <span class="token keyword">return</span> name<span class="token punctuation">[</span>name<span class="token punctuation">.</span>Length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token string">'0'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">void</span> <span class="token function">OnCollisionStay</span><span class="token punctuation">(</span>Collision e<span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//hit other patrol, move to other direction</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>gameObject<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">Contains</span><span class="token punctuation">(</span><span class="token string">"Patrol"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          isCatching <span class="token operator">=</span> <span class="token keyword">false</span><span class="token punctuation">;</span>
+          addAction<span class="token punctuation">.</span><span class="token function">addRandomMovement</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>gameObject<span class="token punctuation">,</span> <span class="token keyword">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment" spellcheck="true">//hit hero, game over</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>gameObject<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">Contains</span><span class="token punctuation">(</span><span class="token string">"hero"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          gameStatusOp<span class="token punctuation">.</span><span class="token function">patrolHitHeroAndGameover</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          Debug<span class="token punctuation">.</span><span class="token function">Log</span><span class="token punctuation">(</span><span class="token string">"Game Over!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>Follow</p>
+<pre class="line-numbers language-csharp"><code class="language-csharp"><span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">;</span>
+<span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic<span class="token punctuation">;</span>
+<span class="token keyword">using</span> UnityEngine<span class="token punctuation">;</span>
+<span class="token keyword">using</span> MyGame<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Follow</span> <span class="token punctuation">:</span> MonoBehaviour
+<span class="token punctuation">{</span>
+  <span class="token keyword">public</span> Vector3 offset<span class="token punctuation">;</span>
+  <span class="token keyword">private</span> Transform playerBip<span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">float</span> smoothing <span class="token operator">=</span> <span class="token number">0.5f</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// Use this for initialization</span>
+  <span class="token keyword">void</span> <span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      playerBip <span class="token operator">=</span> GameObject<span class="token punctuation">.</span><span class="token function">Find</span><span class="token punctuation">(</span><span class="token string">"hero"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>transform<span class="token punctuation">;</span>
+      offset <span class="token operator">=</span> transform<span class="token punctuation">.</span>position <span class="token operator">-</span> playerBip<span class="token punctuation">.</span>position<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// Update is called once per frame</span>
+  <span class="token keyword">void</span> <span class="token function">FixedUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//transform.position = playerBip.position + offset;</span>
+      Vector3 targetPos <span class="token operator">=</span> playerBip<span class="token punctuation">.</span>position <span class="token operator">+</span> offset<span class="token punctuation">;</span>
+      transform<span class="token punctuation">.</span>position <span class="token operator">=</span> Vector3<span class="token punctuation">.</span><span class="token function">Lerp</span><span class="token punctuation">(</span>transform<span class="token punctuation">.</span>position<span class="token punctuation">,</span> targetPos<span class="token punctuation">,</span> smoothing <span class="token operator">*</span> Time<span class="token punctuation">.</span>deltaTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>以上多数为个人理解，可能有误，仅供参考。</li>
+<li>本次项目觉得做得最好的模式是MVC，在之前几次的基础上渐渐改进，本次项目分离得比较彻底，耦合度低了许多。</li>
+<li>如感兴趣，可访问笔者Gayhub项目地址—<a href="https://github.com/gitgiter/unity3d-learning/tree/master/homework6" target="_blank" rel="noopener">传送门</a></li>
+<li>视频演示地址—<a href="https://www.bilibili.com/video/av23309694/" target="_blank" rel="noopener">传送门</a></li>
+<li>csdn博客地址—<a href="https://mp.csdn.net/mdeditor/80288017" target="_blank" rel="noopener">传送门</a></li>
+</ul>
+<hr>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/05/11/Unity3d-hw6-巡逻兵/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/05/11/Unity3d-hw6-巡逻兵/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    gitgiter's blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">gitgiter</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/gitgiter" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://blog.csdn.net/Wonderful_sky" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://img-blog.csdn.net/20180911202649461?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dvbmRlcmZ1bF9za3k=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >SC-hw1-VM+CentOs搭建私有云</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="使用VMware搭建私有云桌面服务"><a href="#使用VMware搭建私有云桌面服务" class="headerlink" title="使用VMware搭建私有云桌面服务"></a>使用VMware搭建私有云桌面服务</h1><h2 id="1-安装VMware虚拟机工作台"><a href="#1-安装VMware虚拟机工作台" class="headerlink" title="1. 安装VMware虚拟机工作台"></a>1. 安装VMware虚拟机工作台</h2><ul>
+<li>官网下载安装包<ul>
+<li>版本：14.1.3 Pro</li>
+<li>地址：<a href="https://my.vmware.com/en/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/14_0" target="_blank" rel="noopener">https://my.vmware.com/en/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/14_0</a></li>
+</ul>
+</li>
+<li>双击直接运行安装程序，按提示完成安装（网上教程较多不展开叙述）</li>
+<li>激活密钥可以去网上找</li>
+<li>贴一个我参考的教程：<a href="https://jingyan.baidu.com/article/9f7e7ec09da5906f281554d6.html" target="_blank" rel="noopener">安装+破解</a></li>
+</ul>
+<h2 id="2-配置CentOS-7虚拟机"><a href="#2-配置CentOS-7虚拟机" class="headerlink" title="2. 配置CentOS 7虚拟机"></a>2. 配置CentOS 7虚拟机</h2><ul>
+<li>官网下载镜像<ul>
+<li>版本：CentOS 7 Minimal 1804</li>
+<li>地址：<a href="https://www.centos.org/download/" target="_blank" rel="noopener">https://www.centos.org/download/</a></li>
+</ul>
+</li>
+<li>进入VMware主界面，点击创建新的虚拟机</li>
+<li>配置新虚拟机（在弹出的安装向导中依次按下图操作）<ul>
+<li>选典型，按下一步<br><img src="/2018/09/16/SC-hw1-搭建私有云/step1.jpg" alt=""></li>
+<li>选稍后安装操作系统，按下一步<br><img src="/2018/09/16/SC-hw1-搭建私有云/step2.jpg" alt=""></li>
+<li>选操作系统类型，版本，按下一步<br><img src="/2018/09/16/SC-hw1-搭建私有云/step3.jpg" alt=""></li>
+<li>定义新虚拟机名字和存储位置，按下一步<br><img src="/2018/09/16/SC-hw1-搭建私有云/step4.jpg" alt=""></li>
+<li>设置最大磁盘大小，30g以上，按下一步<br><img src="/2018/09/16/SC-hw1-搭建私有云/step5.jpg" alt=""></li>
+<li>选择自定义硬件，详细查看各种设置<br><img src="/2018/09/16/SC-hw1-搭建私有云/step6.jpg" alt=""></li>
+<li>内存2g以上，处理器1~2个，记得设置镜像位置<br><img src="/2018/09/16/SC-hw1-搭建私有云/step7.jpg" alt=""></li>
+<li>点击完成开始配置新的虚拟机<br><img src="/2018/09/16/SC-hw1-搭建私有云/step8.jpg" alt=""></li>
+<li>等待配置完成</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-配置网卡"><a href="#3-配置网卡" class="headerlink" title="3. 配置网卡"></a>3. 配置网卡</h2><ul>
+<li><p>创建第二块网卡（也可在前面自定义硬件的时候顺便设置）</p>
+<ul>
+<li>打开VMware，菜单栏中选择：虚拟机=&gt;设置</li>
+<li>可见原来有个NAT模式的适配器（第一块网卡）</li>
+<li>在硬件栏下点添加键，添加一个网络适配器（即第二块网卡）</li>
+<li>将其网络连接模式设为仅主机模式</li>
+<li>效果：<br><img src="/2018/09/16/SC-hw1-搭建私有云/host-only.jpg" alt=""></li>
+</ul>
+</li>
+<li><p>配置第二块网卡地址</p>
+<ul>
+<li>菜单栏中选择：编辑=&gt;虚拟网络编辑器</li>
+<li>选中VMnet1，即以仅主机模式的虚拟网络</li>
+<li>配置虚拟机的ip网段：192.168.100.0（注意是0结尾，表示网段）</li>
+<li>效果：<br><img src="/2018/09/16/SC-hw1-搭建私有云/set-ip.jpg" alt=""></li>
+</ul>
+</li>
+<li><p>三种模式的区别（补充）</p>
+<ul>
+<li>桥接模式：使虚拟机相当于真实网络上的一台独立计算机，需要真实的物理网卡</li>
+<li>NAT模式：使虚拟机可以通过主机单向访问外网，外网无法访问虚拟机</li>
+<li>仅主机模式：使虚拟机只能与主机互联，无法访问外网</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-安装操作系统"><a href="#4-安装操作系统" class="headerlink" title="4. 安装操作系统"></a>4. 安装操作系统</h2><ul>
+<li>开启刚配置好的虚拟机CentOS 7</li>
+<li>如果提示Intel-VT没有激活<ul>
+<li>重启主机，适当时候按F2进入BIOS界面</li>
+<li>点开高级模式（Advanced Mode）</li>
+<li>打开CPU设置（CPU Configuration）</li>
+<li>找到Intel 虚拟技术（Intel VT-x）</li>
+<li>将关闭改成开启（disable=&gt;enable）</li>
+<li>重启电脑</li>
+<li>打开VMware，再次开启虚拟机</li>
+</ul>
+</li>
+<li>接下来按默认选择安装好操作系统即可（也可自行设置时区、磁盘分区等）</li>
+<li>设置root密码和新建新用户</li>
+<li>系统启动后登录root用户，进行下一步操作</li>
+</ul>
+<h2 id="5-配置操作系统"><a href="#5-配置操作系统" class="headerlink" title="5. 配置操作系统"></a>5. 配置操作系统</h2><ul>
+<li>先升级内核<pre><code>yum update
+</code></pre></li>
+<li>安装wget<pre><code>yum install wget
+</code></pre></li>
+<li>安装一个网络工具包（否则不能使用ifconfig、ifup、ifdown等命令，如果觉得nmcli和nmtui够用那就不用安装）<pre><code>yum install net-tools
+</code></pre></li>
+<li>具体配置第二块网卡地址（之前只有网段，现在来指定具体的主机号，避免动态生成ip不固定）<ul>
+<li>输入 <code>nmtui</code>，弹出用户交互界面</li>
+<li>注：方向箭选择，回车确认，空格勾选</li>
+<li>选择Edit a Connection，回车，弹出连接管理的界面</li>
+<li>选择Add，回车，弹出选择网络类型</li>
+<li>选择Ethernet，回车，弹出详细设置页面</li>
+<li>为方便辨认，设置新连接的名称</li>
+<li>设置固定虚拟ip地址为：192.168.100.127/24（动态生成的一般是192.168.100.128，24是指定掩码格式）</li>
+<li>设置网关为主机上虚拟网卡VMnet1的ip地址，即192.168.100.1</li>
+<li>效果：<br><img src="/2018/09/16/SC-hw1-搭建私有云/nmtui1.jpg" alt="">  </li>
+<li>保存更改</li>
+</ul>
+</li>
+<li>激活第二块网卡<ul>
+<li>回到nmtui的用户交互界面</li>
+<li>选择Activate a Connection</li>
+<li>选择新建立的连接，回车激活（连接名前面出现星号即激活）</li>
+<li>效果：<br><img src="/2018/09/16/SC-hw1-搭建私有云/nmtui2.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+<h2 id="6-检查配置结果"><a href="#6-检查配置结果" class="headerlink" title="6. 检查配置结果"></a>6. 检查配置结果</h2><ul>
+<li>使用nmcli或ifconfig查看当前的网络配置（有两块网卡且已激活就算正确）<ul>
+<li>nmcli<br><img src="/2018/09/16/SC-hw1-搭建私有云/nmcli.jpg" alt=""></li>
+<li>ifconfig<br><img src="/2018/09/16/SC-hw1-搭建私有云/ifconfig.jpg" alt=""></li>
+</ul>
+</li>
+<li>确认虚拟机能ping通主机<ul>
+<li>VMnet1：ping 192.168.100.1<br><img src="/2018/09/16/SC-hw1-搭建私有云/ping1.jpg" alt=""></li>
+<li>VMnet8：ping 192.168.134.1<br><img src="/2018/09/16/SC-hw1-搭建私有云/ping2.jpg" alt=""></li>
+<li>WLAN：ping 192.168.199.133<br><img src="/2018/09/16/SC-hw1-搭建私有云/ping3.jpg" alt=""></li>
+<li>以上结果说明三种方式都能ping通，虚拟机可以连主机也可以连外网</li>
+</ul>
+</li>
+<li>确认主机可以ping通虚拟机<ul>
+<li>VMnet1：ping 192.168.100.127<br><img src="/2018/09/16/SC-hw1-搭建私有云/ping4.jpg" alt=""></li>
+<li>ssh远程控制<ul>
+<li>打开主机的Git bash（未安装git需先安装git）</li>
+<li>使用ssh控制虚拟机<ul>
+<li>控制方法<pre><code>## 形如以下两例，@前是用户名 @后是网卡地址
+ssh tao@192.168.100.127
+ssh root@192.168.100.127
+</code></pre></li>
+<li>控制用户tao<br><img src="/2018/09/16/SC-hw1-搭建私有云/ssh1.jpg" alt=""></li>
+<li>控制root用户<br><img src="/2018/09/16/SC-hw1-搭建私有云/ssh2.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>以上结果说明主机和虚拟机互连成功</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-复制虚拟机"><a href="#7-复制虚拟机" class="headerlink" title="7. 复制虚拟机"></a>7. 复制虚拟机</h2><ul>
+<li>关闭刚刚配置好的虚拟机</li>
+<li>右键=&gt;管理=&gt;克隆</li>
+<li>克隆向导依次按如下选择（按默认完成）<ul>
+<li>欢迎界面，下一步<br><img src="/2018/09/16/SC-hw1-搭建私有云/clone1.jpg" alt=""></li>
+<li>克隆自当前状态，下一步<br><img src="/2018/09/16/SC-hw1-搭建私有云/clone2.jpg" alt=""></li>
+<li>链接复制，下一步<br><img src="/2018/09/16/SC-hw1-搭建私有云/clone3.jpg" alt=""></li>
+<li>自定义虚拟机名和路径，完成<br><img src="/2018/09/16/SC-hw1-搭建私有云/clone4.jpg" alt=""></li>
+</ul>
+</li>
+<li>启动克隆机，重新配置第二块网卡（第一块网卡的mac地址会自动重新生成）<ul>
+<li>删除克隆过来的第二块网卡（因为mac地址和base机冲突）</li>
+<li>重新添加第二块网卡（这里我设ip为192.168.100.126）</li>
+<li>效果（可以看到mac地址重新生成了，ip地址也改了）：<br><img src="/2018/09/16/SC-hw1-搭建私有云/nmcli2.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+<h2 id="8-检查最终配置"><a href="#8-检查最终配置" class="headerlink" title="8. 检查最终配置"></a>8. 检查最终配置</h2><ul>
+<li>ping主机以及验证ssh连接均没有问题（这里只展示ssh的）<ul>
+<li>用户tao<br><img src="/2018/09/16/SC-hw1-搭建私有云/ssh3.jpg" alt=""></li>
+<li>root用户<br><img src="/2018/09/16/SC-hw1-搭建私有云/ssh4.jpg" alt=""></li>
+</ul>
+</li>
+<li>虚拟机之间互相ping<ul>
+<li>base机 ping 克隆机<br><img src="/2018/09/16/SC-hw1-搭建私有云/ping5.jpg" alt=""></li>
+<li>克隆机 ping base机<br><img src="/2018/09/16/SC-hw1-搭建私有云/ping6.jpg" alt=""></li>
+</ul>
+</li>
+<li>为了方便辨认，修改主机名<ul>
+<li>nmtui修改<br><img src="/2018/09/16/SC-hw1-搭建私有云/nmtui3.jpg" alt="">    </li>
+<li>base机改为base<br><img src="/2018/09/16/SC-hw1-搭建私有云/rename1.jpg" alt=""></li>
+<li>克隆机改为clone1<br><img src="/2018/09/16/SC-hw1-搭建私有云/rename2.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+<h2 id="9-远程桌面控制"><a href="#9-远程桌面控制" class="headerlink" title="9. 远程桌面控制"></a>9. 远程桌面控制</h2><ul>
+<li>安装桌面<pre><code>## -y表示默认同意所有问题
+yum -y groupinstall &quot;GNOME Desktop&quot;
+</code></pre></li>
+<li>设置启动目标为图形界面后重启<pre><code>systemctl set-default graphical.target
+</code></pre><img src="/2018/09/16/SC-hw1-搭建私有云/desktop.jpg" alt=""></li>
+<li>安装epel（免费开源发行软件包版本库）<pre><code>yum install epel-release
+</code></pre></li>
+<li>安装xrdp（远程连接证书）<pre><code>yum install xrdp
+</code></pre></li>
+<li>安装tigervnc-server（xrdp会自动启用vnc，所以必须安装）<pre><code>yum install tigervnc-server
+</code></pre></li>
+<li>关闭防火墙<pre><code>systemctl stop firewalld
+systemctl disable firewalld
+</code></pre></li>
+<li>远程连接<ul>
+<li>启动Windows的rdp  <ul>
+<li>方法一：在搜索栏搜索远程桌面连接</li>
+<li>方法二：Win+R后输入mstsc回车</li>
+</ul>
+</li>
+<li>输入虚拟机的ip地址和用户名，连接<br><img src="/2018/09/16/SC-hw1-搭建私有云/rdp1.jpg" alt=""></li>
+<li>连接后输入用户密码<br><img src="/2018/09/16/SC-hw1-搭建私有云/rdp2.jpg" alt=""></li>
+<li>登陆后便可进行远控<br><img src="/2018/09/16/SC-hw1-搭建私有云/rdp3.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/09/16/SC-hw1-搭建私有云/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/09/16/SC-hw1-搭建私有云/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
