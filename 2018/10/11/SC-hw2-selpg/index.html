@@ -464,62 +464,94 @@ echo "test 12 complete"
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="3-5-选项操作"><a href="#3-5-选项操作" class="headerlink" title="3.5 选项操作"></a>3.5 选项操作</h3><p>两者实现思路差不多，都是到达页分隔阈值的时候页计数器增加1（如果有行计数器则需要重置），边读变写，只不过固定行数的页分隔模式多了一个行数的计数器lineCount，以及’\f’的解析模式只能逐个字节读写。</p>
 <ul>
-<li><p>固定行数页分隔模式<br><code>`</code>go<br>func optionL(args <em>selpgArgs, reader </em>bufio.Reader, writer *bufio.Writer) (pageCount int) {<br>  pageCount = 1<br>  lineCount := 1<br>  for {</p>
-<pre><code>  line, err := reader.ReadBytes(&#39;\n&#39;)
-  if err != nil {
-      if err == io.EOF {
-          break
-      }
-      fmt.Fprintf(os.Stderr, &quot;failed to read bytes, %s\n&quot;, err.Error())
-      os.Exit(15)
-  }
-
-  if pageCount &gt;= args.start &amp;&amp; pageCount &lt;= args.end {
-      _, writeErr := writer.Write(line)
-      if writeErr != nil {
-          fmt.Fprintf(os.Stderr, &quot;failed to write bytes\n&quot;)
-          os.Exit(16)
-      }
-      writer.Flush()
-  }
-  if lineCount &gt;= args.length {
-      pageCount++
-      lineCount = 1
-  } else {
-      lineCount++
-  }
-</code></pre><p>  }<br>  return pageCount<br>}</p>
-</li>
+<li>固定行数页分隔模式</li>
 </ul>
-<p>func optionFD(args <em>selpgArgs, reader </em>bufio.Reader, writer io.WriteCloser) (pageCount int) {<br>    pageCount = 1<br>    for {<br>        ch, err := reader.ReadByte()<br>        if err != nil {<br>            if err == io.EOF {<br>                break<br>            }<br>            fmt.Fprintf(os.Stderr, “failed to read byte\n”)<br>            os.Exit(17)<br>        }<br>        if pageCount &gt;= args.start &amp;&amp; pageCount &lt;= args.end {<br>            _, writeErr := writer.Write([]byte{ch})<br>            if writeErr != nil {<br>                fmt.Fprintf(os.Stderr, “failed to write bytes\n”)<br>                os.Exit(18)<br>            }<br>        }<br>        if ch == ‘\f’ {<br>            pageCount++<br>        }<br>    }<br>    return pageCount<br>}</p>
-<pre><code>- &#39;\f&#39;页分隔模式
-```go
-func optionF(args *selpgArgs, reader *bufio.Reader, writer *bufio.Writer) (pageCount int) {
-    pageCount = 1
-    for {
-        ch, err := reader.ReadByte()
-        if err != nil {
-            if err == io.EOF {
-                break
-            }
-            fmt.Fprintf(os.Stderr, &quot;failed to read byte\n&quot;)
-            os.Exit(13)
-        }
-        if pageCount &gt;= args.start &amp;&amp; pageCount &lt;= args.end {
-            writeErr := writer.WriteByte(ch)
-            if writeErr != nil {
-                fmt.Fprintf(os.Stderr, &quot;failed to write byte\n&quot;)
-                os.Exit(14)
-            }
-            writer.Flush()
-        }
-        if ch == &#39;\f&#39; {
-            pageCount++
-        }
-    }
-    return pageCount
-}
-</code></pre><h3 id="3-6-错误处理总览"><a href="#3-6-错误处理总览" class="headerlink" title="3.6 错误处理总览"></a>3.6 错误处理总览</h3><table>
+<pre class="line-numbers language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">optionL</span><span class="token punctuation">(</span>args <span class="token operator">*</span>selpgArgs<span class="token punctuation">,</span> reader <span class="token operator">*</span>bufio<span class="token punctuation">.</span>Reader<span class="token punctuation">,</span> writer <span class="token operator">*</span>bufio<span class="token punctuation">.</span>Writer<span class="token punctuation">)</span> <span class="token punctuation">(</span>pageCount <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    pageCount <span class="token operator">=</span> <span class="token number">1</span>
+    lineCount <span class="token operator">:=</span> <span class="token number">1</span>
+    <span class="token keyword">for</span> <span class="token punctuation">{</span>
+        line<span class="token punctuation">,</span> err <span class="token operator">:=</span> reader<span class="token punctuation">.</span><span class="token function">ReadBytes</span><span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> err <span class="token operator">==</span> io<span class="token punctuation">.</span>EOF <span class="token punctuation">{</span>
+                <span class="token keyword">break</span>
+            <span class="token punctuation">}</span>
+            fmt<span class="token punctuation">.</span><span class="token function">Fprintf</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>Stderr<span class="token punctuation">,</span> <span class="token string">"failed to read bytes, %s\n"</span><span class="token punctuation">,</span> err<span class="token punctuation">.</span><span class="token function">Error</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            os<span class="token punctuation">.</span><span class="token function">Exit</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">if</span> pageCount <span class="token operator">>=</span> args<span class="token punctuation">.</span>start <span class="token operator">&amp;&amp;</span> pageCount <span class="token operator">&lt;=</span> args<span class="token punctuation">.</span>end <span class="token punctuation">{</span>
+            <span class="token boolean">_</span><span class="token punctuation">,</span> writeErr <span class="token operator">:=</span> writer<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> writeErr <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+                fmt<span class="token punctuation">.</span><span class="token function">Fprintf</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>Stderr<span class="token punctuation">,</span> <span class="token string">"failed to write bytes\n"</span><span class="token punctuation">)</span>
+                os<span class="token punctuation">.</span><span class="token function">Exit</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            writer<span class="token punctuation">.</span><span class="token function">Flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> lineCount <span class="token operator">>=</span> args<span class="token punctuation">.</span>length <span class="token punctuation">{</span>
+            pageCount<span class="token operator">++</span>
+            lineCount <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            lineCount<span class="token operator">++</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> pageCount
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">optionFD</span><span class="token punctuation">(</span>args <span class="token operator">*</span>selpgArgs<span class="token punctuation">,</span> reader <span class="token operator">*</span>bufio<span class="token punctuation">.</span>Reader<span class="token punctuation">,</span> writer io<span class="token punctuation">.</span>WriteCloser<span class="token punctuation">)</span> <span class="token punctuation">(</span>pageCount <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    pageCount <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">for</span> <span class="token punctuation">{</span>
+        ch<span class="token punctuation">,</span> err <span class="token operator">:=</span> reader<span class="token punctuation">.</span><span class="token function">ReadByte</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> err <span class="token operator">==</span> io<span class="token punctuation">.</span>EOF <span class="token punctuation">{</span>
+                <span class="token keyword">break</span>
+            <span class="token punctuation">}</span>
+            fmt<span class="token punctuation">.</span><span class="token function">Fprintf</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>Stderr<span class="token punctuation">,</span> <span class="token string">"failed to read byte\n"</span><span class="token punctuation">)</span>
+            os<span class="token punctuation">.</span><span class="token function">Exit</span><span class="token punctuation">(</span><span class="token number">17</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> pageCount <span class="token operator">>=</span> args<span class="token punctuation">.</span>start <span class="token operator">&amp;&amp;</span> pageCount <span class="token operator">&lt;=</span> args<span class="token punctuation">.</span>end <span class="token punctuation">{</span>
+            <span class="token boolean">_</span><span class="token punctuation">,</span> writeErr <span class="token operator">:=</span> writer<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">{</span>ch<span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> writeErr <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+                fmt<span class="token punctuation">.</span><span class="token function">Fprintf</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>Stderr<span class="token punctuation">,</span> <span class="token string">"failed to write bytes\n"</span><span class="token punctuation">)</span>
+                os<span class="token punctuation">.</span><span class="token function">Exit</span><span class="token punctuation">(</span><span class="token number">18</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> ch <span class="token operator">==</span> <span class="token string">'\f'</span> <span class="token punctuation">{</span>
+            pageCount<span class="token operator">++</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> pageCount
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>‘\f’页分隔模式</li>
+</ul>
+<pre class="line-numbers language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">optionF</span><span class="token punctuation">(</span>args <span class="token operator">*</span>selpgArgs<span class="token punctuation">,</span> reader <span class="token operator">*</span>bufio<span class="token punctuation">.</span>Reader<span class="token punctuation">,</span> writer <span class="token operator">*</span>bufio<span class="token punctuation">.</span>Writer<span class="token punctuation">)</span> <span class="token punctuation">(</span>pageCount <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    pageCount <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">for</span> <span class="token punctuation">{</span>
+        ch<span class="token punctuation">,</span> err <span class="token operator">:=</span> reader<span class="token punctuation">.</span><span class="token function">ReadByte</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> err <span class="token operator">==</span> io<span class="token punctuation">.</span>EOF <span class="token punctuation">{</span>
+                <span class="token keyword">break</span>
+            <span class="token punctuation">}</span>
+            fmt<span class="token punctuation">.</span><span class="token function">Fprintf</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>Stderr<span class="token punctuation">,</span> <span class="token string">"failed to read byte\n"</span><span class="token punctuation">)</span>
+            os<span class="token punctuation">.</span><span class="token function">Exit</span><span class="token punctuation">(</span><span class="token number">13</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> pageCount <span class="token operator">>=</span> args<span class="token punctuation">.</span>start <span class="token operator">&amp;&amp;</span> pageCount <span class="token operator">&lt;=</span> args<span class="token punctuation">.</span>end <span class="token punctuation">{</span>
+            writeErr <span class="token operator">:=</span> writer<span class="token punctuation">.</span><span class="token function">WriteByte</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> writeErr <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+                fmt<span class="token punctuation">.</span><span class="token function">Fprintf</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>Stderr<span class="token punctuation">,</span> <span class="token string">"failed to write byte\n"</span><span class="token punctuation">)</span>
+                os<span class="token punctuation">.</span><span class="token function">Exit</span><span class="token punctuation">(</span><span class="token number">14</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            writer<span class="token punctuation">.</span><span class="token function">Flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> ch <span class="token operator">==</span> <span class="token string">'\f'</span> <span class="token punctuation">{</span>
+            pageCount<span class="token operator">++</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> pageCount
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="3-6-错误处理总览"><a href="#3-6-错误处理总览" class="headerlink" title="3.6 错误处理总览"></a>3.6 错误处理总览</h3><table>
 <thead>
 <tr>
 <th style="text-align:center">错误码</th>
