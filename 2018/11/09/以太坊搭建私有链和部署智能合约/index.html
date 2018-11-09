@@ -1,0 +1,701 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    gitgiter's blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">gitgiter</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/gitgiter" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://blog.csdn.net/Wonderful_sky" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1541759752461&amp;di=8da8126de1af5c5a233df4649bf9c764&amp;imgtype=0&amp;src=http%3A%2F%2Fupload.fx678.com%2Fupload%2Fht%2F20180316%2Fsy_2018031620340133.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >以太坊搭建私有链和部署智能合约</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="以太坊搭建私有链和部署智能合约"><a href="#以太坊搭建私有链和部署智能合约" class="headerlink" title="以太坊搭建私有链和部署智能合约"></a>以太坊搭建私有链和部署智能合约</h1><hr>
+<p>[TOC]</p>
+<h2 id="1-实验环境"><a href="#1-实验环境" class="headerlink" title="1. 实验环境"></a>1. 实验环境</h2><p>VMWare虚拟机 + CentOs 7 + Golang</p>
+<h2 id="2-以太坊安装"><a href="#2-以太坊安装" class="headerlink" title="2. 以太坊安装"></a>2. 以太坊安装</h2><h3 id="2-1-安装相关组件"><a href="#2-1-安装相关组件" class="headerlink" title="2.1 安装相关组件"></a>2.1 安装相关组件</h3><p>为了避免后续安装过程出错，这里提前安装一些需要用到的组件和依赖。如果不确定之前有没有安装过这些组件也没关系，检测到安装就不会重复安装。-y表示安装过程中弹出的问题一律回答yes。</p>
+<pre class="line-numbers language-sh"><code class="language-sh">yum update -y && yum install git wget bzip2 vim gcc-c++ ntp epel-release nodejs cmake -y
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>相关组件的作用</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">组件</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">git</td>
+<td style="text-align:center">版本管理工具，用于后面从github克隆geth</td>
+</tr>
+<tr>
+<td style="text-align:center">wget</td>
+<td style="text-align:center">Linux命令行的下载工具，用于后面下载cmake</td>
+</tr>
+<tr>
+<td style="text-align:center">bzip2</td>
+<td style="text-align:center">无损压缩软件</td>
+</tr>
+<tr>
+<td style="text-align:center">vim</td>
+<td style="text-align:center">编辑工具，用于后面编辑一些环境配置文件</td>
+</tr>
+<tr>
+<td style="text-align:center">gcc-c++</td>
+<td style="text-align:center">c/c++编译工具，用于后面geth的编译</td>
+</tr>
+<tr>
+<td style="text-align:center">ntp</td>
+<td style="text-align:center">网络时钟同步组件</td>
+</tr>
+<tr>
+<td style="text-align:center">nodejs</td>
+<td style="text-align:center">用于前端js开发的包管理软件</td>
+</tr>
+<tr>
+<td style="text-align:center">epel</td>
+<td style="text-align:center">网络第三方的linux安装包源</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-2-安装及配置Golang环境"><a href="#2-2-安装及配置Golang环境" class="headerlink" title="2.2 安装及配置Golang环境"></a>2.2 安装及配置Golang环境</h3><ul>
+<li>我的虚拟机之前已经装过Golang环境，因此这里不再重现和赘述。</li>
+<li>贴一篇我当时配golang环境时写的博客：<a href="https://gitgiter.github.io/2018/09/23/golang%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" target="_blank" rel="noopener">golang开发环境配置</a></li>
+</ul>
+<h3 id="2-3-克隆并编译geth"><a href="#2-3-克隆并编译geth" class="headerlink" title="2.3 克隆并编译geth"></a>2.3 克隆并编译geth</h3><ul>
+<li>从github上clone下来go-ethereum（简称geth）</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh">git clone https://github.com/ethereum/go-ethereum.git
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>进入geth根目录并编译</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh">cd go-ethereum && make all
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>配置环境变量  </li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh"># 打开环境配置文件
+vim ~/.profile
+
+# 新增path
+export PATH=$PATH:$GOPATH/bin:$HOME/go-ethereum/build/bin
+
+# 让更改生效
+source ~/.profile
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>验证是否配置成功<br>在终端输入geth -h有一堆帮助信息出来即可</li>
+</ul>
+<h3 id="2-4-安装及配置cmake环境"><a href="#2-4-安装及配置cmake环境" class="headerlink" title="2.4 安装及配置cmake环境"></a>2.4 安装及配置cmake环境</h3><p>智能合约编译需要cmake，之前yum install cmake的版本只有2.8不够，这里需要去官网下载其独立安装包。这里我用的是最新版本3.12.3。</p>
+<ul>
+<li>下载到用户根目录$HOME</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh">cd && wget https://cmake.org/files/v3.12/cmake-3.12.3.tar.gz
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>解压</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh">tar -xzvf cmake-3.12.3.tar.gz
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>进入cmake根目录并编译安装</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh">cd cmake-3.12.3
+./bootstrap && make && make install
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
+<li>配置环境变量</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh"># 打开环境配置文件
+vim ~/.profile
+
+# 新增path
+export PATH=$PATH:$GOPATH/bin:$HOME/go-ethereum/build/bin:$HOME/cmake/bin
+
+# 让更改生效
+source ~/.profile
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>验证是否配置成功<br>在终端输入cmake -h或cmake -version有一堆帮助信息出来或者有版本信息出来均可</li>
+</ul>
+<h3 id="2-5-防火墙"><a href="#2-5-防火墙" class="headerlink" title="2.5 防火墙"></a>2.5 防火墙</h3><p>因为之前在配置golang私有云桌面的时候把防火墙关闭了，我在这里就不需要考虑。</p>
+<ul>
+<li>你可以选择关闭防火墙<pre class="line-numbers language-sh"><code class="language-sh">systemctl stop firewalld
+systemctl disable firewalld
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>也可以只添加防火墙规则，允许某几个geth使用一些默认端口。<pre class="line-numbers language-sh"><code class="language-sh">firewall-cmd --zone=public --add-port=8087/tcp --permanent
+firewall-cmd --zone=public --add-port=30303/tcp --permanent
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>mark一下：启用防火墙的命令<pre class="line-numbers language-sh"><code class="language-sh">systemctl enable firewalld
+systemctl start firewalld
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="2-6-时钟同步"><a href="#2-6-时钟同步" class="headerlink" title="2.6 时钟同步"></a>2.6 时钟同步</h3><p>因为区块链需要同步网络时间，所以需要启用网络时间同步</p>
+<pre class="line-numbers language-sh"><code class="language-sh">systemctl enable ntpd
+systemctl start ntpd
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="3-私有链创世区块搭建"><a href="#3-私有链创世区块搭建" class="headerlink" title="3. 私有链创世区块搭建"></a>3. 私有链创世区块搭建</h2><ul>
+<li>编写创世区块的配置文件genesis.json。里面可以设置一些挖矿难度，默认的挖矿账户和最大手续费等。<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>  
+  <span class="token property">"nonce"</span><span class="token operator">:</span> <span class="token string">"0x0000000000000042"</span><span class="token punctuation">,</span>  
+  <span class="token property">"timestamp"</span><span class="token operator">:</span> <span class="token string">"0x00"</span><span class="token punctuation">,</span>  
+  <span class="token property">"parentHash"</span><span class="token operator">:</span> <span class="token string">"0x0000000000000000000000000000000000000000000000000000000000000000"</span><span class="token punctuation">,</span>  
+  <span class="token property">"extraData"</span><span class="token operator">:</span> <span class="token string">"0x00"</span><span class="token punctuation">,</span>  
+  <span class="token property">"gasLimit"</span><span class="token operator">:</span> <span class="token string">"0x80000000"</span><span class="token punctuation">,</span>  
+  <span class="token property">"difficulty"</span><span class="token operator">:</span> <span class="token string">"0x400"</span><span class="token punctuation">,</span>  
+  <span class="token property">"mixhash"</span><span class="token operator">:</span> <span class="token string">"0x0000000000000000000000000000000000000000000000000000000000000000"</span><span class="token punctuation">,</span>  
+  <span class="token property">"coinbase"</span><span class="token operator">:</span> <span class="token string">"0x2D356ee3F5b8718d8690AFCD31Fe2CB5E602677e"</span><span class="token punctuation">,</span>  
+  <span class="token property">"alloc"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>  
+  <span class="token property">"config"</span><span class="token operator">:</span> <span class="token punctuation">{</span>  
+      <span class="token property">"chainId"</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>  
+      <span class="token property">"homesteadBlock"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>  
+      <span class="token property">"eip155Block"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>  
+      <span class="token property">"eip158Block"</span><span class="token operator">:</span> <span class="token number">0</span>  
+  <span class="token punctuation">}</span>  
+<span class="token punctuation">}</span>  
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>初始化创世区块节点信息<pre class="line-numbers language-sh"><code class="language-sh">geth --datadir node0 init genesis.json
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>得到如下信息，说明初始化成功<br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/node0.jpg" alt=""></li>
+<li>执行geth的控制台，将输出重定向到geth.log中<pre class="line-numbers language-sh"><code class="language-sh">geth --datadir node0 console 2>> geth.log
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>一些基本的操作<ul>
+<li>新建账户、查看账户及账户余额<br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/op1.jpg" alt=""></li>
+<li>查看挖矿的账户、当前区块数等<br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/op2.jpg" alt=""></li>
+<li>发起交易、查看交易池状态等<br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/op3.jpg" alt=""></li>
+<li>挖矿使交易池中待处理的交易完成（可以看见pending从1变成0，目标账户的余额从0变成15个以太币——注意单位换算fromWei），sleepBlocks(n)可以监控挖矿过程，指定在挖到第n个新块的时候的时候执行下条命令，如stop()。<br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/op4.jpg" alt=""></li>
+<li>注：只要实际上有在挖矿，start返回null或true都无所谓。</li>
+</ul>
+</li>
+<li>另开一个终端查看log内容<pre class="line-numbers language-sh"><code class="language-sh">tail -f geth.log
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h2 id="4-私有链节点加入"><a href="#4-私有链节点加入" class="headerlink" title="4. 私有链节点加入"></a>4. 私有链节点加入</h2><ul>
+<li>新建一个节点并初始化<pre class="line-numbers language-sh"><code class="language-sh">geth --datadir node1 init genesis.json
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>启动上一个节点的rpc服务，并把网络id设置成2018，其他不设置（默认rpc端口8545，监听端口30303，ip地址127.0.0.1）<pre class="line-numbers language-sh"><code class="language-sh">geth --datadir node0 -networkid 2018 -rpc console 2>> geth.log
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>启动新节点的rpc服务，把网络id设置成2018（要相同），rpc的端口默认8545，节点监听的端口默认是30303，这两个端口都被上一个节点占用了（因为我是在一台机器上），因此这个新节点的这两个端口都要手动设置（我这里分别设成8546和30304），ip地址仍是默认<pre class="line-numbers language-sh"><code class="language-sh">geth --datadir node1 -networkid 2018 -rpc -rpcport 8546 -port 30304 console 2>> geth.log
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>查看新节点的enode，并拷贝<pre class="line-numbers language-sh"><code class="language-sh">admin.nodeInfo.enode
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>在另一个终端上，进入上一个节点的console，加入新节点<pre class="line-numbers language-sh"><code class="language-sh">admin.addPeer(上面拷贝的enode)
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>连接成功<br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/peer2.jpg" alt=""></p>
+</li>
+<li><p>有个小小的疑惑。当时忘记设置网络id，默认是1，网上说networkid是1的时候是接入公网？然后确实是会莫名其妙偶尔连到一些外国的节点，第一个193开头的是乌克兰，第一个52开头的是爱尔兰的。但是为何私链可以接到公网上面？后面发现加上-nodiscover就可以不被别的节点发现。<br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/peer1.jpg" alt=""><br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/peer3.jpg" alt=""></p>
+</li>
+</ul>
+<h2 id="5-区块字段解释"><a href="#5-区块字段解释" class="headerlink" title="5. 区块字段解释"></a>5. 区块字段解释</h2><h3 id="5-1-最新区块"><a href="#5-1-最新区块" class="headerlink" title="5.1 最新区块"></a>5.1 最新区块</h3><p><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/block_latest.jpg" alt=""></p>
+<h3 id="5-2-各个字段解释"><a href="#5-2-各个字段解释" class="headerlink" title="5.2 各个字段解释"></a>5.2 各个字段解释</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">difficulty</td>
+<td style="text-align:center">挖到当前区块的难度</td>
+</tr>
+<tr>
+<td style="text-align:center">extraData</td>
+<td style="text-align:center">额外数据</td>
+</tr>
+<tr>
+<td style="text-align:center">gasLimit</td>
+<td style="text-align:center">该区块允许使用的手续费上限</td>
+</tr>
+<tr>
+<td style="text-align:center">gasUsed</td>
+<td style="text-align:center">该区块实际包含的所有手续费</td>
+</tr>
+<tr>
+<td style="text-align:center">hash</td>
+<td style="text-align:center">该区块的唯一哈希值标识，32字节</td>
+</tr>
+<tr>
+<td style="text-align:center">logsBloom</td>
+<td style="text-align:center">区块日志的过滤器，256字节</td>
+</tr>
+<tr>
+<td style="text-align:center">miner</td>
+<td style="text-align:center">打包该区块的矿工地址，20字节</td>
+</tr>
+<tr>
+<td style="text-align:center">mixHash</td>
+<td style="text-align:center">混合哈希</td>
+</tr>
+<tr>
+<td style="text-align:center">nonce</td>
+<td style="text-align:center">一个符合PoW难题的随机值，8字节</td>
+</tr>
+<tr>
+<td style="text-align:center">number</td>
+<td style="text-align:center">当前区块的序号</td>
+</tr>
+<tr>
+<td style="text-align:center">parentHash</td>
+<td style="text-align:center">父区块的哈希值，32字节</td>
+</tr>
+<tr>
+<td style="text-align:center">receiptRoot</td>
+<td style="text-align:center">收据的唯一哈希值标识</td>
+</tr>
+<tr>
+<td style="text-align:center">sha3Uncles</td>
+<td style="text-align:center">叔区块的SHA3哈希值</td>
+</tr>
+<tr>
+<td style="text-align:center">size</td>
+<td style="text-align:center">区块的大小，单位是字节</td>
+</tr>
+<tr>
+<td style="text-align:center">stateRoot</td>
+<td style="text-align:center">该区块最终前缀树的根哈希</td>
+</tr>
+<tr>
+<td style="text-align:center">timeStamp</td>
+<td style="text-align:center">该区块被发现时的Unix时间戳</td>
+</tr>
+<tr>
+<td style="text-align:center">totalDifficulty</td>
+<td style="text-align:center">挖到当前区块前所有区块的难度总和</td>
+</tr>
+<tr>
+<td style="text-align:center">transactions</td>
+<td style="text-align:center">所有交易的哈希值集合</td>
+</tr>
+<tr>
+<td style="text-align:center">transactionsRoot</td>
+<td style="text-align:center">该区块交易前缀树的根哈希</td>
+</tr>
+<tr>
+<td style="text-align:center">uncles</td>
+<td style="text-align:center">叔哈希</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-3-补充"><a href="#5-3-补充" class="headerlink" title="5.3 补充"></a>5.3 补充</h3><ul>
+<li>difficulty由父区块的难度及其时间戳与本区块时间戳的差计算得到。</li>
+<li>mixHash是一个与随机数 (nonce)相关的 256 位哈希计算，用于证明针对当前区块已经完成了足够的计算，相当于签名。</li>
+<li>创世区块的parentHash为0</li>
+<li>当前区块的哈希由区块头唯一决定。意味着，区块头不同，产生的哈希才会不同。区块头里面所要记录的信息都是确定的、不变的，为了让区块头产生变化，引入了一个随机值 Nonce，作为一个唯一的变量，在密码学中Nonce是一个只被使用一次的任意或非重复的随机数值。矿工的作用其实就是不断重复 变化 Nonce，计算哈希的过程，直到碰到一个 Nonce 的值，使得区块头的哈希可以小于目标值，从而能够写入区块链。</li>
+<li>一个块奖励5个以太币</li>
+</ul>
+<h2 id="6-日志输出解释（默认日志等级）"><a href="#6-日志输出解释（默认日志等级）" class="headerlink" title="6. 日志输出解释（默认日志等级）"></a>6. 日志输出解释（默认日志等级）</h2><h3 id="6-1-挖矿"><a href="#6-1-挖矿" class="headerlink" title="6.1 挖矿"></a>6.1 挖矿</h3><p>可以观察到每次挖到一个新的区块都需要经历四个阶段。分别是commit new mining work =&gt; successfully sealed new block =&gt; block reached canonical chain =&gt; mined potential block，即先提交要打包某个区块的任务，然后成功打包该区块，该区块接到主链上（主链最后一个区块号一般会比当前的目标区块小一些，因为有分叉），成功完成挖矿。每条记录后面的number指明的是当前挖矿的目标区块序号。<br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/log1.jpg" alt=""></p>
+<h3 id="6-2-节点记录"><a href="#6-2-节点记录" class="headerlink" title="6.2 节点记录"></a>6.2 节点记录</h3><ul>
+<li>new local node record这条记录在网上搜了很久没有发现对应的解释，我猜测可能是因为我关闭了防火墙，同时没有设置nodiscover，也许会从各个udp端口或30303tcp端口收到来自公网的包，从而进行同步，猜测这也是之前为什么会连接到公网节点的原因之一，当然可能也不仅仅只包含公网的同步，应该也还有私链上的多节点同步。每条该类记录后面会有一个seq标识当前记录是第几个的记录。</li>
+<li>然后每经过一定量的日志记录后，会出现regenerated local transaction journal，这个是日志记录的回转，为了防止日志记录过多。日志轮换是系统管理中使用的自动过程，对过时的日志文件进行存档。运行大型应用程序的服务器通常会记录每个请求，面对庞大的日志，日志轮换提供了一种限制保留日志总大小的方法，同时仍允许分析最近的事件。<br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/log2.jpg" alt=""></li>
+</ul>
+<h3 id="6-3-添加节点"><a href="#6-3-添加节点" class="headerlink" title="6.3 添加节点"></a>6.3 添加节点</h3><ul>
+<li>这段日志里的各种closed和stopped是因为退出了某个节点的控制台，需要关闭所有服务，当然包括数据库及各种协议。</li>
+<li>其他的像添加节点后便会出现从starting peer-to-peer node到started P2P networking等一系列节点连接的过程，包括ipc服务的open，存储空间的确认，第一次连接的话可能中间还会有一些初始化同一创世区块的步骤。</li>
+</ul>
+<p><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/log3.jpg" alt=""></p>
+<h2 id="7-部署智能合约"><a href="#7-部署智能合约" class="headerlink" title="7. 部署智能合约"></a>7. 部署智能合约</h2><h3 id="7-1-编写合约"><a href="#7-1-编写合约" class="headerlink" title="7.1 编写合约"></a>7.1 编写合约</h3><p>通过remix，写了一个最简单的合约，有读操作也有写操作。</p>
+<pre class="line-numbers language-js"><code class="language-js">pragma solidity <span class="token operator">^</span><span class="token number">0.4</span><span class="token punctuation">.</span><span class="token number">18</span><span class="token punctuation">;</span>
+
+contract Test<span class="token punctuation">{</span>
+
+    string <span class="token keyword">public</span> name<span class="token punctuation">;</span>
+
+    <span class="token keyword">function</span> <span class="token function">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token punctuation">{</span>
+        name <span class="token operator">=</span> <span class="token string">"xietao"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> view returns <span class="token punctuation">(</span>string<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">setName</span><span class="token punctuation">(</span>string _name<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token punctuation">{</span>
+        name <span class="token operator">=</span> _name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="7-2-编译并部署合约"><a href="#7-2-编译并部署合约" class="headerlink" title="7.2 编译并部署合约"></a>7.2 编译并部署合约</h3><ul>
+<li>右侧点击start compile之后点击detail可以看见合约详情。</li>
+<li>找到WEB3DEPLOY一项，拷贝里面的代码<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">var</span> testContract <span class="token operator">=</span> web3<span class="token punctuation">.</span>eth<span class="token punctuation">.</span><span class="token function">contract</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"constant"</span><span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">,</span><span class="token string">"inputs"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">"name"</span><span class="token punctuation">,</span><span class="token string">"outputs"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">""</span><span class="token punctuation">,</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"string"</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"payable"</span><span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token string">"stateMutability"</span><span class="token punctuation">:</span><span class="token string">"view"</span><span class="token punctuation">,</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"function"</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"constant"</span><span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">,</span><span class="token string">"inputs"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">"getName"</span><span class="token punctuation">,</span><span class="token string">"outputs"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">""</span><span class="token punctuation">,</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"string"</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"payable"</span><span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token string">"stateMutability"</span><span class="token punctuation">:</span><span class="token string">"view"</span><span class="token punctuation">,</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"function"</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"constant"</span><span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token string">"inputs"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">"_name"</span><span class="token punctuation">,</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"string"</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"name"</span><span class="token punctuation">:</span><span class="token string">"setName"</span><span class="token punctuation">,</span><span class="token string">"outputs"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"payable"</span><span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token string">"stateMutability"</span><span class="token punctuation">:</span><span class="token string">"nonpayable"</span><span class="token punctuation">,</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"function"</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token string">"inputs"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"payable"</span><span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token string">"stateMutability"</span><span class="token punctuation">:</span><span class="token string">"nonpayable"</span><span class="token punctuation">,</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"constructor"</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> test <span class="token operator">=</span> testContract<span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">(</span>
+ <span class="token punctuation">{</span>
+   <span class="token keyword">from</span><span class="token punctuation">:</span> web3<span class="token punctuation">.</span>eth<span class="token punctuation">.</span>accounts<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> 
+   data<span class="token punctuation">:</span> <span class="token string">'0x6060604052341561000f57600080fd5b60408051908101604052600681527f78696574616f00000000000000000000000000000000000000000000000000006020820152600090805161005692916020019061005c565b506100f7565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061009d57805160ff19168380011785556100ca565b828001600101855582156100ca579182015b828111156100ca5782518255916020019190600101906100af565b506100d69291506100da565b5090565b6100f491905b808211156100d657600081556001016100e0565b90565b61037f806101066000396000f3006060604052600436106100565763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166306fdde03811461005b57806317d7de7c146100e5578063c47f0027146100f8575b600080fd5b341561006657600080fd5b61006e61014b565b60405160208082528190810183818151815260200191508051906020019080838360005b838110156100aa578082015183820152602001610092565b50505050905090810190601f1680156100d75780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156100f057600080fd5b61006e6101e9565b341561010357600080fd5b61014960046024813581810190830135806020601f8201819004810201604051908101604052818152929190602084018383808284375094965061029295505050505050565b005b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101e15780601f106101b6576101008083540402835291602001916101e1565b820191906000526020600020905b8154815290600101906020018083116101c457829003601f168201915b505050505081565b6101f16102a9565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102875780601f1061025c57610100808354040283529160200191610287565b820191906000526020600020905b81548152906001019060200180831161026a57829003601f168201915b505050505090505b90565b60008180516102a59291602001906102bb565b5050565b60206040519081016040526000815290565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102fc57805160ff1916838001178555610329565b82800160010185558215610329579182015b8281111561032957825182559160200191906001019061030e565b50610335929150610339565b5090565b61028f91905b80821115610335576000815560010161033f5600a165627a7a72305820ca52a32829a7341ced9c589fa39647854f065bcec7bf1d7b4a2aed5185b579900029'</span><span class="token punctuation">,</span> 
+   gas<span class="token punctuation">:</span> <span class="token string">'4700000'</span>
+ <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">,</span> contract<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> contract<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> contract<span class="token punctuation">.</span>address <span class="token operator">!==</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Contract mined! address: '</span> <span class="token operator">+</span> contract<span class="token punctuation">.</span>address <span class="token operator">+</span> <span class="token string">' transactionHash: '</span> <span class="token operator">+</span> contract<span class="token punctuation">.</span>transactionHash<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>将上述代码直接黏贴进console，或者可以保存在某个js文件中再load进来（比较优雅）。如果报错说没有unlock则需要先解锁一个账户。<pre class="line-numbers language-js"><code class="language-js">personal<span class="token punctuation">.</span><span class="token function">unlockAccount</span><span class="token punctuation">(</span>eth<span class="token punctuation">.</span>accounts<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>然后开始挖矿进行部署，否则合约实例的address是undefined。<pre class="line-numbers language-js"><code class="language-js">miner<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>admin<span class="token punctuation">.</span><span class="token function">sleepBlocks</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>miner<span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>提示contract mined则正式部署成功！<pre class="line-numbers language-sh"><code class="language-sh">Contract mined! address: 0x7e8109387a54814fcc61a48729b7a891f24cd291 transactionHash: 0x656fc28b69415dab65edbb5e62f2034daa6f2402f5db052aaba72da3269a1707
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>再次查看合约实例——test的address字段，已经不再是undefined了。<h3 id="7-3-调用合约"><a href="#7-3-调用合约" class="headerlink" title="7.3 调用合约"></a>7.3 调用合约</h3></li>
+<li>读操作。读操作很简单，直接调用就行，不消耗gas。<br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/get.jpg" alt=""></li>
+<li>写操作。写操作遇到一点坑，一开始总是set没有更改到。虽然知道要扣费，但一开始不知道没搞懂怎么扣除指定账户的gas。后面发现其实合约也是一个账户，和交易类似。有两种设置付款账户的方法。<ul>
+<li>为该节点设置默认账户，这样在调用set函数时就会自动让你付款。这种方法适用于只有一个账户的节点或者只有一个账户经常使用的多账户节点。<pre class="line-numbers language-js"><code class="language-js">eth<span class="token punctuation">.</span>defaultAccount <span class="token operator">=</span> eth<span class="token punctuation">.</span>accouts<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>每次调用set时顺便指定付款账户。这种方法适用于每个账户都经常使用的多账户节点。<pre class="line-numbers language-js"><code class="language-js">test<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"xietao1"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token keyword">from</span><span class="token punctuation">:</span>eth<span class="token punctuation">.</span>accounts<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">}</span>"<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>其他操作和交易时是一样的，交易前记得解锁账户，产生交易后记得挖矿。<br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/set.jpg" alt=""></li>
+</ul>
+</li>
+<li>注意到读操作和写操作是有区别的——写操作要消耗gas，读操作不用。因为写操作需要通过矿工对链做出更改和同步，有代价。<br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/contract_gas.jpg" alt=""></li>
+</ul>
+<h2 id="8-交易字段解释"><a href="#8-交易字段解释" class="headerlink" title="8. 交易字段解释"></a>8. 交易字段解释</h2><h3 id="8-1-交易信息"><a href="#8-1-交易信息" class="headerlink" title="8.1 交易信息"></a>8.1 交易信息</h3><p><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/transaction.jpg" alt=""></p>
+<h3 id="8-2-各个字段解释"><a href="#8-2-各个字段解释" class="headerlink" title="8.2 各个字段解释"></a>8.2 各个字段解释</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">blockHash</td>
+<td style="text-align:center">该交易所在区块的哈希，32字节</td>
+</tr>
+<tr>
+<td style="text-align:center">blockNumber</td>
+<td style="text-align:center">该交易所在的区块序号</td>
+</tr>
+<tr>
+<td style="text-align:center">from</td>
+<td style="text-align:center">该交易转账方的地址</td>
+</tr>
+<tr>
+<td style="text-align:center">gas</td>
+<td style="text-align:center">转账方愿意支付的手续费</td>
+</tr>
+<tr>
+<td style="text-align:center">gasPrice</td>
+<td style="text-align:center">gas的单价，单位是Wei</td>
+</tr>
+<tr>
+<td style="text-align:center">hash</td>
+<td style="text-align:center">该交易的哈希</td>
+</tr>
+<tr>
+<td style="text-align:center">input</td>
+<td style="text-align:center">交易过程中用到的数据</td>
+</tr>
+<tr>
+<td style="text-align:center">nonce</td>
+<td style="text-align:center">转账方在该交易前发起的交易数</td>
+</tr>
+<tr>
+<td style="text-align:center">r，s</td>
+<td style="text-align:center">交易的ECDSA签名</td>
+</tr>
+<tr>
+<td style="text-align:center">to</td>
+<td style="text-align:center">该交易收款方的地址</td>
+</tr>
+<tr>
+<td style="text-align:center">v</td>
+<td style="text-align:center">公钥恢复id</td>
+</tr>
+<tr>
+<td style="text-align:center">transactionIndex</td>
+<td style="text-align:center">该交易在所在区块交易集合的下标</td>
+</tr>
+<tr>
+<td style="text-align:center">value</td>
+<td style="text-align:center">交易的金额，单位是Wei</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8-3-补充"><a href="#8-3-补充" class="headerlink" title="8.3 补充"></a>8.3 补充</h3><ul>
+<li>区别（结合例子解释）<ul>
+<li>gas。在交易信息中的gas字段，表示交易发起方（转账方）愿意支付的gas上限。本例是发起方愿意支付90000单位的gas。</li>
+<li>gas price。由交易发起方（转账方）设置，表示gas的单位价格，单价越高交易越优先处理。本例中发起方愿意以每单位1000000000Wei的价格支付gas。gas * gas price = 发起方最多愿意支付的手续费。</li>
+<li>gas limit。在交易信息中和gas是一个意思，但是在区块信息中表示该区块最多可以消耗的gas上限。也就是该区块中所有交易实际消耗gas（gas used）的总和不能超过该区块的gas limit。</li>
+<li>gas used。表示一个交易实际上消耗的gas。看看该交易对应的区块，可以发现gas实际上只消耗了21000，没有超过交易发起方愿意发起的gas上限（交易发起方的gas limit，即90000），交易正常进行。gas used * gas price = 发起方实际支付的手续费，多余的gas会被返还。<br><img src="/2018/11/09/以太坊搭建私有链和部署智能合约/block_17.jpg" alt=""></li>
+<li>注意如果发起方愿意支付的gas小于实际消耗的gas，那么交易会被撤销，但仍然会扣除发起方支付的gas，因为不管交易是否可以顺利进行，矿工都已经进行了工作。</li>
+</ul>
+</li>
+<li>区别<ul>
+<li>交易的nonce。交易信息中的nonce字段是通过计数来用来唯一标识每一个交易。nonce越小会越先被处理。可以用来防止一些双花等恶意消费动机。</li>
+<li>挖矿的nonce。即区块中的nonce，这个前面解释过，是用来调整大小以产生符合难题的哈希的一个无意义的值。</li>
+</ul>
+</li>
+<li>Wei是以太币的最小计量单位，$一个以太币=10^{18}Wei$</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/11/09/以太坊搭建私有链和部署智能合约/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/11/09/以太坊搭建私有链和部署智能合约/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Written By: <a href="https://github.com/gitgiter" style="border-bottom: none;">gitgiter</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
