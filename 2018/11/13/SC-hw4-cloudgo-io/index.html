@@ -1,0 +1,545 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    gitgiter's blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">gitgiter</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/gitgiter" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://blog.csdn.net/Wonderful_sky" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/kataras/iris/raw/master/_benchmarks/benchmarks_graph_22_october_2018_gray.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >SC-hw4-cloudgo-io</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>[Toc]</p>
+<h1 id="web小应用之cloudgo-io"><a href="#web小应用之cloudgo-io" class="headerlink" title="web小应用之cloudgo-io"></a>web小应用之cloudgo-io</h1><hr>
+<h2 id="1、概述"><a href="#1、概述" class="headerlink" title="1、概述"></a>1、概述</h2><h3 id="1-1-功能"><a href="#1-1-功能" class="headerlink" title="1.1 功能"></a>1.1 功能</h3><p>这是一个简单的web小应用，有以下几个功能：</p>
+<ul>
+<li>支持静态文件服务</li>
+<li>支持简单的js访问</li>
+<li>提交表单，并输出一个表格</li>
+<li>对/unknow给出开发中的提示，返回码501</li>
+</ul>
+<h3 id="1-2-运行"><a href="#1-2-运行" class="headerlink" title="1.2 运行"></a>1.2 运行</h3><ul>
+<li>转到main.go所在目录，执行以下命令</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh">go run main.go # 不指定端口默认8080
+
+or
+
+go run main.go -p 9090 # 指定监听9090端口
+
+or
+
+go install && cloudgo-io [-p ...] # 先安装之后可以直接使用cloudgo-io或cloudgo-io -p ...命令启动
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>在浏览器地址栏输入</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh"># 登录界面
+http://localhost:yourport/login
+
+# 静态资源文件服务
+http://localhost:yourport/public
+
+# 未开发
+http://localhost:yourport/unknown
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="1-3-效果"><a href="#1-3-效果" class="headerlink" title="1.3 效果"></a>1.3 效果</h3><ul>
+<li>主界面（背景来自我的github page）<br><img src="/2018/11/13/SC-hw4-cloudgo-io/main.jpg" alt=""></li>
+<li>支持静态文件服务<br><img src="/2018/11/13/SC-hw4-cloudgo-io/public.jpg" alt=""><br><img src="/2018/11/13/SC-hw4-cloudgo-io/css.jpg" alt=""></li>
+<li>支持简单的js访问（可跳转到静态资源界面）<br><img src="/2018/11/13/SC-hw4-cloudgo-io/js.jpg" alt=""><br><img src="/2018/11/13/SC-hw4-cloudgo-io/public.jpg" alt=""></li>
+<li>提交表单，并输出一个表格<br><img src="/2018/11/13/SC-hw4-cloudgo-io/form.jpg" alt=""><br><img src="/2018/11/13/SC-hw4-cloudgo-io/table.jpg" alt=""></li>
+<li>对/unknow给出开发中的提示，返回码501<br><img src="/2018/11/13/SC-hw4-cloudgo-io/unknown.jpg" alt=""></li>
+</ul>
+<h2 id="2、挑选框架"><a href="#2、挑选框架" class="headerlink" title="2、挑选框架"></a>2、挑选框架</h2><p>综合比较了最常见的六种框架后，我选择了iris，毕竟年份最新、功能最全、速度最快。</p>
+<p>这是2017年的统计数据。虽然star数暂时没有beego那么多，但是iris比beego慢了四年诞生，发展得很快。<br><img src="http://img.my.csdn.net/uploads/201711/23/1511412883_1414.JPG" alt=""></p>
+<p>当然我选择iris最大的原因，还是因为下图，功能这么全，早进坑早享受。不过现在iris网上的教程比较稀缺，多数需要先跟着官方example一步一步摸索。<br><img src="http://img.my.csdn.net/uploads/201711/23/1511412786_8911.JPG" alt=""></p>
+<p>以上两幅图片引用自：<br><a href="https://blog.csdn.net/dev_csdn/article/details/78740990" target="_blank" rel="noopener">https://blog.csdn.net/dev_csdn/article/details/78740990</a></p>
+<p>关于速度，见iris最新官方数据。<br><img src="https://github.com/kataras/iris/raw/master/_benchmarks/benchmarks_third_party_source_snapshot_go_23_october_2018.png" alt=""></p>
+<h2 id="3、文件结构"><a href="#3、文件结构" class="headerlink" title="3、文件结构"></a>3、文件结构</h2><p>没有硬性规定，但是最好把负责不同模块或功能的文件分到不同的文件夹，便于维护。我的文件结构如下：</p>
+<pre class="line-numbers language-sh"><code class="language-sh">cloudgo-io/
+    configs/
+        main.tml
+    static/
+        css/
+        js/
+        img/
+    services/
+        GetPages.go
+        ServicesManager.go
+    templates/
+        login.html
+        info.html
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>configs中的main.tml文件可交由服务器管理员配置服务器后台。虽然也可以放在代码中配置，但是这样比较方便，不用每次都重新编译代码。</li>
+<li>static存放静态文件。</li>
+<li>services存放服务器提供服务的一系列代码，最后可以为这一系列服务安排一个manger统一管理，也方便统一调用。</li>
+<li>templates存放网页的模板，在模板中需要留一些待注入的标记，有了这些预设的标记便可以在代码中找到对应的标记进行填充，比直接找element方便许多。</li>
+</ul>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>username<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>{{.username}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>password<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>{{.password}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<p>以下介绍一些我的一些关于iris的探索成果和使用心得</p>
+<hr>
+<h2 id="4、iris的简单使用"><a href="#4、iris的简单使用" class="headerlink" title="4、iris的简单使用"></a>4、iris的简单使用</h2><h3 id="4-1-获取iris"><a href="#4-1-获取iris" class="headerlink" title="4.1 获取iris"></a>4.1 获取iris</h3><pre class="line-numbers language-sh"><code class="language-sh">go get -u github.com/kataras/iris
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="4-2-使用的套路"><a href="#4-2-使用的套路" class="headerlink" title="4.2 使用的套路"></a>4.2 使用的套路</h3><ul>
+<li>最简单版（官方例子）</li>
+</ul>
+<pre class="line-numbers language-go"><code class="language-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"github.com/kataras/iris"</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    app <span class="token operator">:=</span> iris<span class="token punctuation">.</span><span class="token function">Default</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    app<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span><span class="token string">"/ping"</span><span class="token punctuation">,</span> <span class="token keyword">func</span><span class="token punctuation">(</span>ctx iris<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ctx<span class="token punctuation">.</span><span class="token function">JSON</span><span class="token punctuation">(</span>iris<span class="token punctuation">.</span>Map<span class="token punctuation">{</span>
+            <span class="token string">"message"</span><span class="token punctuation">:</span> <span class="token string">"pong"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// listen and serve on http://0.0.0.0:8080.</span>
+    app<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span>iris<span class="token punctuation">.</span><span class="token function">Addr</span><span class="token punctuation">(</span><span class="token string">":8080"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>一般步骤：<ul>
+<li>1.先获取到iris的app。可以通过iris.New方式获取后自己配置一些参数，也可以通过iris.Default直接获取它的一个默认的app，app的类型是iris.Application。</li>
+<li>2.可选步骤（如下面我的main.go）<ul>
+<li>2.1 允许用户自己设置监听的端口——如使用pflag实现用户指定端口。</li>
+<li>2.2 设置日志等级。默认为info等级，debug等级会输出更多的信息，方便调试。</li>
+<li>2.3 启动你提供的服务。</li>
+<li>2.4 其他</li>
+</ul>
+</li>
+<li>3.app.Run运行app（顺便进行服务器配置，推荐）</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers language-go"><code class="language-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+    <span class="token string">"os"</span>
+
+    <span class="token string">"github.com/gitgiter/ServiceComputing/cloudgo-io/services"</span>
+
+    <span class="token string">"github.com/kataras/iris"</span>
+    <span class="token string">"github.com/spf13/pflag"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">(</span>
+    <span class="token comment" spellcheck="true">// PORT 8080 (default)</span>
+    PORT <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">"8080"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token comment" spellcheck="true">// get and set server listening port</span>
+
+    port <span class="token operator">:=</span> os<span class="token punctuation">.</span><span class="token function">Getenv</span><span class="token punctuation">(</span><span class="token string">"PORT"</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token function">len</span><span class="token punctuation">(</span>port<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+        port <span class="token operator">=</span> PORT
+    <span class="token punctuation">}</span>
+
+    pPort <span class="token operator">:=</span> pflag<span class="token punctuation">.</span><span class="token function">StringP</span><span class="token punctuation">(</span><span class="token string">"port"</span><span class="token punctuation">,</span> <span class="token string">"p"</span><span class="token punctuation">,</span> PORT<span class="token punctuation">,</span> <span class="token string">"http listening port"</span><span class="token punctuation">)</span>
+    pflag<span class="token punctuation">.</span><span class="token function">Parse</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token function">len</span><span class="token punctuation">(</span><span class="token operator">*</span>pPort<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+        port <span class="token operator">=</span> <span class="token operator">*</span>pPort
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">// get iris http server app</span>
+    app <span class="token operator">:=</span> iris<span class="token punctuation">.</span><span class="token function">Default</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true">// set logger level</span>
+    app<span class="token punctuation">.</span><span class="token function">Logger</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetLevel</span><span class="token punctuation">(</span><span class="token string">"debug"</span><span class="token punctuation">)</span>
+
+    services<span class="token punctuation">.</span><span class="token function">StartServices</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true">// listen and serve on http://localhost:port</span>
+
+    <span class="token comment" spellcheck="true">// configuring by file is more convenient</span>
+    app<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span>iris<span class="token punctuation">.</span><span class="token function">Addr</span><span class="token punctuation">(</span><span class="token string">":"</span><span class="token operator">+</span>port<span class="token punctuation">)</span><span class="token punctuation">,</span> iris<span class="token punctuation">.</span><span class="token function">WithConfiguration</span><span class="token punctuation">(</span>iris<span class="token punctuation">.</span><span class="token function">TOML</span><span class="token punctuation">(</span><span class="token string">"./configs/main.tml"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="4-3-配置"><a href="#4-3-配置" class="headerlink" title="4.3 配置"></a>4.3 配置</h3><p>服务器配置有三种方式：</p>
+<ul>
+<li>第一种是直接在app.Run的时候显式配置</li>
+</ul>
+<pre class="line-numbers language-go"><code class="language-go">app<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span>iris<span class="token punctuation">.</span><span class="token function">Addr</span><span class="token punctuation">(</span><span class="token string">":8080"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> iris<span class="token punctuation">.</span><span class="token function">WithConfiguration</span><span class="token punctuation">(</span>iris<span class="token punctuation">.</span>Configuration<span class="token punctuation">{</span>
+    DisableInterruptHandler<span class="token punctuation">:</span>           <span class="token boolean">false</span><span class="token punctuation">,</span>
+    DisablePathCorrection<span class="token punctuation">:</span>             <span class="token boolean">false</span><span class="token punctuation">,</span>
+    EnablePathEscape<span class="token punctuation">:</span>                  <span class="token boolean">false</span><span class="token punctuation">,</span>
+    FireMethodNotAllowed<span class="token punctuation">:</span>              <span class="token boolean">false</span><span class="token punctuation">,</span>
+    DisableBodyConsumptionOnUnmarshal<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    DisableAutoFireStatusCode<span class="token punctuation">:</span>         <span class="token boolean">false</span><span class="token punctuation">,</span>
+    TimeFormat<span class="token punctuation">:</span>                        <span class="token string">"Mon, 02 Jan 2006 15:04:05 GMT"</span><span class="token punctuation">,</span>
+    Charset<span class="token punctuation">:</span>                           <span class="token string">"UTF-8"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>第二种比较推荐，便是通过配置文件的形式，这样便可以在修改配置的时候不需要重新编译。如configs目录下的main.tml是我当前的配置，读取配置的方法就是4.2中的例子。</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh">DisablePathCorrection = false
+EnablePathEscape = false
+FireMethodNotAllowed = true
+DisableBodyConsumptionOnUnmarshal = false
+TimeFormat = "Mon, 01 Jan 2006 15:04:05 GMT"
+Charset = "UTF-8"
+MyServerName = "gitgiter's iris"
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>第三种则是直接在app.Run前调用app.Configure方法进行设置，这种比较不推荐，效果和第一种差不多而且可读性还没有第一种好。</li>
+</ul>
+<h2 id="5、使用iris实现上述四种服务"><a href="#5、使用iris实现上述四种服务" class="headerlink" title="5、使用iris实现上述四种服务"></a>5、使用iris实现上述四种服务</h2><h3 id="5-1-静态文件服务"><a href="#5-1-静态文件服务" class="headerlink" title="5.1 静态文件服务"></a>5.1 静态文件服务</h3><p>第一个参数是一个虚拟路径，第二个参数才是真正的系统路径。</p>
+<pre class="line-numbers language-go"><code class="language-go"><span class="token comment" spellcheck="true">// load static files</span>
+<span class="token comment" spellcheck="true">// first parameter is the href request url, second is the real system path</span>
+app<span class="token punctuation">.</span><span class="token function">StaticWeb</span><span class="token punctuation">(</span><span class="token string">"/public"</span><span class="token punctuation">,</span> <span class="token string">"./static"</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>虚拟路径是給用户访问用的，如此时如果用户要访问我的静态文件目录，只需要在浏览器输入类似 ip:port/public/css/main.css 即可访问我的静态文件。可以避免系统路径改变导致用户的访问路径也要改变的麻烦。</p>
+<p>为了进一步避免这种麻烦，可以在 /public 下所有的跳转链接，避免用户需要记住具体的静态文件路径。Context的HTML方法可以直接向页面写入html，这种适合写少量HTML的时候使用，要写大量HTML的最好的做法还是通过文件，否则会影响代码可读性且增大耦合性。</p>
+<pre class="line-numbers language-go"><code class="language-go">app<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span><span class="token string">"/public"</span><span class="token punctuation">,</span> <span class="token keyword">func</span><span class="token punctuation">(</span>ctx iris<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ctx<span class="token punctuation">.</span><span class="token function">HTML</span><span class="token punctuation">(</span><span class="token string">`&lt;a href='/public/css/main.css'>/public/css/main.css&lt;/a>&lt;br/>&lt;br/>
+        &lt;a href='/public/img/bg.jpg'>/public/img/bg.jpg&lt;/a>&lt;br/>&lt;br/>
+        &lt;a href='/public/img/favicon.ico'>/public/img/favicon.ico&lt;/a>&lt;br/>&lt;br/>
+        &lt;a href='/public/js/showStatic.js'>/public/js/showStatic.js&lt;/a>`</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="5-2-js请求"><a href="#5-2-js请求" class="headerlink" title="5.2 js请求"></a>5.2 js请求</h3><p>这里只写了一个很简单的js请求作为示例，比如点击登录界面中的Response按钮可以触发js的页面跳转事件。</p>
+<p>js文件：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">myfunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    window<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"/public"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>设置按钮点击事件：</p>
+<pre class="line-numbers language-html"><code class="language-html">js test: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myfunction()<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>response<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>处理请求，就是5.1写的那个。app.Get可以用来处理Get方式的请求，第一个参数为请求的url，第二个参数可以用一个函数指定请求的处理方式。</p>
+<pre class="line-numbers language-go"><code class="language-go">app<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span><span class="token string">"/public"</span><span class="token punctuation">,</span> <span class="token keyword">func</span><span class="token punctuation">(</span>ctx iris<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="5-3-表单提交，填充模板"><a href="#5-3-表单提交，填充模板" class="headerlink" title="5.3 表单提交，填充模板"></a>5.3 表单提交，填充模板</h3><ul>
+<li>表单——form。表单提交一般采用POST模式，尤其是带有敏感信息的表单，这样表单的参数不会显示在url中。action用来指定表单提交后的动作，这里是跳转到/info页面。</li>
+</ul>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>POST<span class="token punctuation">"</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/info<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    username: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Username<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>
+    password: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Password<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>login<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>
+    js test: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myfunction()<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>response<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>通过文件设置HTML视图时需要提前注册视图才可以加载视图。第一个参数指定你要加载的视图文件所在的文件夹，第二个参数指定要加载的文件后缀是html。Reload设置为true可以避免每次改动模板时需要重启app，对开发者比较友好，对用户来说没太大区别。</li>
+</ul>
+<pre class="line-numbers language-go"><code class="language-go"><span class="token comment" spellcheck="true">// register views from ./templates folder</span>
+app<span class="token punctuation">.</span><span class="token function">RegisterView</span><span class="token punctuation">(</span>iris<span class="token punctuation">.</span><span class="token function">HTML</span><span class="token punctuation">(</span><span class="token string">"./templates"</span><span class="token punctuation">,</span> <span class="token string">".html"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Reload</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
+<li>ReadForm读取POST过来的表单，并绑定模板对视图进行填充。注意读取表单时要先定义一个结构体，这个结构体的每个字段名称需要和表单一致，且首字母必须大写，表示exported。ViewData填充数据使用键值对即可，key就是info.html里面定义的模板，value就是要替换的值。View加载指定文件的视图。</li>
+</ul>
+<pre class="line-numbers language-go"><code class="language-go"><span class="token keyword">type</span> User <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+    Username <span class="token builtin">string</span>
+    Password <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// GetInfoPage load html and static web</span>
+<span class="token keyword">func</span> <span class="token function">GetInfoPage</span><span class="token punctuation">(</span>app <span class="token operator">*</span>iris<span class="token punctuation">.</span>Application<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    app<span class="token punctuation">.</span><span class="token function">Post</span><span class="token punctuation">(</span><span class="token string">"/info"</span><span class="token punctuation">,</span> <span class="token keyword">func</span><span class="token punctuation">(</span>ctx iris<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// get the form data</span>
+        form <span class="token operator">:=</span> User<span class="token punctuation">{</span><span class="token punctuation">}</span>
+        err <span class="token operator">:=</span> ctx<span class="token punctuation">.</span><span class="token function">ReadForm</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>form<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+            ctx<span class="token punctuation">.</span><span class="token function">StatusCode</span><span class="token punctuation">(</span>iris<span class="token punctuation">.</span>StatusInternalServerError<span class="token punctuation">)</span>
+            ctx<span class="token punctuation">.</span><span class="token function">WriteString</span><span class="token punctuation">(</span>err<span class="token punctuation">.</span><span class="token function">Error</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">// bind data by passing key-value pair</span>
+        username <span class="token operator">:=</span> form<span class="token punctuation">.</span>Username
+        password <span class="token operator">:=</span> form<span class="token punctuation">.</span>Password
+        ctx<span class="token punctuation">.</span><span class="token function">ViewData</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">,</span> username<span class="token punctuation">)</span>
+        ctx<span class="token punctuation">.</span><span class="token function">ViewData</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">,</span> password<span class="token punctuation">)</span>
+        ctx<span class="token punctuation">.</span><span class="token function">View</span><span class="token punctuation">(</span><span class="token string">"info.html"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="5-4-unknown报错"><a href="#5-4-unknown报错" class="headerlink" title="5.4 /unknown报错"></a>5.4 /unknown报错</h3><p>这个和前面的网页请求同理，不过需要通过app.StatusCode设置一个返回码以让用户知道是什么原因导致的页面无效，默认是返回200即正常访问。</p>
+<pre class="line-numbers language-go"><code class="language-go"><span class="token comment" spellcheck="true">// NotImplement returns 501 error to client</span>
+<span class="token keyword">func</span> <span class="token function">NotImplement</span><span class="token punctuation">(</span>app <span class="token operator">*</span>iris<span class="token punctuation">.</span>Application<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    app<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span><span class="token string">"/unknown"</span><span class="token punctuation">,</span> <span class="token keyword">func</span><span class="token punctuation">(</span>ctx iris<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ctx<span class="token punctuation">.</span><span class="token function">StatusCode</span><span class="token punctuation">(</span><span class="token number">501</span><span class="token punctuation">)</span>
+        ctx<span class="token punctuation">.</span><span class="token function">JSON</span><span class="token punctuation">(</span>iris<span class="token punctuation">.</span>Map<span class="token punctuation">{</span>
+            <span class="token string">"error"</span><span class="token punctuation">:</span> <span class="token string">"501 not implement error"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="6、其他"><a href="#6、其他" class="headerlink" title="6、其他"></a>6、其他</h2><ul>
+<li>项目地址：<a href="https://github.com/gitgiter/ServiceComputing/tree/master/cloudgo-io" target="_blank" rel="noopener">gitgiter/ServiceComputing/cloudgo-io</a></li>
+<li>github page：<a href="gitgiter.github.io">gitgiter.github.io</a></li>
+<li>csdn blog：<a href="https://blog.csdn.net/Wonderful_sky" target="_blank" rel="noopener">wonderful_sky</a></li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/11/13/SC-hw4-cloudgo-io/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/11/13/SC-hw4-cloudgo-io/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Written By: <a href="https://github.com/gitgiter" style="border-bottom: none;">gitgiter</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
