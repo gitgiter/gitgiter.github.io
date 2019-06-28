@@ -1,0 +1,372 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    gitgiter's blog
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="miccall">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">gitgiter</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/gitgiter" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://blog.csdn.net/Wonderful_sky" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>MySQL安装配置及基本操作</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="MySQL安装配置及基本操作"><a href="#MySQL安装配置及基本操作" class="headerlink" title="MySQL安装配置及基本操作"></a>MySQL安装配置及基本操作</h2><p>之前做过几个项目都用过 MySQL，使用体验不错，但容易忘记一些基本配置流程和命令，这里简单记录一下在 CentOS 7 下的安装配置及一些基本操作。</p>
+<h3 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h3><h4 id="1-CentOS-7-安装-MySQL5-7"><a href="#1-CentOS-7-安装-MySQL5-7" class="headerlink" title="1. CentOS 7 安装 MySQL5.7"></a>1. CentOS 7 安装 MySQL5.7</h4><p>如果要安装在 root 用户下，请使用 sudo。</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ yum <span class="token function">install</span> mysql-community-server
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="2-启动-MySQL-服务"><a href="#2-启动-MySQL-服务" class="headerlink" title="2. 启动 MySQL 服务"></a>2. 启动 MySQL 服务</h4><p>MySQL 默认监听到 3306 端口。</p>
+<pre class="line-numbers language-bash"><code class="language-bash">systemctl start mysqld
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="3-查看启动状态"><a href="#3-查看启动状态" class="headerlink" title="3. 查看启动状态"></a>3. 查看启动状态</h4><pre class="line-numbers language-bash"><code class="language-bash">systemctl status mysqld
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="4-修改-root-密码"><a href="#4-修改-root-密码" class="headerlink" title="4. 修改 root 密码"></a>4. 修改 root 密码</h4><p>这个很重要，否则无法接入数据库。如果是第一次安装，那么 MySQL 会在 /var/log/mysqld.log 中生成一个默认的随机密码。</p>
+<ul>
+<li>首先，找到这个初始密码。输入以下命令，可以将该初始密码输出到终端，当然直接打开文件去查找也是可以的。</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">grep</span> <span class="token string">'temporary password'</span> /var/log/mysqld.log <span class="token comment" spellcheck="true"># 请确保文件路径正确</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>然后，使用这个初始密码登录 MySQL。输入以下命令后会提示你输入 root 用户的密码，将刚刚拿到的初始密码输入即可进入支持 sql 的 shell。</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash">$ mysql -u root -p
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>最后修改 root 用户密码。注意是在 MySQL 的 shell 中进行修改。在该 shell 中一切语句都要以分号结尾。</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell">> ALTER USER 'root'@'localhost' IDENTIFIED BY 'YourNewPassword';
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>到这里配置就结束了，以后便可以使用新的密码登录 MySQL 的 root 用户了。</p>
+<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><h4 id="1-登录及修改密码"><a href="#1-登录及修改密码" class="headerlink" title="1. 登录及修改密码"></a>1. 登录及修改密码</h4><p>参照上文</p>
+<h4 id="2-查看所有数据库"><a href="#2-查看所有数据库" class="headerlink" title="2. 查看所有数据库"></a>2. 查看所有数据库</h4><pre class="line-numbers language-shell"><code class="language-shell">> show databases;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="3-创建数据库"><a href="#3-创建数据库" class="headerlink" title="3. 创建数据库"></a>3. 创建数据库</h4><pre class="line-numbers language-shell"><code class="language-shell">> create database yourdatabase;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="4-进入某个数据库"><a href="#4-进入某个数据库" class="headerlink" title="4. 进入某个数据库"></a>4. 进入某个数据库</h4><pre class="line-numbers language-shell"><code class="language-shell">> use yourdatabase;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="5-查看数据库中的所有表"><a href="#5-查看数据库中的所有表" class="headerlink" title="5. 查看数据库中的所有表"></a>5. 查看数据库中的所有表</h4><pre class="line-numbers language-shell"><code class="language-shell">> show tables;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="6-创建表"><a href="#6-创建表" class="headerlink" title="6. 创建表"></a>6. 创建表</h4><pre class="line-numbers language-shell"><code class="language-shell">> create table yourtable;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="7-删除表"><a href="#7-删除表" class="headerlink" title="7. 删除表"></a>7. 删除表</h4><pre class="line-numbers language-shell"><code class="language-shell">DROP table yourtable;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="8-删除数据库"><a href="#8-删除数据库" class="headerlink" title="8. 删除数据库"></a>8. 删除数据库</h4><pre class="line-numbers language-shell"><code class="language-shell">DROP database yourdatabase;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<hr>
+<p>以下是一些基本的 sql 语法。如果对 sql 不熟悉，可以参照 <a href="https://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="noopener">https://www.runoob.com/mysql/mysql-tutorial.html</a></p>
+<hr>
+<h4 id="9-查询表"><a href="#9-查询表" class="headerlink" title="9. 查询表"></a>9. 查询表</h4><p>这里记录一下常用的。</p>
+<ul>
+<li>查询表中所有记录。</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell">> SELECT * FROM yourtable;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>查询表中某列的所有记录。</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell">> SELECT column1 FROM yourtable;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>查询表中列名为 column2 的值为 ‘xxx’ 的所有记录。</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell">> SELECT * FROM yourtable WHERE column2='xxx';
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>查询表中列名为 column3 和 列名为 column5 的 column4 这一列的值为 ‘xxx’ 的所有记录。</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell">> SELECT column3, column5 FROM yourtable WHERE column4='xxx';
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="10-插入数据"><a href="#10-插入数据" class="headerlink" title="10. 插入数据"></a>10. 插入数据</h4><pre class="line-numbers language-shell"><code class="language-shell">INSERT INTO yourtable (column1, column2, ..., columnN) VALUES (value1, value2, ..., valueN)
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="11-更新表"><a href="#11-更新表" class="headerlink" title="11. 更新表"></a>11. 更新表</h4><ul>
+<li>更新所有记录的某个字段（列）。</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell">> UPDATE yourtable SET column2='xxx'; 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>更新某些特定字段。</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell">> UPDATE yourtable SET column2='xxx' WHERE column5='yyy';
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>更复杂一些的更新。</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell">> UPDATE yourtable SET column2='xxx1', column3='xxx2' WHERE column5='yyy1' AND column4='yyy2' OR column6='yyy3';
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="12-简单的字段排序"><a href="#12-简单的字段排序" class="headerlink" title="12. 简单的字段排序"></a>12. 简单的字段排序</h4><ul>
+<li>升序。</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell">SELECT column1 FROM yourtable ORDER BY column2 ASC;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>降序</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell">SELECT column1 FROM yourtable ORDER BY column4 DESC;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="13-简单的分组"><a href="#13-简单的分组" class="headerlink" title="13. 简单的分组"></a>13. 简单的分组</h4><ul>
+<li>计数。</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell">SELECT column1, COUNT(*) FROM yourtable GROUP BY column1;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>求和。</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell">SELECT column1, SUM(column4) as newcolumn FROM yourtable GROUP BY column2 WITH ROLLUP;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>去平均。</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell">SELECT column1, AVG(column4) as newcolumn FROM yourtable GROUP BY column2 WITH ROLLUP;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>更多的统计函数还有取最大值、最小值等。</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/06/28/MySQL安装配置及基本操作/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/06/28/MySQL安装配置及基本操作/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Written By: <a href="https://github.com/gitgiter" style="border-bottom: none;">gitgiter</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2019总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
