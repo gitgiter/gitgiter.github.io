@@ -151,23 +151,37 @@
 </nav>
 
         <div id="main">
-            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://img-blog.csdnimg.cn/20190505103340986.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dvbmRlcmZ1bF9za3k=,size_16,color_FFFFFF,t_70);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/gitgiter/gitgiter.github.io/tree/master/2019/05/05/SWSAD-hw7/hw7_6.png?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
                 <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>SWSAD-hw7</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <h2 id="用例建模-业务建模方法"><a href="#用例建模-业务建模方法" class="headerlink" title="用例建模 - 业务建模方法"></a>用例建模 - 业务建模方法</h2><h4 id="使用-UMLet-建模："><a href="#使用-UMLet-建模：" class="headerlink" title="使用 UMLet 建模："></a>使用 UMLet 建模：</h4><p><strong>1. 根据订旅馆建模文档</strong>，<a href="https://sysu-swsad.github.io/swad-guide/material/Asg_RH.pdf" target="_blank" rel="noopener">Asg-RH.pdf</a>：</p>
 <ul>
-<li>绘制用例图模型（到子用例）<br><img src="https://img-blog.csdnimg.cn/20190505103253354.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dvbmRlcmZ1bF9za3k=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li>给出 make reservation 用例的活动图<br><img src="https://img-blog.csdnimg.cn/20190505103303348.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dvbmRlcmZ1bF9za3k=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>绘制用例图模型（到子用例）</li>
 </ul>
-<p><strong>2. 根据课程练习“投递员使用投递箱给收件人快递包裹”的业务场景</strong><br><strong>场景1：</strong> x科技公司发明了投递柜，它们自建了投递柜以及远程控制系统。注册的投递员在推广期免费使用投递柜。由于缺乏资源，仅能使用y移动平台向客户发送短信通知。<br><strong>场景2：</strong> 随着产品推广，x公司与各大快递z公司达成协议。x公司在快递柜上添加了二维码扫描装置，z公司的快递员不仅可在快递柜上登陆（由z公司提供认证服务），且可扫描快递单号，投递入柜后自动由z公司发短信给客户。客户取件后，自动发送给z公司投递完成。<br><strong>场景3：</strong> x公司进一步优化服务，开发了微信小程序实现扫码取快递。如果用户关注了该公司公众号，直接通过过公众号推送给用户取件码等信息。不再发送短信。<br><strong>备注：</strong> 关于z公司投递员认证过程。一般采用用户登陆z公司，z公司用私钥签名的token（二维码包含公司名，用户ID，有效期等）；x公司扫描该二维码，用对应公钥验证该token。</p>
+<p><img src="/2019/05/05/SWSAD-hw7/hw7_1.png" alt="在这里插入图片描述"></p>
+<ul>
+<li>给出 make reservation 用例的活动图</li>
+</ul>
+<p><img src="/2019/05/05/SWSAD-hw7/hw7_2.png" alt="在这里插入图片描述"></p>
+<p><strong>2. 根据课程练习“投递员使用投递箱给收件人快递包裹”的业务场景</strong></p>
+<p><strong>场景1：</strong> x科技公司发明了投递柜，它们自建了投递柜以及远程控制系统。注册的投递员在推广期免费使用投递柜。由于缺乏资源，仅能使用y移动平台向客户发送短信通知。</p>
+<p><strong>场景2：</strong> 随着产品推广，x公司与各大快递z公司达成协议。x公司在快递柜上添加了二维码扫描装置，z公司的快递员不仅可在快递柜上登陆（由z公司提供认证服务），且可扫描快递单号，投递入柜后自动由z公司发短信给客户。客户取件后，自动发送给z公司投递完成。</p>
+<p><strong>场景3：</strong> x公司进一步优化服务，开发了微信小程序实现扫码取快递。如果用户关注了该公司公众号，直接通过过公众号推送给用户取件码等信息。不再发送短信。</p>
+<p><strong>备注：</strong> 关于z公司投递员认证过程。一般采用用户登陆z公司，z公司用私钥签名的token（二维码包含公司名，用户ID，有效期等）；x公司扫描该二维码，用对应公钥验证该token。</p>
 <ul>
 <li><p>分别用多泳道图建模三个场景的业务过程</p>
 <ul>
-<li><strong>场景1：</strong><br><img src="https://img-blog.csdnimg.cn/2019050510331799.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dvbmRlcmZ1bF9za3k=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li><strong>场景2：</strong><br><img src="https://img-blog.csdnimg.cn/20190505103326203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dvbmRlcmZ1bF9za3k=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li><strong>场景3：</strong><br><img src="https://img-blog.csdnimg.cn/20190505103333333.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dvbmRlcmZ1bF9za3k=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li><p><strong>场景1：</strong></p>
+<p><img src="/2019/05/05/SWSAD-hw7/hw7_3.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><strong>场景2：</strong></p>
+<p><img src="/2019/05/05/SWSAD-hw7/hw7_4.png" alt="在这里插入图片描述"></p>
+</li>
+<li><p><strong>场景3：</strong></p>
+<p><img src="/2019/05/05/SWSAD-hw7/hw7_5.png" alt="在这里插入图片描述"></p>
+</li>
 </ul>
 </li>
 <li><p>根据上述流程，给出快递柜系统最终的用例图模型</p>
@@ -178,7 +192,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/20190505103340986.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dvbmRlcmZ1bF9za3k=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="/2019/05/05/SWSAD-hw7/hw7_6.png" alt="在这里插入图片描述"></p>
 
             </div>
 

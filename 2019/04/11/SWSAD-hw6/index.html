@@ -151,7 +151,7 @@
 </nav>
 
         <div id="main">
-            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://img-blog.csdnimg.cn/2019041112280951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dvbmRlcmZ1bF9za3k=,size_16,color_FFFFFF,t_70);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/gitgiter/gitgiter.github.io/tree/master/2019/04/11/SWSAD-hw6/hw6_2.png?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
                 <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>SWSAD-hw6</h2></a>
             </div>
             <!-- Post -->
@@ -160,43 +160,51 @@
 <li><p><strong>用例的概念。</strong><br>在软件和系统工程中，用例是一列操作或事件步骤，通常定义角色（在UML中称为参与者）和系统之间的交互，以实现目标。   </p>
 </li>
 <li><p><strong>用例和场景的关系？什么是主场景或 happy path？</strong></p>
+<ul>
+<li><p><strong>关系：</strong> 每个用例提供了一个或多个场景。其中场景是指使用场景，用来说明系统可以做什么，系统是如何和用户或其他系统交互的，从而获得一个明确的业务目标。</p>
 </li>
-</ol>
-<ul>
-<li>关系：每个用例提供了一个或多个场景。其中场景是指使用场景，用来说明系统可以做什么，系统是如何和用户或其他系统交互的，从而获得一个明确的业务目标。</li>
-<li>主场景：场景中最主要的一个，也就是用户与系统发生主要交互的那个。</li>
-<li>happy path：没有异常或错误条件的默认场景，即用户和系统可以很顺利、无误、符合预期地进行交互。</li>
+<li><p><strong>主场景：</strong> 场景中最主要的一个，也就是用户与系统发生主要交互的那个。</p>
+</li>
+<li><p><strong>happy path：</strong> 没有异常或错误条件的默认场景，即用户和系统可以很顺利、无误、符合预期地进行交互。</p>
+</li>
 </ul>
-<ol start="3">
-<li><strong>用例有哪些形式？</strong><br>常见的三种用例形式：</li>
-</ol>
+</li>
+<li><p><strong>用例有哪些形式？</strong><br>常见的三种用例形式：</p>
 <ul>
-<li>Brief（high level）简洁型。通常是简短的一段话，描述主要的成功场景，便于快速了解主题和范围，可以快速创建。</li>
-<li>Casual（简便格式）随意型。非正式的段落格式，包含多种场景。</li>
-<li>Fully 完整型。所有的步骤和变化都写得很详细，并有支持部分，如先决条件和成功的保证。</li>
+<li><p><strong>Brief（high level）简洁型。</strong> 通常是简短的一段话，描述主要的成功场景，便于快速了解主题和范围，可以快速创建。</p>
+</li>
+<li><p><strong>Casual（简便格式）随意型。</strong> 非正式的段落格式，包含多种场景。</p>
+</li>
+<li><p><strong>Fully 完整型。</strong> 所有的步骤和变化都写得很详细，并有支持部分，如先决条件和成功的保证。</p>
+</li>
 </ul>
-<ol start="4">
+</li>
 <li><p><strong>对于复杂业务，为什么编制完整用例非常难？</strong><br>复杂的业务涉及到的场景非常多，且场景与场景之间也有各种各样的关联，要编制完整用例不但需要熟悉各种业务场景和流程，还要懂得建模相关的专业知识，如何分离和提炼一个场景的主要元素也是在复杂场景中显得尤为重要和困难。</p>
 </li>
 <li><p><strong>什么是用例图？</strong><br>用例图是指由参与者（Actor）、用例（Use Case），边界以及它们之间的关系构成的用于描述系统功能的视图。</p>
 </li>
 <li><p><strong>用例图的基本符号与元素？</strong><br>用例图的基本元素包括：</p>
+<ul>
+<li><p><strong>参与者。</strong> 符号是一个小人。</p>
 </li>
-</ol>
-<ul>
-<li>参与者。符号是一个小人。</li>
-<li>用例。符号是一个圆框。</li>
-<li>系统边界。符号是一个方框。</li>
-<li>关联关系。符号是一个虚线箭头：—-&gt;，箭头指向消息接收方。</li>
-<li>包含关系。符号是一个虚线箭头，有&lt;<includes>&gt;标识。箭头方向指向被包含者。</includes></li>
-<li>扩展关系。符号是一个虚线箭头，有&lt;<extends>&gt;标识，箭头方向指向被继承者。</extends></li>
-<li>泛化关系。符号是一个实线箭头，箭头是个小三角，指向父用例。</li>
+<li><p><strong>用例。</strong> 符号是一个圆框。</p>
+</li>
+<li><p><strong>系统边界。</strong> 符号是一个方框。</p>
+</li>
+<li><p><strong>关联关系。</strong> 符号是一个虚线箭头：—-&gt;，箭头指向消息接收方。</p>
+</li>
+<li><p><strong>包含关系。</strong> 符号是一个虚线箭头，有&lt;<includes>&gt;标识。箭头方向指向被包含者。</includes></p>
+</li>
+<li><p><strong>扩展关系。</strong> 符号是一个虚线箭头，有&lt;<extends>&gt;标识，箭头方向指向被继承者。</extends></p>
+</li>
+<li><p><strong>泛化关系。</strong> 符号是一个实线箭头，箭头是个小三角，指向父用例。</p>
+</li>
 </ul>
-<ol start="7">
-<li><strong>用例图的画法与步骤</strong></li>
-</ol>
+</li>
+<li><p><strong>用例图的画法与步骤</strong></p>
 <ul>
-<li>确定参与者（谁来做）。一般是：<ul>
+<li><p><strong>确定参与者（谁来做）。</strong> 一般是：</p>
+<ul>
 <li>使用该系统主要功能的人。</li>
 <li>需要该系统支持以完成工作的人。</li>
 <li>需要维护、管理该系统，以及保持该系统处于工作状态的人。</li>
@@ -204,11 +212,14 @@
 <li>与本系统有关的人或系统。</li>
 </ul>
 </li>
-<li>识别用例（做什么）。一般以动词开头描述某件事情。</li>
-<li>理清用例之间的关系。需要仔细思考用例之间的业务关系，并以此来划分。</li>
+<li><p><strong>识别用例（做什么）。</strong> 一般以动词开头描述某件事情。</p>
+</li>
+<li><p><strong>理清用例之间的关系。</strong> 需要仔细思考用例之间的业务关系，并以此来划分。</p>
+</li>
 </ul>
-<ol start="8">
-<li><strong>用例图给利益相关人与开发者的价值有哪些？</strong><br>用例图可以从用户的视角描述一个系统的主要功能以及如何使用，比较符合人的自然认知，同时进行可视化，方便理解和获取需求，在整个开发过程及其他工作流中起到指导作用，同时也便于向系统用户即需求者阐述系统功能。</li>
+</li>
+<li><p><strong>用例图给利益相关人与开发者的价值有哪些？</strong><br>用例图可以从用户的视角描述一个系统的主要功能以及如何使用，比较符合人的自然认知，同时进行可视化，方便理解和获取需求，在整个开发过程及其他工作流中起到指导作用，同时也便于向系统用户即需求者阐述系统功能。</p>
+</li>
 </ol>
 <h3 id="二、建模练习题（用例模型）"><a href="#二、建模练习题（用例模型）" class="headerlink" title="二、建模练习题（用例模型）"></a>二、建模练习题（用例模型）</h3><ol>
 <li>选择2-3个你熟悉的类似业务的在线服务系统（或移动 APP），如定旅馆（携程、去哪儿等）、定电影票、背单词APP等，分别绘制它们用例图。并满足以下要求：<ul>
@@ -219,23 +230,116 @@
 </ul>
 </li>
 </ol>
-<p><strong>订旅馆：</strong><br><img src="https://img-blog.csdnimg.cn/2019041112280951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dvbmRlcmZ1bF9za3k=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><strong>订电影票：</strong><br><img src="https://img-blog.csdnimg.cn/20190411122835328.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dvbmRlcmZ1bF9za3k=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>订旅馆：</strong><br><img src="/2019/04/11/SWSAD-hw6/hw6_2.png" alt="在这里插入图片描述"></p>
+<p><strong>订电影票：</strong><br><img src="/2019/04/11/SWSAD-hw6/hw6_1.png" alt="在这里插入图片描述"></p>
 <ol start="2">
-<li><p>然后回答下列问题：</p>
-<ul>
-<li><strong>为什么相似系统的用例图是相似的？</strong><br>从上面两幅图可以看出，两个相似的查询系统的用例图几乎是一样的。这是因为相似系统的主要业务逻辑类似，比如查询系统通常只是查询内容的不同，而登录、注册、查询、管理订单这些基本功能都是相同的，用例的类型基本固定，与子用例的关系也类似。</li>
-<li><strong>如果是定旅馆业务，请对比 Asg_RH 用例图，简述如何利用不同时代、不同地区产品的用例图，展现、突出创新业务和技术。</strong><br>订旅馆业务可以与周边的旅游业务合作，结合旅游线路安排更加合理的旅馆。其次有特价推荐、按历史入住旅馆的特征进行推荐等，有餐饮条件的旅馆还可以额外提供婚宴、同学聚会的承办的入住优惠等。</li>
-<li><strong>如何利用用例图定位创新思路（业务创新、或技术创新、或商业模式创新）在系统中的作用。</strong><br>在用例图中对创新用例使用某种颜色进行高亮标记。可以很方便地让需求方、开发人员快速了解该系统的创新模式。</li>
-<li><p><strong>请使用 SCRUM 方法，选择一个用例图，编制某定旅馆开发的需求（backlog）开发计划表</strong>  </p>
-<p>|ID|Name|Imp|Est(man-day)|How to demo|Notes|<br>|:—:|:—:|:—:|:—:|:—:|:—:|<br>|1|注册|20|5|选择注册方式，手机注册则输入手机号接收验证码完成绑定，第三方注册则使用第三方软件授权|需要谨慎设计数据库存储的字段|<br>|2|登录|20|5|用户注册后使用手机验证码或第三方授权进行登录|需要记录登录状态|<br>|3|管理订单|60|8|用户可以选择喜欢的支付方式进行支付下单，同时可以删除订单，退款（需审核），对订单进行评价|需要支持主流支付方式如支付宝、微信、银行卡|<br>|4|查询|100|30|可以对酒店进行日期、价格、地点、名称、品牌、口碑等因素的筛选|筛选条件放在一行显示在页面顶部搜索框下方| </p>
-</li>
-<li><p><strong>根据任务4，参考 使用用例点估算软件成本，给出项目用例点的估算。</strong> <a href="https://www.ibm.com/developerworks/cn/rational/edge/09/mar09/collaris_dekker/index.html" target="_blank" rel="noopener">参考</a></p>
-<p>|用例|事务|计算|原因|UC权重|<br>|:—:|:—:|:—:|:—:|:—:|<br>|注册|2|2|两种注册方式|简单|<br>|登录|2|2|两种登录方式|简单|<br>|管理订单|6|6|不少于3种支付方式，评价体系、退款审核等|平均|<br>|查询|10|8|多个筛选条件、扩展功能|复杂| </p>
-</li>
-</ul>
-</li>
+<li>然后回答下列问题：</li>
 </ol>
+<ul>
+<li><strong>为什么相似系统的用例图是相似的？</strong></li>
+</ul>
+<p>从上面两幅图可以看出，两个相似的查询系统的用例图几乎是一样的。这是因为相似系统的主要业务逻辑类似，比如查询系统通常只是查询内容的不同，而登录、注册、查询、管理订单这些基本功能都是相同的，用例的类型基本固定，与子用例的关系也类似。</p>
+<ul>
+<li><strong>如果是定旅馆业务，请对比 Asg_RH 用例图，简述如何利用不同时代、不同地区产品的用例图，展现、突出创新业务和技术。</strong></li>
+</ul>
+<p>订旅馆业务可以与周边的旅游业务合作，结合旅游线路安排更加合理的旅馆。其次有特价推荐、按历史入住旅馆的特征进行推荐等，有餐饮条件的旅馆还可以额外提供婚宴、同学聚会的承办的入住优惠等。</p>
+<ul>
+<li><strong>如何利用用例图定位创新思路（业务创新、或技术创新、或商业模式创新）在系统中的作用。</strong></li>
+</ul>
+<p>在用例图中对创新用例使用某种颜色进行高亮标记。可以很方便地让需求方、开发人员快速了解该系统的创新模式。</p>
+<ul>
+<li><strong>请使用 SCRUM 方法，选择一个用例图，编制某定旅馆开发的需求（backlog）开发计划表</strong>  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">Name</th>
+<th style="text-align:center">Imp</th>
+<th style="text-align:center">Est(man-day)</th>
+<th style="text-align:center">How to demo</th>
+<th style="text-align:center">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">注册</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">选择注册方式，手机注册则输入手机号接收验证码完成绑定，第三方注册则使用第三方软件授权</td>
+<td style="text-align:center">需要谨慎设计数据库存储的字段</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">登录</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">用户注册后使用手机验证码或第三方授权进行登录</td>
+<td style="text-align:center">需要记录登录状态</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">管理订单</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">用户可以选择喜欢的支付方式进行支付下单，同时可以删除订单，退款（需审核），对订单进行评价</td>
+<td style="text-align:center">需要支持主流支付方式如支付宝、微信、银行卡</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">查询</td>
+<td style="text-align:center">100</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">可以对酒店进行日期、价格、地点、名称、品牌、口碑等因素的筛选</td>
+<td style="text-align:center">筛选条件放在一行显示在页面顶部搜索框下方</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>根据任务4，参考 使用用例点估算软件成本，给出项目用例点的估算。</strong> <a href="https://www.ibm.com/developerworks/cn/rational/edge/09/mar09/collaris_dekker/index.html" target="_blank" rel="noopener">参考</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">用例</th>
+<th style="text-align:center">事务</th>
+<th style="text-align:center">计算</th>
+<th style="text-align:center">原因</th>
+<th style="text-align:center">UC权重</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">注册</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">两种注册方式</td>
+<td style="text-align:center">简单</td>
+</tr>
+<tr>
+<td style="text-align:center">登录</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">两种登录方式</td>
+<td style="text-align:center">简单</td>
+</tr>
+<tr>
+<td style="text-align:center">管理订单</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">不少于3种支付方式，评价体系、退款审核等</td>
+<td style="text-align:center">平均</td>
+</tr>
+<tr>
+<td style="text-align:center">查询</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">多个筛选条件、扩展功能</td>
+<td style="text-align:center">复杂</td>
+</tr>
+</tbody>
+</table>
 
             </div>
 
