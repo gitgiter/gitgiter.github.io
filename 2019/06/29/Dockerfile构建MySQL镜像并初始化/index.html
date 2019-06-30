@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    gitgiter's blog
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="miccall">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">gitgiter</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/gitgiter" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://blog.csdn.net/Wonderful_sky" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1561882125888&amp;di=5e73dcaf2c3608f6e7545e8101bcc357&amp;imgtype=0&amp;src=http%3A%2F%2Fs3.51cto.com%2Foss%2F201904%2F08%2F7ab9872f0431705d30420a0eaf484b12.jpg-wh_651x-s_2761281060.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Docker构建MySQL镜像并初始化</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>[TOC]</p>
+<h2 id="Docker构建MySQL镜像并初始化"><a href="#Docker构建MySQL镜像并初始化" class="headerlink" title="Docker构建MySQL镜像并初始化"></a>Docker构建MySQL镜像并初始化</h2><p>使用 docker 直接 pull MySQL 的镜像是很简单，但是有时候却需要对容器做一些初始化操作，比如挂载配置文件和初始化数据库等，这些就需要通过巧妙利用 Dockerfile 来实现。</p>
+<h3 id="Dockerfile-的一些常用语法"><a href="#Dockerfile-的一些常用语法" class="headerlink" title="Dockerfile 的一些常用语法"></a>Dockerfile 的一些常用语法</h3><p>docker 可以通过 Dockerfile 构建新的镜像，掌握 Dockerfile 的编写，是 docker 入门学习的第一步。</p>
+<h4 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h4><p>Dockerfile 的第一条指令，指定基础镜像，即你的镜像是在什么镜像的基础上构建的。比如这里我要制作基于 MySQL 的镜像，那么就是</p>
+<pre class="line-numbers language-docker"><code class="language-docker"><span class="token keyword">FROM</span> mysql
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>可以在镜像后指定特定版本，如果没有，则默认 latest。</p>
+<pre class="line-numbers language-docker"><code class="language-docker"><span class="token keyword">FROM</span> mysql<span class="token punctuation">:</span>5.7.25
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="RUN"><a href="#RUN" class="headerlink" title="RUN"></a>RUN</h4><p>在 <strong>容器中</strong> 运行指定的命令。</p>
+<p>有两种命令格式。</p>
+<ol>
+<li>直接跟 shell 命令。</li>
+</ol>
+<pre class="line-numbers language-docker"><code class="language-docker"><span class="token keyword">RUN</span> &lt;command<span class="token punctuation">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="2">
+<li>调用可执行文件，支持传参调用。</li>
+</ol>
+<pre class="line-numbers language-docker"><code class="language-docker"><span class="token keyword">RUN</span> <span class="token punctuation">[</span><span class="token string">"executable"</span><span class="token punctuation">,</span> <span class="token string">"param1"</span><span class="token punctuation">,</span> <span class="token string">"param2"</span><span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>需要注意的是，Dockerfile 中每条命令都会构建一层镜像，如有多条 RUN 命令，尽量不要拆开写成多个 RUN 命令，这会导致镜像多层、臃肿、容易出错。建议是写成一句或者放到一个 sh 文件中批量执行。</p>
+<h4 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h4><p>命令格式类似 RUN，但区别是，RUN是构建容器时就运行的命令以及提交运行结果，CMD 指定的是容器启动时执行的命令，在构建时并不运行。</p>
+<p>需要注意的是，RUN 可以有多个，且每个都能起作用；而 CMD 虽然也可以有多个，但是只以最后一个为准。</p>
+<h4 id="ENV"><a href="#ENV" class="headerlink" title="ENV"></a>ENV</h4><p>设置环境变量。</p>
+<p>有两种命令格式，但作用相同。</p>
+<ol>
+<li><p>设置一对环境变量。</p>
+<pre class="line-numbers language-docker"><code class="language-docker"><span class="token keyword">ENV</span> &lt;key<span class="token punctuation">></span> &lt;value<span class="token punctuation">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>设置一对或多对环境变量。</p>
+<pre class="line-numbers language-docker"><code class="language-docker"><span class="token keyword">ENV</span> &lt;key<span class="token punctuation">></span>=&lt;value<span class="token punctuation">></span> <span class="token punctuation">...</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ol>
+<h4 id="COPY"><a href="#COPY" class="headerlink" title="COPY"></a>COPY</h4><p>复制文件到容器中。</p>
+<p>常用命令格式</p>
+<pre class="line-numbers language-docker"><code class="language-docker"><span class="token keyword">COPY</span> &lt;src<span class="token punctuation">></span><span class="token punctuation">...</span> &lt;dest<span class="token punctuation">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-docker"><code class="language-docker"><span class="token keyword">COPY</span> <span class="token punctuation">[</span><span class="token string">"&lt;src>"</span><span class="token punctuation">,</span><span class="token punctuation">...</span> <span class="token string">"&lt;dest>"</span><span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="ADD"><a href="#ADD" class="headerlink" title="ADD"></a>ADD</h4><p>将文件打包进容器，可以理解为 COPY 的升级版。</p>
+<pre class="line-numbers language-docker"><code class="language-docker"><span class="token keyword">ADD</span> &lt;src<span class="token punctuation">></span><span class="token punctuation">...</span> &lt;dest<span class="token punctuation">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-docker"><code class="language-docker"><span class="token keyword">ADD</span> <span class="token punctuation">[</span><span class="token string">"&lt;src>"</span><span class="token punctuation">,</span><span class="token punctuation">...</span> <span class="token string">"&lt;dest>"</span><span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>其中 ADD 的 <code>&lt;src&gt;</code> 不仅支持本地文件，还支持 url （类似 wget）。</p>
+<h4 id="WORKDIR"><a href="#WORKDIR" class="headerlink" title="WORKDIR"></a>WORKDIR</h4><p>设置工作目录，也就是在容器中执行命令时所在的目录。</p>
+<pre class="line-numbers language-docker"><code class="language-docker"><span class="token keyword">WORKDIR</span> &lt;path<span class="token punctuation">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="EXPOSE"><a href="#EXPOSE" class="headerlink" title="EXPOSE"></a>EXPOSE</h4><p>暴露容器监听的内部端口到外部，如果外部需要访问该内部端口，需要指定端口映射。</p>
+<pre class="line-numbers language-docker"><code class="language-docker"><span class="token keyword">EXPOSE</span> &lt;port<span class="token punctuation">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="构建自带初始化的-MySQL-镜像"><a href="#构建自带初始化的-MySQL-镜像" class="headerlink" title="构建自带初始化的 MySQL 镜像"></a>构建自带初始化的 MySQL 镜像</h3><h4 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h4><p>首先，Dockerfile 长这样，具体的命令上面有解释。核心逻辑就是拷贝三个文件进去，然后在容器启动的时候执行 setup.sh，由 setup.sh 执行另外两个文件。</p>
+<pre class="line-numbers language-docker"><code class="language-docker"><span class="token keyword">FROM</span> mysql<span class="token punctuation">:</span>5.7.25
+
+<span class="token comment" spellcheck="true"># allow no password</span>
+<span class="token keyword">ENV</span> MYSQL_ALLOW_EMPTY_PASSWORD yes
+
+<span class="token comment" spellcheck="true"># copy file into container</span>
+<span class="token keyword">COPY</span> setup.sh /mysql/setup.sh
+<span class="token keyword">COPY</span> schema.sql /mysql/schema.sql
+<span class="token keyword">COPY</span> privileges.sql /mysql/privileges.sql
+
+<span class="token comment" spellcheck="true"># exec these command when container start up</span>
+<span class="token keyword">CMD</span> <span class="token punctuation">[</span><span class="token string">"sh"</span><span class="token punctuation">,</span> <span class="token string">"/mysql/setup.sh"</span><span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这里首先设置允许免密登录是为了方便后面配置，密码最后再通过 privileges.sql 来设置。</p>
+<h4 id="启动脚本"><a href="#启动脚本" class="headerlink" title="启动脚本"></a>启动脚本</h4><p>setup.sh的作用就是启动 MySQL 服务，然后执行两个 sql 文件。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">#!/bin/bash
+set -e
+
+echo '1. starting mysql...'
+service mysql start
+
+echo '2. creating database...'
+mysql < /mysql/schema.sql
+
+# set password
+echo '3. setting password....'
+mysql < /mysql/privileges.sql
+
+# check mysql status
+echo `service mysql status`
+echo '4. mysql for baobaozhuan is ready...'
+
+tail -f /dev/null
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="schema-sql"><a href="#schema-sql" class="headerlink" title="schema.sql"></a>schema.sql</h4><p>一些对于数据库的初始化操作可以放在这里，比如这里我们需要创建一个数据库。当然，建表，插入数据那些都是可以的。</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">database</span> <span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span> baobaozhuan<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="privileges-sql"><a href="#privileges-sql" class="headerlink" title="privileges.sql"></a>privileges.sql</h4><p>这个文件是对 MySQL 进行一些权限配置，比如设置用户密码，创建新用户，数据库授权等。</p>
+<p>后面两句很重要，一开始没有加上授权，结果 go server 一直连不上 docker 里面的 MySQL server。</p>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">use</span> mysql<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">-- new user</span>
+<span class="token keyword">set</span> password <span class="token keyword">for</span> root<span class="token variable">@localhost</span> <span class="token operator">=</span> password<span class="token punctuation">(</span><span class="token string">'SYSU_baobaozhuan2019'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">-- important</span>
+<span class="token keyword">grant</span> <span class="token keyword">all</span> <span class="token keyword">on</span> <span class="token operator">*</span><span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">to</span> root@'<span class="token operator">%</span><span class="token string">' identified by '</span>SYSU_baobaozhuan2019' <span class="token keyword">with</span> <span class="token keyword">grant</span> <span class="token keyword">option</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">-- use privileges</span>
+flush <span class="token keyword">privileges</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<p>欢迎访问我们的项目：<a href="https://swsad-dalaotelephone.github.io/docs/" target="_blank" rel="noopener">https://swsad-dalaotelephone.github.io/docs/</a></p>
+<hr>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/06/29/Dockerfile构建MySQL镜像并初始化/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/06/29/Dockerfile构建MySQL镜像并初始化/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Written By: <a href="https://github.com/gitgiter" style="border-bottom: none;">gitgiter</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2019总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
