@@ -160,8 +160,8 @@
 <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><blockquote>
 <p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows 机器上，也可以实现虚拟化。 —百度百科</p>
 </blockquote>
-<p>可以简单地将 docker 理解为一种应用虚拟化方法。</p>
 <p><img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=9f1b2701eddde711f3df4ba4c686a57e/a50f4bfbfbedab644936dac4ff36afc379311e69.jpg" alt=""></p>
+<p>可以简单地将 docker 理解为一种应用虚拟化方法。</p>
 <p>docker 有以下优势：</p>
 <ul>
 <li>随心所欲打包镜像。</li>
@@ -198,14 +198,14 @@
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h3><h4 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h4><p>不加 tag 的话默认拉取最新。</p>
 <pre class="line-numbers language-shell"><code class="language-shell"># command
-docker pull <image>:<tag>
+docker pull image:tag
 
 # example
 docker pull mysql:5.7.25
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></tag></image></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="查找镜像"><a href="#查找镜像" class="headerlink" title="查找镜像"></a>查找镜像</h4><p>可以先查看镜像存不存在或是详细信息。</p>
-<pre class="line-numbers language-shell"><code class="language-shell">docker search <image>:<tag>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></tag></image></code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">docker search image:tag
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="查看镜像"><a href="#查看镜像" class="headerlink" title="查看镜像"></a>查看镜像</h4><pre class="line-numbers language-shell"><code class="language-shell">docker images
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="查看容器"><a href="#查看容器" class="headerlink" title="查看容器"></a>查看容器</h4><p>查看正在运行的容器。</p>
@@ -218,31 +218,32 @@ docker pull mysql:5.7.25
 <pre class="line-numbers language-shell"><code class="language-shell">docker container ls -a
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="容器交互"><a href="#容器交互" class="headerlink" title="容器交互"></a>容器交互</h4><p>在容器创建时就进入交互界面。</p>
-<pre class="line-numbers language-shell"><code class="language-shell">docker run -it <image-id> bash
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></image-id></code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">docker run -it image-id bash
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>在容器创建后，通过容器id进入交互界面。</p>
-<pre class="line-numbers language-shell"><code class="language-shell">docker exec -it <container-id> bash
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></container-id></code></pre>
-<h4 id="停止容器"><a href="#停止容器" class="headerlink" title="停止容器"></a>停止容器</h4><pre><code>docker stop &lt;container-id&gt;
-</code></pre><h4 id="创建镜像"><a href="#创建镜像" class="headerlink" title="创建镜像"></a>创建镜像</h4><p>当你对容器做出一些更改的时候，可以将其打包成一个新的镜像。</p>
-<pre class="line-numbers language-shell"><code class="language-shell">docker commit <container-id>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></container-id></code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">docker exec -it container-id bash
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="停止容器"><a href="#停止容器" class="headerlink" title="停止容器"></a>停止容器</h4><pre class="line-numbers language-shell"><code class="language-shell">docker stop container-id
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="创建镜像"><a href="#创建镜像" class="headerlink" title="创建镜像"></a>创建镜像</h4><p>当你对容器做出一些更改的时候，可以将其打包成一个新的镜像。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">docker commit container-id
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>当然，最通用的方法还是使用 Dockerfile 构建镜像，Dockerfile 的基本语法在我的另一篇博客 <a href="https://gitgiter.github.io/2019/06/29/Docker构建MySQL镜像并初始化/" target="_blank" rel="noopener">Docker构建MySQL镜像并初始化</a> 中有介绍。</p>
 <pre class="line-numbers language-shell"><code class="language-shell"># 在 Dockerfile 同目录下
-docker build . -t <new-image>:<tag>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></tag></new-image></code></pre>
-<h4 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h4><pre class="line-numbers language-shell"><code class="language-shell">docker rmi <image-id>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></image-id></code></pre>
+docker build . -t new-image:tag
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h4 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h4><pre class="line-numbers language-shell"><code class="language-shell">docker rmi image-id
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h4><p>删除镜像前可能需要先删除容器，即使容器是停止的，还是会占用着镜像。</p>
-<pre class="line-numbers language-shell"><code class="language-shell">docker rm <container-id>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></container-id></code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell">docker rm container-id
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="发布镜像"><a href="#发布镜像" class="headerlink" title="发布镜像"></a>发布镜像</h4><p>登录到 docker 账户。</p>
 <pre class="line-numbers language-shell"><code class="language-shell">docker login
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>推送镜像到 docker hub。</p>
-<pre class="line-numbers language-shell"><code class="language-shell">docker push <image-id>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></image-id></code></pre>
-<p>注：<code>&lt;image-id&gt;</code> 与 <code>&lt;image&gt;:&lt;tag&gt;</code> 均能唯一标识一个镜像。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">docker push image-id
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>注：<code>image-id</code> 与 <code>image:tag</code> 均能唯一标识一个镜像。</p>
 
             </div>
 
