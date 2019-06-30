@@ -1,0 +1,540 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    gitgiter's blog
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="miccall">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">gitgiter</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/gitgiter" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="https://blog.csdn.net/Wonderful_sky" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(http://ask.qcloudimg.com/http-save/yehe-1416054/4879vfdbg4.jpeg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Swagger简单使用心得</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="Swagger简单使用心得"><a href="#Swagger简单使用心得" class="headerlink" title="Swagger简单使用心得"></a>Swagger简单使用心得</h2><p>[TOC]</p>
+<hr>
+<p>这里指的是那个在线的 <a href="http://editor.swagger.io/" target="_blank" rel="noopener">Swagger Editor</a> 网站，不是本地的。<del>在线的用得多舒服呀</del></p>
+<hr>
+<h3 id="为什么要使用-Swagger"><a href="#为什么要使用-Swagger" class="headerlink" title="为什么要使用 Swagger"></a>为什么要使用 Swagger</h3><p>在正规的项目开发中，API 接口文档有着极其重要的作用，一份好的 API 文档能大大简化开发的难度，因为 API 文档就是架构设计的体现，良好的架构设计与开发息息相关；同时，一份好的 API 文档还能大大降低沟通成本，节约开发时间。</p>
+<p>但是，编写 API 文档本身就是一个相当费事费力的工作，要想编写一份好的 API 文档，不光要有好的文字组织能力，还要有长远的眼光，以及丰富的开发经验。</p>
+<p>传统的 API 开发更是如此，书写过程耗费时间，而且开发前期可能需要经常调整接口的访问方式、需要的参数、返回的结果以及文字描述等，容易造成文档更新不及时，进而导致前后端双方沟通成本上升。</p>
+<p>现在一些主流的 API 设计工具着重解决的问题就是如何更好地自动化生成 API 文档，大大节约了文档编写时间，并且可以很容易将测试也集成进来。</p>
+<p>现在比较好的主流的 API 设计工具主要有两个，分别是 Swagger 和 Postman。这里用 Swagger 是因为之前接触过一些；Postman也挺不错的，更加轻量，可自行了解。</p>
+<blockquote>
+<p>Swagger 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务。</p>
+</blockquote>
+<p>简单说，就是一个兼接口编写、文档编写、交互测试于一身的功能强大的 API 设计/管理 工具，提供了多种编程语言的前后端分离解决方案。</p>
+<p>它长这样：</p>
+<p><img src="/2019/06/01/Swagger简单使用心得/user.png" alt=""></p>
+<p><img src="/2019/06/01/Swagger简单使用心得/task.png" alt=""></p>
+<p>这是我们 <strong><a href="https://swsad-dalaotelephone.github.io/docs/" target="_blank" rel="noopener">包包赚众包平台</a></strong> 项目的部分api，更详细的可以去我们的 <a href="https://swsad-dalaotelephone.github.io/docs/api/" target="_blank" rel="noopener">API 文档</a> 查看。</p>
+<h3 id="一些基本语法"><a href="#一些基本语法" class="headerlink" title="一些基本语法"></a>一些基本语法</h3><p>主要就是通过键值对来定义文档，这些键值对都编写在一个 yaml 文件中，在线的 Swagger Editor 可以根据 yaml 自动生成动态可交互的 API 文档。</p>
+<h4 id="定义数据结构"><a href="#定义数据结构" class="headerlink" title="定义数据结构"></a>定义数据结构</h4><p>一些经常要复用到的数据结构，可以把它们定义成一个组件，在要使用的地方引用即可。当然不定义在语法上也说得过去，但是会增加很多重复的代码，而且修改起来麻烦，改一个地方全都得改。</p>
+<pre class="line-numbers language-yml"><code class="language-yml">components:
+  schemas:
+
+    ...
+
+    task:
+      type: object
+      description: Task info
+      properties:
+        id:
+          type: string
+          description: Task id, which is given after publishing, only can be empty before publishing
+        publisher_id:
+          type: string
+          description: User id of the publisher
+        name:
+          type: string
+          description: Task name
+        brief_info:
+          type: string
+          description: Brief information of the task
+        type:
+          type: string
+          description: Task type, questionnaire is "q", data collection is "d", recruitment is "r"
+        contact:
+          type: string
+          description: Contact of the publisher
+        requirements:
+          type: object
+          description: The types of target people, in json format
+        tag_id:
+          type: integer
+          description: The tag id of the task
+        ddl:
+          type: string
+          description: The deadline for the task
+        status:
+          type: integer
+          description: The status of the task, 0 for "running", 1 for "end", 2 for "stop"
+        required_count:
+          type: integer
+          description: Total count of required tasks
+        submited_count:
+          type: integer
+          description: Total count of submited tasks
+        finished_count:
+          type: integer
+          description: Total count of finished tasks
+        reward:
+          type: number
+          description: Reward for finshing the task (one person)
+        content:
+          type: object
+          description: All content for task, in json format (see schema of task for detail), only used in /task/publishTask api and /task/getTaskDetail api
+          oneOf:
+            - $ref: '#/components/schemas/questionnaire'
+            - $ref: '#/components/schemas/dataCollection'
+            - $ref: '#/components/schemas/recruitment'
+    questionnaire:
+      type: object
+      description: All content of the questionnaire, in json format
+      properties:
+        quest_des:
+          type: string
+          description: Descripition for the questionnaire
+        questions:
+          type: array
+          description: All questions
+          items:
+            $ref: '#/components/schemas/question'
+    question:
+      type: object
+      description: Each question
+      properties:
+        quest_type:
+          type: string
+          description: Type of the question
+        quest_title:
+          type: string
+          description: The question
+        quest_option:
+          type: array
+          description: Options of a question
+          items:
+            type: string
+            description: Option
+
+    ...
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>type</code> 用来指定数据类型，一般可以是 object，array，string，integer，number等。</p>
+<p><code>description</code> 用来对字段进行描述。</p>
+<p><code>properties</code> 用来指定 object 类型的数据字段有哪些属性。</p>
+<p><code>item</code> 用来指定 array 类型的数据字段的元素类型。</p>
+<p><code>$ref: &#39;path&#39;</code> 便是上文所说的引用。</p>
+<p><code>oneOf</code> 关键字表示任一都可以，比如上文的 <code>oneOf</code>，就表示 task 的 content 字段的结构可以是 questionnaire，dataCollection, recruitment 三者的结构之一，对应的还有 <code>allOf</code>, <code>anyOf</code>。</p>
+<h4 id="定义通用返回头"><a href="#定义通用返回头" class="headerlink" title="定义通用返回头"></a>定义通用返回头</h4><p>一些常用的返回头也可以像数据结构那样预先定义好，在需要的地方引用即可。</p>
+<pre class="line-numbers language-yml"><code class="language-yml">responses:
+    200StatusOK:
+      description: Status OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              msg:
+                type: string
+                default: 'OK'
+    400BadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              msg:
+                type: string
+                default: 'Bad Request'
+    404NotFound:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              msg:
+                type: string
+                default: 'Not Found'
+    500ServerErr:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              msg:
+                type: string
+                default: 'Internal Server Error'
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h4><p>终于到了真正的路由部分。</p>
+<pre class="line-numbers language-yml"><code class="language-yml">paths:
+
+  ...
+
+  /user/preferences:
+    get:
+      tags: 
+      - user
+      summary: Get user preferences, cookie needed
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tag_ids:
+                    type: array
+                    description: All tag ids
+                    items:
+                      type: integer
+                      description: Tag id
+        400:
+          $ref: '#/components/responses/400BadRequest'
+        404:
+          $ref: '#/components/responses/404NotFound'
+        500:
+          $ref: '#/components/responses/500ServerErr'
+    put:
+      tags:
+      - user
+      summary: Update user preferences, cookie needed
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                tag_ids:
+                    type: array
+                    description: All tag ids
+                    items:
+                      type: integer
+                      description: Tag id
+      responses:
+        200:
+          $ref: '#/components/responses/200StatusOK'
+        400:
+          $ref: '#/components/responses/400BadRequest'
+        404:
+          $ref: '#/components/responses/404NotFound'
+        500:
+          $ref: '#/components/responses/500ServerErr'
+
+
+    ...
+
+    /task/{task_id}:
+    get:
+      tags: 
+      - task
+      summary: Get the detail information of the task, if has cookie, will also return the acceptance
+      parameters: 
+      - name: task_id
+        in: path
+        description: Id of the task which is queried
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  task:
+                    $ref: '#/components/schemas/task'
+                  acceptance:
+                    $ref: '#/components/schemas/acceptance'
+        400:
+          $ref: '#/components/responses/400BadRequest'
+        404:
+          $ref: '#/components/responses/404NotFound'
+        500:
+          $ref: '#/components/responses/500ServerErr'
+
+    ...
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>首先需要注意的是路由是唯一的，一个路由如果有多个方法，应该把多个方法都写在同一路由下，而不是拆开多个路由。</p>
+<p><code>get</code>、<code>put</code>、<code>post</code>等指的是请求类型。</p>
+<p><code>tags</code> 可以给路由打标签，实现路由分组。</p>
+<p><code>summary</code> 描述这个路由的作用，相当于路由的 <code>description</code>。</p>
+<p><code>parameters</code> 可以指定显式的路由参数。</p>
+<ul>
+<li><code>in</code> 字段指定参数形式。<ul>
+<li><code>query</code> 表示参数出现在 get 方法 url 中的 ? 后面。</li>
+<li><code>path</code> 或者出现在路径里的参数。</li>
+</ul>
+</li>
+<li><code>name</code> 是参数名字。</li>
+<li><code>required</code> 表示参数是否必须。</li>
+<li><code>schema</code> 指定参数格式。</li>
+</ul>
+<p><code>requestBody</code> 可以指定隐式的路由参数，这些参数都在请求体中。</p>
+<ul>
+<li><code>content</code> 下面的 <code>application/json</code> 或 <code>application/x-www-form-urlencoded</code> 是用来指定请求体的格式。</li>
+<li><code>schema</code> 指定参数格式。</li>
+</ul>
+<p><code>responses</code> 指定返回结果的格式。</p>
+<ul>
+<li><code>200</code>、<code>400</code>、<code>404</code>、<code>500</code> 等指定返回的状态码。</li>
+<li><code>content</code> 下面的 <code>application/json</code> 或 <code>application/x-www-form-urlencoded</code> 是用来指定返回体的格式。</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/06/01/Swagger简单使用心得/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/06/01/Swagger简单使用心得/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Written By: <a href="https://github.com/gitgiter" style="border-bottom: none;">gitgiter</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2019总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
